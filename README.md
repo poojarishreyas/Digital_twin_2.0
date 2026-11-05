@@ -40,6 +40,26 @@ non-loopback client with the stock clients (`redis-cli`, `psql`, `curl`,
 | `results/` | raw JSON for every run, `summary.json`, figures, verdict cache |
 | `paper/` | manuscript: `fidelity-cores.tex` (IEEEtran), `.pdf`, `.docx` (built by `build_docx.py`) |
 
+## The `fidelity` CLI (real-world use)
+
+Seven services are declared in `specs/` (Redis, PostgreSQL, Nginx, OpenSSH, Mosquitto, MongoDB, MariaDB);
+new ones need only a YAML spec ([docs/adding-a-service.md](docs/adding-a-service.md)). Native services need the
+binaries installed; image-based ones need Docker. Every verdict comes from a real server in an isolated twin.
+
+```bash
+python3 -m fidelity.cli specs                                         # list services and properties
+python3 -m fidelity.cli analyze redis examples/redis.conf --md report.md --sarif report.sarif
+python3 -m fidelity.cli export redis examples/redis.conf             # minimal export + "unset" markers
+python3 -m fidelity.cli fingerprint redis --images native redis:7.0  # compare builds' default behaviour
+python3 -m fidelity.cli gate mosquitto old.conf new.conf             # CI gate: exit 1 if a change introduces exposure
+```
+
+`analyze` reports, per security property, the verdict, the minimal explanation (core), the pivot lines (which line
+enables an exposure or protects against one), security-labelled lines that have no effect, and the keys that rely on
+server defaults. `gate` re-emulates only when a guarded key changed, so routine edits cost nothing; its SARIF output
+can be uploaded to GitHub code scanning. Configurations are parsed and redacted (secrets replaced by a synthetic
+password) before any server runs; input files are never modified.
+
 ## Reproduce
 
 Requirements (Ubuntu 24.04): `redis-server`, `postgresql-16`, `nginx`,

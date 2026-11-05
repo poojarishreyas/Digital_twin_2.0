@@ -1,0 +1,4914 @@
+[
+ {
+  "cid": "re000",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re001",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re002",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re003",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re004",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re005",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re006",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re007",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re008",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re009",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re010",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re011",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re012",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re013",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re014",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re015",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re016",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re017",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re018",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re019",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re020",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re021",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re022",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re023",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re024",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re025",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re026",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re027",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re028",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re029",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re030",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re031",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re032",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re033",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re034",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re035",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re036",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re037",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re038",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re039",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re040",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re041",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re042",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re043",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re044",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re045",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re046",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re047",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re048",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re049",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re050",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re051",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re052",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re053",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re054",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re055",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re056",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re057",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re058",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re059",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po000",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po001",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po002",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "po003",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po004",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po005",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po006",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po007",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po008",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po009",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "po010",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po011",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po012",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po013",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po014",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "po015",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po016",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po017",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "po018",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po019",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po020",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "po021",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "po022",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po023",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "po024",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po025",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "po026",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po027",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po028",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po029",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po030",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po031",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po032",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "po033",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "po034",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "po035",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po036",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "po037",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po038",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po039",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po040",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po041",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po042",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po043",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po044",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po045",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po046",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po047",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po048",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "po049",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po050",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po051",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po052",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po053",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po054",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po055",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po056",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "po057",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po058",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po059",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng000",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng000",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng001",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng001",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng002",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng002",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng003",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng003",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng004",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng004",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng005",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng005",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng006",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng006",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng007",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng007",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng008",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng008",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng009",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng009",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng010",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng010",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng011",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng011",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng012",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng012",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng013",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng013",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng014",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng014",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng015",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng015",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng016",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng016",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng017",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng017",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng018",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng018",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng019",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng019",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng020",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng020",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng021",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng021",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng022",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng022",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng023",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng023",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng024",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng024",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng025",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng025",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng026",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng026",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng027",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng027",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng028",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng028",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng029",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng029",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng030",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng030",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng031",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng031",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng032",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng032",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng033",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng033",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng034",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng034",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng035",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng035",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng036",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng036",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng037",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng037",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng038",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng038",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng039",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng039",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng040",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng040",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng041",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng041",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng042",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng042",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng043",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng043",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng044",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng044",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng045",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng045",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng046",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng046",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng047",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng047",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng048",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng048",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng049",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng049",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng050",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng050",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng051",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng051",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng052",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng052",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng053",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng053",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng054",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng054",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng055",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng055",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng056",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng056",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng057",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng057",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng058",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng058",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng059",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng059",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op000",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op001",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op002",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op003",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op004",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op005",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op006",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op007",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op008",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op009",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op010",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op011",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op012",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op013",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op014",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op015",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op016",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op017",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op018",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op019",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op020",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op021",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op022",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op023",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op024",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op025",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op027",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op028",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op029",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op030",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op031",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op032",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op033",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op034",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op036",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op037",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op038",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op039",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op040",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op041",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op042",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op043",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op045",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op046",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op047",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op048",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op049",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op050",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op051",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op052",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op053",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op054",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op055",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op056",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op057",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op058",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op059",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op060",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op061",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op062",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng037-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng037-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng037-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng037-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re021-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re021-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng007-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng007-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng007-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng007-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op049-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op049-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op007-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op007-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po003-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po003-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re029-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re029-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op059-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op059-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re015-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re015-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op005-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op005-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re053-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re053-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng041-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng041-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng041-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng041-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po055-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po055-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng021-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng021-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng021-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng021-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re001-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re001-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re013-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re013-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng029-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng029-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng029-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng029-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po017-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po017-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po045-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po045-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po047-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po047-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op045-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op045-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re013-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re013-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op043-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op043-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng057-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng057-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng057-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng057-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re047-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re047-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op007-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op007-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng039-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng039-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng039-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng039-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng043-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng043-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng043-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng043-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "po013-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po013-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng023-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng023-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng023-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng023-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng033-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng033-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng033-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng033-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng059-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng059-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng059-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng059-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op037-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op037-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng009-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng009-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng009-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng009-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng015-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng015-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng015-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng015-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re001-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re001-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re005-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re005-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op037-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op037-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op015-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op015-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng049-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng049-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng049-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng049-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng051-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng051-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng051-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng051-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re057-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re057-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po021-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po021-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op023-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op023-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po013-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po013-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op029-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op029-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op009-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op009-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op021-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op021-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng033-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng033-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng033-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng033-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "po005-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po005-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re023-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re023-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng009-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng009-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng009-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng009-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op005-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op005-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng041-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng041-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng041-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng041-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng029-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng029-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng029-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng029-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re031-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re031-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po007-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po007-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po039-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po039-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po009-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po009-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng001-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng001-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng001-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng001-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re003-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re003-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po047-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po047-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng007-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng007-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng007-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng007-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "po017-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po017-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng003-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng003-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng003-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng003-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "po013-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po013-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re013-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re013-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po023-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po023-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op009-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op009-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op021-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op021-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re003-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re003-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op001-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op001-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re059-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re059-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re023-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re023-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng019-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng019-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng019-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng019-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op057-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op057-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng053-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng053-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng053-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng053-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re019-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re019-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po023-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "po023-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op009-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op009-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng015-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng015-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng015-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng015-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng025-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng025-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng025-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng025-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re009-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re009-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op045-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op045-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re047-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re047-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op005-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op005-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng025-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng025-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng025-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng025-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng001-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng001-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng001-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng001-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re011-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re011-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "op055-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op055-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po053-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po053-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re045-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re045-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po051-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po051-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re017-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re017-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po001-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po001-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po051-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po051-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng017-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng017-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng017-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng017-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "po003-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po003-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re037-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re037-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op023-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op023-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po033-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po033-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op033-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op033-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po049-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "po049-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng011-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng011-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng011-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng011-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng031-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng031-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng031-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng031-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng055-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng055-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng055-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng055-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng021-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng021-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng021-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng021-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re051-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re051-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "po059-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "po059-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re039-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re039-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po011-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po011-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng039-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng039-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng039-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng039-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "po051-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po051-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op043-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "op043-d",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng037-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng037-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng037-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng037-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "po031-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po031-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng049-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng049-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "ng049-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng049-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "re041-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "re041-d",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng035-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng035-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng035-d",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "ng035-d",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "native": false,
+  "spec": false,
+  "agree": true
+ },
+ {
+  "cid": "po017-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": true,
+  "spec": true,
+  "agree": true
+ },
+ {
+  "cid": "po017-d",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "native": true,
+  "spec": true,
+  "agree": true
+ }
+]

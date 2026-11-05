@@ -1,0 +1,331 @@
+# Nginx: nested blocks; any allow/deny at an inner level replaces the parent's list.
+name: nginx
+config:
+  files:
+    - name: nginx.conf
+      template: |
+        daemon off;
+        master_process off;
+        pid {dir}/nginx.pid;
+        error_log {dir}/error.log;
+        events { worker_connections 64; }
+        http {
+          access_log off;
+          client_body_temp_path {dir}/tmp-body;
+          proxy_temp_path {dir}/tmp-proxy;
+          fastcgi_temp_path {dir}/tmp-fastcgi;
+          uwsgi_temp_path {dir}/tmp-uwsgi;
+          scgi_temp_path {dir}/tmp-scgi;
+          auth_basic_user_file {dir}/htpasswd;
+          {{http}}
+          server {
+            listen {host}:{port};
+            root {dir}/www;
+            {{server}}
+            location / {
+              {{loc_root}}
+            }
+            location /admin/ {
+              {{loc_admin}}
+            }
+          }
+        }
+  sections:
+    http: {placeholder: http, line: "{key} {value};", line_flag: "{key};"}
+    server: {placeholder: server, line: "{key} {value};", line_flag: "{key};"}
+    "loc:/": {placeholder: loc_root, line: "{key} {value};", line_flag: "{key};"}
+    "loc:/admin/": {placeholder: loc_admin, line: "{key} {value};", line_flag: "{key};"}
+runtime:
+  port_base: 18180
+  command: [/usr/sbin/nginx, -p, "{dir}", -c, "{dir}/nginx.conf"]
+  ready: {type: tcp}
+prepare:
+  steps:
+    - {cmd: [sh, -c, "mkdir -p {dir}/www/admin {dir}/tmp-body {dir}/tmp-proxy {dir}/tmp-fastcgi {dir}/tmp-uwsgi {dir}/tmp-scgi && echo public > {dir}/www/index.html && echo admin-console > {dir}/www/admin/index.html && printf 'auditor:%s\\n' \"$(openssl passwd -apr1 {password})\" > {dir}/htpasswd"], native: true}
+properties:
+  - id: nginx.version_leak
+    description: the Server header discloses the version
+    probe: {cmd: [curl, --noproxy, "*", -sS, -o, /dev/null, -D, "-", --max-time, "3", "http://{host}:{port}/"]}
+    exposed_if: '(?i)^Server:\s*nginx/\d'
+    safe_if: '^HTTP/'
+  - id: nginx.admin_open
+    description: /admin/ returns 200 without credentials
+    probe: {cmd: [curl, --noproxy, "*", -sS, -o, /dev/null, -w, "%{http_code}", --max-time, "3", "http://{host}:{port}/admin/"]}
+    exposed_if: '^200$'
+    safe_if: '^\d{3}$'
+# generated from fidelity/corpus.py CATALOG (one entry per legal section)
+catalog:
+- section: http
+  key: server_tokens
+  values:
+  - 'on'
+  - 'off'
+  class: security
+- section: server
+  key: server_tokens
+  values:
+  - 'on'
+  - 'off'
+  class: security
+- section: loc:/
+  key: server_tokens
+  values:
+  - 'on'
+  - 'off'
+  class: security
+- section: http
+  key: allow
+  values:
+  - 10.77.0.1
+  - 10.77.0.0/16
+  - 192.168.0.0/16
+  - all
+  class: security
+- section: server
+  key: allow
+  values:
+  - 10.77.0.1
+  - 10.77.0.0/16
+  - 192.168.0.0/16
+  - all
+  class: security
+- section: loc:/admin/
+  key: allow
+  values:
+  - 10.77.0.1
+  - 10.77.0.0/16
+  - 192.168.0.0/16
+  - all
+  class: security
+- section: http
+  key: deny
+  values:
+  - all
+  - 10.77.0.0/16
+  - 192.168.0.0/16
+  class: security
+- section: server
+  key: deny
+  values:
+  - all
+  - 10.77.0.0/16
+  - 192.168.0.0/16
+  class: security
+- section: loc:/admin/
+  key: deny
+  values:
+  - all
+  - 10.77.0.0/16
+  - 192.168.0.0/16
+  class: security
+- section: http
+  key: auth_basic
+  values:
+  - '"Restricted"'
+  - 'off'
+  class: security
+- section: server
+  key: auth_basic
+  values:
+  - '"Restricted"'
+  - 'off'
+  class: security
+- section: loc:/admin/
+  key: auth_basic
+  values:
+  - '"Restricted"'
+  - 'off'
+  class: security
+- section: server
+  key: satisfy
+  values:
+  - any
+  - all
+  class: security
+- section: loc:/admin/
+  key: satisfy
+  values:
+  - any
+  - all
+  class: security
+- section: loc:/admin/
+  key: internal
+  values:
+  - ''
+  class: security
+- section: http
+  key: client_max_body_size
+  values:
+  - 1m
+  - 8m
+  - 64m
+  class: operational
+- section: server
+  key: client_max_body_size
+  values:
+  - 1m
+  - 8m
+  - 64m
+  class: operational
+- section: loc:/
+  key: client_max_body_size
+  values:
+  - 1m
+  - 8m
+  - 64m
+  class: operational
+- section: http
+  key: keepalive_timeout
+  values:
+  - '15'
+  - '65'
+  class: operational
+- section: server
+  key: keepalive_timeout
+  values:
+  - '15'
+  - '65'
+  class: operational
+- section: http
+  key: sendfile
+  values:
+  - 'on'
+  - 'off'
+  class: operational
+- section: server
+  key: sendfile
+  values:
+  - 'on'
+  - 'off'
+  class: operational
+- section: http
+  key: gzip
+  values:
+  - 'on'
+  - 'off'
+  class: operational
+- section: server
+  key: gzip
+  values:
+  - 'on'
+  - 'off'
+  class: operational
+- section: loc:/
+  key: gzip
+  values:
+  - 'on'
+  - 'off'
+  class: operational
+- section: http
+  key: add_header
+  values:
+  - X-Frame-Options DENY
+  - X-Content-Type-Options nosniff
+  - Referrer-Policy no-referrer
+  class: operational
+- section: server
+  key: add_header
+  values:
+  - X-Frame-Options DENY
+  - X-Content-Type-Options nosniff
+  - Referrer-Policy no-referrer
+  class: operational
+- section: loc:/
+  key: add_header
+  values:
+  - X-Frame-Options DENY
+  - X-Content-Type-Options nosniff
+  - Referrer-Policy no-referrer
+  class: operational
+- section: loc:/admin/
+  key: add_header
+  values:
+  - X-Frame-Options DENY
+  - X-Content-Type-Options nosniff
+  - Referrer-Policy no-referrer
+  class: operational
+- section: http
+  key: client_body_timeout
+  values:
+  - 10s
+  - 60s
+  class: operational
+- section: server
+  key: client_body_timeout
+  values:
+  - 10s
+  - 60s
+  class: operational
+- section: http
+  key: send_timeout
+  values:
+  - 10s
+  - 60s
+  class: operational
+- section: server
+  key: send_timeout
+  values:
+  - 10s
+  - 60s
+  class: operational
+- section: http
+  key: charset
+  values:
+  - utf-8
+  - 'off'
+  class: operational
+- section: server
+  key: charset
+  values:
+  - utf-8
+  - 'off'
+  class: operational
+- section: loc:/
+  key: charset
+  values:
+  - utf-8
+  - 'off'
+  class: operational
+- section: loc:/
+  key: autoindex
+  values:
+  - 'off'
+  class: operational
+- section: loc:/admin/
+  key: autoindex
+  values:
+  - 'off'
+  class: operational
+- section: http
+  key: etag
+  values:
+  - 'on'
+  - 'off'
+  class: operational
+- section: server
+  key: etag
+  values:
+  - 'on'
+  - 'off'
+  class: operational
+- section: http
+  key: tcp_nodelay
+  values:
+  - 'on'
+  - 'off'
+  class: operational
+- section: server
+  key: tcp_nodelay
+  values:
+  - 'on'
+  - 'off'
+  class: operational
+- section: loc:/
+  key: expires
+  values:
+  - 1h
+  - 'off'
+  class: operational
+array_keys: [allow, deny, add_header]
+base_profiles:
+  platform: [{section: http, key: server_tokens, value: "on"}]

@@ -1,0 +1,61 @@
+# MongoDB 7.0: nested YAML; keys are dotted paths.
+# Interplay: net.bindIp / net.bindIpAll, security.authorization and the localhost exception.
+name: mongodb
+config:
+  format: yaml
+  files: [{name: mongod.conf, template: ""}]
+  yaml_scaffold: |
+    net:
+      port: {port}
+    storage:
+      dbPath: {dir}/db
+parse:
+  kind: yaml
+  environment: [net.port, storage.dbPath, systemLog.path, systemLog.destination, systemLog.logAppend, "processManagement.*",
+                "net.tls.*", "net.ssl.*", security.keyFile, "replication.*", "sharding.*", "storage.journal.*",
+                net.unixDomainSocket.pathPrefix, storage.engine]
+  address_keys: [net.bindIp]
+runtime:
+  image: mongo:7.0
+  port_base: 27100
+  command: [mongod, --config, "{dir}/mongod.conf"]
+  ready: {type: log, marker: "Waiting for connections"}
+  start_timeout: 40
+prepare:
+  steps:
+    - {cmd: [mkdir, -p, "{dir}/db"], native: true}
+properties:
+  - id: mongo.unauth_list
+    description: an unauthenticated remote client can list databases
+    probe:
+      cmd: [mongosh, --quiet, "mongodb://{host}:{port}/admin?serverSelectionTimeoutMS=3000", --eval, "db.adminCommand({listDatabases:1}).ok"]
+      client_image: true
+      timeout: 25
+    exposed_if: '^1$'
+    safe_if: 'requires authentication|Unauthorized|ECONNREFUSED|MongoServerSelectionError|MongoNetworkError'
+catalog:
+  - {key: net.bindIp, values: ["127.0.0.1", "0.0.0.0", "{host}", "127.0.0.1,{host}", "localhost"], class: security}
+  - {key: net.bindIpAll, values: ["true", "false"], class: security}
+  - {key: security.authorization, values: ["enabled", "disabled"], class: security}
+  - {key: setParameter.enableLocalhostAuthBypass, values: ["true", "false"], class: security}
+  - {key: security.javascriptEnabled, values: ["true", "false"], class: security}
+  - {key: operationProfiling.mode, values: ["off", "slowOp"], class: operational}
+  - {key: operationProfiling.slowOpThresholdMs, values: ["100", "250"], class: operational}
+  - {key: net.maxIncomingConnections, values: ["1000", "200"], class: operational}
+  - {key: storage.wiredTiger.engineConfig.cacheSizeGB, values: ["0.25", "0.5"], class: operational}
+  - {key: systemLog.verbosity, values: ["0", "1"], class: operational}
+  - {key: systemLog.quiet, values: ["true", "false"], class: operational}
+  - {key: net.compression.compressors, values: ["snappy,zstd", "disabled"], class: operational}
+  - {key: setParameter.diagnosticDataCollectionEnabled, values: ["false", "true"], class: operational}
+  - {key: setParameter.cursorTimeoutMillis, values: ["600000", "300000"], class: operational}
+postures:
+  - [[net.bindIp, "0.0.0.0"]]
+  - [[net.bindIpAll, "true"], [security.authorization, "disabled"]]
+  - [[net.bindIp, "0.0.0.0"], [security.authorization, "enabled"]]
+  - [[net.bindIp, "127.0.0.1"]]
+  - [[net.bindIp, "127.0.0.1,{host}"], [setParameter.enableLocalhostAuthBypass, "true"]]
+  - [[net.bindIp, "{host}"], [security.authorization, "enabled"], [setParameter.enableLocalhostAuthBypass, "false"]]
+  - []
+array_keys: []
+base_profiles:
+  platform: [{key: security.authorization, value: "enabled"}]

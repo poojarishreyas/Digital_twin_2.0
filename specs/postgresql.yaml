@@ -1,0 +1,169 @@
+# PostgreSQL: postgresql.conf (last assignment wins) + pg_hba.conf (first match wins).
+name: postgresql
+config:
+  files:
+    - name: postgresql.conf
+      template: |
+        port = {port}
+        unix_socket_directories = '{dir}'
+        fsync = off
+        synchronous_commit = off
+        hba_file = '{dir}/pg_hba.conf'
+        ident_file = '{dir}/data/pg_ident.conf'
+        logging_collector = off
+        {{conf}}
+    - name: pg_hba.conf
+      template: |
+        local all postgres trust
+        {{hba}}
+  sections:
+    conf: {placeholder: conf, line: "{key} = {value}"}
+    hba: {placeholder: hba, line: "{value}"}
+parse:
+  kind: rules
+  section: hba
+  key: hba
+  rule_types: [local, host, hostssl, hostnossl, hostgssenc, hostnogssenc]
+  prefix: [{section: conf, key: listen_addresses, value: "'*'"}]
+runtime:
+  port_base: 15540
+  native_user: postgres
+  command: [/usr/lib/postgresql/16/bin/postgres, -D, "{dir}/data", -c, "config_file={dir}/postgresql.conf"]
+  ready: {type: log, marker: "database system is ready to accept connections"}
+prepare:
+  steps:
+    - {cmd: [chown, -R, "postgres:postgres", "{dir}"], native: true}
+    - {cmd: [runuser, -u, postgres, --, /usr/lib/postgresql/16/bin/initdb, -D, "{dir}/data", --auth=trust, -U, postgres, --no-sync], native: true}
+    - cmd: [runuser, -u, postgres, --, sh, -c, "/usr/lib/postgresql/16/bin/pg_ctl -D {dir}/data -o \"-c port={port} -c listen_addresses= -c unix_socket_directories={dir}\" -w start >/dev/null && psql -h {dir} -p {port} -U postgres -d postgres -c \"CREATE ROLE readers NOLOGIN\" -c \"CREATE ROLE synthetic LOGIN PASSWORD '{password}' IN ROLE readers\" -c \"CREATE ROLE admin LOGIN PASSWORD '{password}'\" -c \"CREATE DATABASE synthetic OWNER synthetic\" -c \"CREATE DATABASE appdb OWNER admin\" >/dev/null; /usr/lib/postgresql/16/bin/pg_ctl -D {dir}/data -m fast -w stop >/dev/null"]
+      native: true
+properties:
+  - id: pg.unauth_sql
+    description: role synthetic runs SQL from a remote address without a password
+    probe:
+      cmd: [psql, -w, -h, "{host}", -p, "{port}", -U, synthetic, -d, synthetic, -At, -c, "SELECT 1"]
+      env: {PGPASSWORD: "", PGCONNECT_TIMEOUT: "3", PGSSLMODE: prefer, PGPASSFILE: /nonexistent/pgpass}
+      timeout: 6
+    exposed_if: '^1$'
+    safe_if: 'no password supplied|rejects connection|no pg_hba.conf entry|Connection refused|password authentication failed|authentication failed'
+# generated from fidelity/corpus.py CATALOG (one entry per legal section)
+catalog:
+- section: conf
+  key: listen_addresses
+  values:
+  - '''*'''
+  - '''localhost'''
+  - '''10.77.0.1'''
+  - '''127.0.0.1'''
+  class: security
+- section: conf
+  key: password_encryption
+  values:
+  - scram-sha-256
+  - md5
+  class: security
+- section: hba
+  key: hba
+  values:
+  - host all all 0.0.0.0/0 trust
+  - host all all 10.77.0.0/16 trust
+  - host synthetic synthetic 10.77.0.1/32 trust
+  - host all +readers 10.77.0.0/16 trust
+  - host appdb all 0.0.0.0/0 trust
+  - host all admin 0.0.0.0/0 trust
+  - hostssl all all 0.0.0.0/0 trust
+  - host all all samenet trust
+  - host all all 192.168.10.0/24 trust
+  - host all all 0.0.0.0/0 scram-sha-256
+  - host all all 10.77.0.0/16 scram-sha-256
+  - host all all 127.0.0.1/32 scram-sha-256
+  - host all all 0.0.0.0/0 md5
+  - host appdb admin 10.77.0.0/16 scram-sha-256
+  - host all all 0.0.0.0/0 reject
+  - host synthetic all 10.77.0.0/16 reject
+  - hostnossl all all 0.0.0.0/0 reject
+  - host all all samenet password
+  - host replication all 10.77.0.0/16 trust
+  - host all synthetic 192.168.10.0/24 scram-sha-256
+  class: security
+- section: conf
+  key: max_connections
+  values:
+  - '50'
+  - '100'
+  - '200'
+  class: operational
+- section: conf
+  key: shared_buffers
+  values:
+  - '''16MB'''
+  - '''32MB'''
+  - '''64MB'''
+  class: operational
+- section: conf
+  key: work_mem
+  values:
+  - '''4MB'''
+  - '''8MB'''
+  - '''16MB'''
+  class: operational
+- section: conf
+  key: log_connections
+  values:
+  - 'on'
+  - 'off'
+  class: operational
+- section: conf
+  key: log_disconnections
+  values:
+  - 'on'
+  - 'off'
+  class: operational
+- section: conf
+  key: statement_timeout
+  values:
+  - '0'
+  - '''30s'''
+  - '''5min'''
+  class: operational
+- section: conf
+  key: authentication_timeout
+  values:
+  - '''30s'''
+  - '''1min'''
+  class: operational
+- section: conf
+  key: log_min_duration_statement
+  values:
+  - '-1'
+  - '250'
+  - '1000'
+  class: operational
+- section: conf
+  key: idle_in_transaction_session_timeout
+  values:
+  - '0'
+  - '''60s'''
+  class: operational
+- section: conf
+  key: effective_cache_size
+  values:
+  - '''128MB'''
+  - '''256MB'''
+  class: operational
+- section: conf
+  key: maintenance_work_mem
+  values:
+  - '''32MB'''
+  - '''64MB'''
+  class: operational
+- section: conf
+  key: log_line_prefix
+  values:
+  - '''%m [%p] '''
+  - '''%t %u@%d '''
+  class: operational
+array_keys: [hba]
+base_profiles:
+  platform:
+    - {section: conf, key: listen_addresses, value: "'*'"}
+    - {section: hba, key: hba, value: "host all all 0.0.0.0/0 scram-sha-256"}

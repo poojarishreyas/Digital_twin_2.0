@@ -37,7 +37,9 @@ def ddmin(ok, items: list[int]) -> list[int]:
     return c
 
 
-def fidelity_core(ev, cfg: Config, base: str, prop: str, target) -> dict:
+def fidelity_core(ev, cfg: Config, base: str, prop: str, target, mat=None) -> dict:
+    """``mat(cfg, base)`` builds the twin; defaults to config.materialize (spec services pass their own)."""
+    mat = mat or materialize
     tests = {"n": 0}
     memo: dict[tuple, bool] = {}
 
@@ -45,7 +47,7 @@ def fidelity_core(ev, cfg: Config, base: str, prop: str, target) -> dict:
         key = tuple(sorted(idx))
         if key not in memo:
             tests["n"] += 1
-            memo[key] = ev.verdict(materialize(cfg.subset(key), base), prop) == target
+            memo[key] = ev.verdict(mat(cfg.subset(key), base), prop) == target
         return memo[key]
 
     full = list(range(len(cfg)))

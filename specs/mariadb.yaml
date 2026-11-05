@@ -1,0 +1,72 @@
+# MariaDB 11.4: INI file; directives live in [mysqld].
+# Interplay: bind-address, skip-networking, skip-grant-tables, require-secure-transport.
+name: mariadb
+config:
+  files:
+    - name: my.cnf
+      template: |
+        [mysqld]
+        port = {port}
+        socket = {dir}/mysqld.sock
+        datadir = {dir}/data
+        pid-file = {dir}/mysqld.pid
+        user = root
+        {{mysqld}}
+  sections:
+    mysqld: {placeholder: mysqld, line: "{key} = {value}", line_flag: "{key}"}
+parse:
+  kind: ini
+  sections: [mysqld, mariadb, server, mariadbd]
+  map_section: mysqld
+  environment: [port, socket, datadir, pid-file, pid_file, user, basedir, tmpdir, log-error, log_error, general_log_file,
+                slow_query_log_file, "ssl*", "tls*", lc-messages-dir, lc_messages_dir, plugin-dir, plugin_dir, server-id,
+                server_id, "log-bin*", "log_bin*", "relay-log*", "relay_log*", innodb_data_home_dir,
+                innodb_log_group_home_dir, "!include", "!includedir", symbolic-links, log-basename]
+  address_keys: [bind-address, bind_address]
+runtime:
+  image: mariadb:11.4
+  port_base: 13310
+  command: [mariadbd, "--defaults-file={dir}/my.cnf"]
+  ready: {type: log, marker: "ready for connections"}
+  start_timeout: 40
+prepare:
+  steps:
+    - {cmd: [mariadb-install-db, "--datadir={dir}/data", --user=root, --skip-test-db, --auth-root-authentication-method=socket]}
+properties:
+  - id: mariadb.unauth_root
+    description: a remote client logs in as root without a password and runs SQL
+    probe:
+      cmd: [mariadb, -h, "{host}", -P, "{port}", -u, root, --skip-ssl, --connect-timeout=3, -N, -e, "SELECT 1"]
+      client_image: true
+      timeout: 15
+    exposed_if: '^1$'
+    safe_if: "Access denied|is not allowed to connect|Can't connect|insecure transport|Lost connection|ERROR"
+catalog:
+  - {section: mysqld, key: bind-address, values: ["127.0.0.1", "0.0.0.0", "{host}", "::"], class: security}
+  - {section: mysqld, key: skip-networking, values: [""], class: security}
+  - {section: mysqld, key: skip-grant-tables, values: [""], class: security}
+  - {section: mysqld, key: require-secure-transport, values: ["ON", "OFF"], class: security}
+  - {section: mysqld, key: local-infile, values: ["0", "1"], class: security}
+  - {section: mysqld, key: skip-name-resolve, values: [""], class: security}
+  - {section: mysqld, key: max_connections, values: ["100", "500"], class: operational}
+  - {section: mysqld, key: innodb_buffer_pool_size, values: ["64M", "128M"], class: operational}
+  - {section: mysqld, key: wait_timeout, values: ["600", "28800"], class: operational}
+  - {section: mysqld, key: character-set-server, values: ["utf8mb4", "latin1"], class: operational}
+  - {section: mysqld, key: slow_query_log, values: ["0", "1"], class: operational}
+  - {section: mysqld, key: long_query_time, values: ["2", "10"], class: operational}
+  - {section: mysqld, key: max_allowed_packet, values: ["16M", "64M"], class: operational}
+  - {section: mysqld, key: thread_cache_size, values: ["8", "16"], class: operational}
+  - {section: mysqld, key: table_open_cache, values: ["400", "2000"], class: operational}
+  - {section: mysqld, key: tmp_table_size, values: ["32M", "64M"], class: operational}
+  - {section: mysqld, key: performance_schema, values: ["ON", "OFF"], class: operational}
+postures:
+  - [[bind-address, "0.0.0.0"], [skip-grant-tables, ""]]
+  - [[skip-grant-tables, ""]]
+  - [[skip-grant-tables, ""], [skip-networking, ""]]
+  - [[bind-address, "127.0.0.1"], [skip-grant-tables, ""]]
+  - [[bind-address, "0.0.0.0"]]
+  - [[skip-grant-tables, ""], [require-secure-transport, "ON"]]
+  - [[bind-address, "{host}"], [skip-name-resolve, ""]]
+array_keys: []
+base_profiles:
+  platform: [{section: mysqld, key: bind-address, value: "127.0.0.1"}]

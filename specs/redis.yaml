@@ -1,0 +1,154 @@
+# Redis: flat "key value" file, last value wins.
+name: redis
+config:
+  files:
+    - name: redis.conf
+      template: |
+        port {port}
+        daemonize no
+        save ""
+        appendonly no
+        dir {dir}
+        logfile ""
+        unixsocket {dir}/ready.sock
+        {{main}}
+  sections:
+    "": {placeholder: main, line: "{key} {value}"}
+parse:
+  kind: lines
+  environment: [port, daemonize, supervised, pidfile, logfile, dir, dbfilename, unixsocket, unixsocketperm, include,
+                loadmodule, aclfile, cluster-config-file, appendfilename, appenddirname, save, appendonly, replicaof,
+                slaveof, masterauth, masteruser, "tls-*", cluster-enabled, always-show-logo, sentinel]
+  secret_keys: [requirepass]
+  token_secret_keys: [user]
+  address_keys: [bind]
+runtime:
+  port_base: 16480
+  command: [redis-server, "{dir}/redis.conf"]
+  cleanup: ["{dir}/ready.sock"]
+  ready: {type: unix, path: "{dir}/ready.sock"}
+properties:
+  - id: redis.unauth_admin
+    description: an unauthenticated remote client can run CONFIG GET
+    probe: {cmd: [redis-cli, --no-auth-warning, -h, "{host}", -p, "{port}", CONFIG, GET, maxmemory], timeout: 4}
+    exposed_if: '^maxmemory'
+    safe_if: 'NOAUTH|DENIED|NOPERM|unknown command|Connection refused|WRONGPASS|AUTH failed'
+# generated from fidelity/corpus.py CATALOG (one entry per legal section)
+catalog:
+- key: bind
+  values:
+  - 0.0.0.0
+  - 127.0.0.1
+  - 10.77.0.1
+  - 127.0.0.1 10.77.0.1
+  - '* -::*'
+  class: security
+- key: protected-mode
+  values:
+  - 'yes'
+  - 'no'
+  class: security
+- key: requirepass
+  values:
+  - lab-only-password
+  class: security
+- key: user
+  values:
+  - default on nopass ~* &* +@all
+  - default on nopass ~* &* +@all -@admin
+  - default on nopass ~* &* +@all -@dangerous
+  - default off
+  - default on >lab-only-password ~* &* +@all
+  - default on nopass ~* &* +@read +@write
+  class: security
+- key: rename-command
+  values:
+  - CONFIG ""
+  - CONFIG CONFIG_b7f3
+  - FLUSHALL ""
+  - DEBUG ""
+  class: security
+- key: maxmemory
+  values:
+  - 64mb
+  - 128mb
+  - 256mb
+  - 512mb
+  class: operational
+- key: maxmemory-policy
+  values:
+  - noeviction
+  - allkeys-lru
+  - volatile-lru
+  - allkeys-lfu
+  class: operational
+- key: timeout
+  values:
+  - '0'
+  - '60'
+  - '300'
+  class: operational
+- key: tcp-keepalive
+  values:
+  - '60'
+  - '300'
+  class: operational
+- key: loglevel
+  values:
+  - notice
+  - warning
+  - verbose
+  class: operational
+- key: databases
+  values:
+  - '16'
+  - '4'
+  - '32'
+  class: operational
+- key: maxclients
+  values:
+  - '128'
+  - '256'
+  - '512'
+  class: operational
+- key: hz
+  values:
+  - '10'
+  - '20'
+  - '50'
+  class: operational
+- key: lazyfree-lazy-eviction
+  values:
+  - 'yes'
+  - 'no'
+  class: operational
+- key: slowlog-log-slower-than
+  values:
+  - '10000'
+  - '5000'
+  - '-1'
+  class: operational
+- key: latency-monitor-threshold
+  values:
+  - '0'
+  - '100'
+  class: operational
+- key: tcp-backlog
+  values:
+  - '128'
+  - '511'
+  class: operational
+- key: notify-keyspace-events
+  values:
+  - '""'
+  - Ex
+  - KEA
+  class: operational
+- key: activerehashing
+  values:
+  - 'yes'
+  - 'no'
+  class: operational
+array_keys: [user, rename-command]
+base_profiles:
+  platform: [{key: protected-mode, value: "yes"}]

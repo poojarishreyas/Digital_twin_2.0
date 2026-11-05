@@ -1,0 +1,8 @@
+# example sshd_config with an override that never takes effect
+Port 22
+PasswordAuthentication yes
+PermitRootLogin no
+X11Forwarding no
+PasswordAuthentication no
+Match Address 192.168.50.0/24
+    PasswordAuthentication no

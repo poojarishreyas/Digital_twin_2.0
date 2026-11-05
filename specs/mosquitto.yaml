@@ -1,0 +1,72 @@
+# Eclipse Mosquitto 2.0 MQTT broker: flat "key value" file.
+# Security-relevant interplay: listener binding, allow_anonymous, password_file, per_listener_settings.
+name: mosquitto
+config:
+  files:
+    - name: mosquitto.conf
+      template: |
+        user root
+        persistence false
+        log_dest stdout
+        pid_file {dir}/mosquitto.pid
+        {{main}}
+  sections:
+    "": {placeholder: main, line: "{key} {value}"}
+parse:
+  kind: lines
+  environment: [user, pid_file, persistence_location, persistence_file, log_dest, include_dir, cafile, capath, certfile,
+                keyfile, "bridge_*", connection, address, plugin, "plugin_opt_*", auth_plugin, "auth_opt_*", port, bind_address]
+  rewrite:
+    - {key: listener, pattern: '^\d+', replace: '{port}', enumerate: true}
+    - {key: listener, pattern: '\b(?!127\.0\.0\.1\b|0\.0\.0\.0\b)\d+\.\d+\.\d+\.\d+\b', replace: '{host}'}
+    - {key: password_file, pattern: '^.*$', replace: '{dir}/passwd'}
+    - {key: acl_file, pattern: '^.*$', replace: '{dir}/acl'}
+runtime:
+  image: eclipse-mosquitto:2.0
+  port_base: 18830
+  command: [mosquitto, -c, "{dir}/mosquitto.conf"]
+  ready: {type: log, marker: " running"}
+prepare:
+  files:
+    - {name: acl, content: "user synthetic\ntopic readwrite #\n"}
+  steps:
+    - {cmd: [mosquitto_passwd, -b, -c, "{dir}/passwd", synthetic, "{password}"]}
+properties:
+  - id: mqtt.anonymous_publish
+    description: an anonymous remote client can connect and publish
+    probe:
+      cmd: [mosquitto_pub, -h, "{host}", -p, "{port}", -t, fidelity/probe, -m, x, -q, "1"]
+      client_image: true
+      timeout: 10
+    exposed_if: '^'
+    safe_if: 'not authori[sz]ed|Connection refused|Unable to connect|Error'
+catalog:
+  - {key: listener, values: ["{port}", "{port} {host}", "{port} 0.0.0.0", "{port} 127.0.0.1"], class: security}
+  - {key: allow_anonymous, values: ["true", "false"], class: security}
+  - {key: password_file, values: ["{dir}/passwd"], class: security}
+  - {key: acl_file, values: ["{dir}/acl"], class: security}
+  - {key: per_listener_settings, values: ["true", "false"], class: security}
+  - {key: max_connections, values: ["-1", "200"], class: operational}
+  - {key: max_keepalive, values: ["60", "300"], class: operational}
+  - {key: max_inflight_messages, values: ["20", "40"], class: operational}
+  - {key: max_queued_messages, values: ["1000", "100"], class: operational}
+  - {key: sys_interval, values: ["10", "0"], class: operational}
+  - {key: retain_available, values: ["true", "false"], class: operational}
+  - {key: allow_zero_length_clientid, values: ["true", "false"], class: operational}
+  - {key: connection_messages, values: ["true", "false"], class: operational}
+  - {key: log_type, values: ["error", "all", "warning"], class: operational}
+  - {key: set_tcp_nodelay, values: ["true", "false"], class: operational}
+  - {key: persistent_client_expiration, values: ["1h", "1d"], class: operational}
+  - {key: max_packet_size, values: ["1048576", "268435455"], class: operational}
+# postures: recurring deployment patterns used by the corpus generator (each is a list of [key, value])
+postures:
+  - [[listener, "{port}"], [allow_anonymous, "true"]]
+  - [[listener, "{port} 0.0.0.0"], [allow_anonymous, "true"], [password_file, "{dir}/passwd"]]
+  - [[listener, "{port}"], [password_file, "{dir}/passwd"], [allow_anonymous, "false"]]
+  - [[listener, "{port} 127.0.0.1"], [allow_anonymous, "true"]]
+  - [[per_listener_settings, "true"], [listener, "{port}"], [allow_anonymous, "true"]]
+  - [[listener, "{port}"], [acl_file, "{dir}/acl"], [password_file, "{dir}/passwd"]]
+  - [[listener, "{port}"]]
+array_keys: [listener, log_type]
+base_profiles:
+  platform: [{key: allow_anonymous, value: "false"}]

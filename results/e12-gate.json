@@ -1,0 +1,90 @@
+{
+ "commits": 426,
+ "parsed_changes": 246,
+ "introduced": 10,
+ "removed": 9,
+ "by_service": {
+  "redis": 5,
+  "postgresql": 4,
+  "openssh": 1
+ },
+ "gate": {
+  "union": {
+   "re_emulations": 137,
+   "blocked": 10,
+   "missed_introductions": 0
+  },
+  "expert": {
+   "re_emulations": 159,
+   "blocked": 10,
+   "missed_introductions": 0
+  }
+ },
+ "introducing_commit_keys": [
+  {
+   "service": "redis",
+   "touched": [
+    "protected-mode"
+   ]
+  },
+  {
+   "service": "postgresql",
+   "touched": [
+    "hba"
+   ]
+  },
+  {
+   "service": "postgresql",
+   "touched": [
+    "hba"
+   ]
+  },
+  {
+   "service": "postgresql",
+   "touched": [
+    "hba"
+   ]
+  },
+  {
+   "service": "redis",
+   "touched": [
+    "protected-mode"
+   ]
+  },
+  {
+   "service": "redis",
+   "touched": [
+    "protected-mode"
+   ]
+  },
+  {
+   "service": "redis",
+   "touched": [
+    "maxmemory",
+    "maxmemory-policy",
+    "protected-mode",
+    "tcp-keepalive",
+    "timeout"
+   ]
+  },
+  {
+   "service": "redis",
+   "touched": [
+    "bind",
+    "protected-mode"
+   ]
+  },
+  {
+   "service": "openssh",
+   "touched": [
+    "passwordauthentication"
+   ]
+  },
+  {
+   "service": "postgresql",
+   "touched": [
+    "hba"
+   ]
+  }
+ ]
+}

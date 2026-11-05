@@ -1,0 +1,244 @@
+# OpenSSH: first obtained value wins; Match blocks override global settings.
+name: openssh
+config:
+  files:
+    - name: sshd_config
+      template: |
+        Port {port}
+        ListenAddress {host}
+        HostKey {dir}/hostkey
+        UsePAM no
+        PidFile {dir}/sshd.pid
+        StrictModes no
+        KbdInteractiveAuthentication no
+        {{global}}
+        {{match}}
+  sections:
+    "": {placeholder: global, line: "{key} {value}"}
+  dynamic_sections:
+    - {match: "^Match ", placeholder: match, header: "{section}", line: "  {key} {value}"}
+parse:
+  kind: lines
+  section_header: '^(?i:match)\s'
+  section_reset: '^(?i:match\s+all)\s*$'
+  environment: [port, listenaddress, hostkey, pidfile, include, usepam, hostcertificate, hostkeyagent, addressfamily]
+runtime:
+  port_base: 12320
+  command: [/usr/sbin/sshd, -D, -e, -f, "{dir}/sshd_config"]
+  ready: {type: log, marker: "Server listening on"}
+prepare:
+  steps:
+    - {cmd: [sh, -c, "mkdir -p /run/sshd && rm -f {dir}/hostkey {dir}/hostkey.pub && ssh-keygen -q -t ed25519 -N '' -f {dir}/hostkey"], native: true}
+properties:
+  - id: ssh.password_login
+    description: user synthetic logs in with a password and runs a command
+    probe:
+      cmd: [sshpass, -p, "{password}", ssh, -F, /dev/null, -o, StrictHostKeyChecking=no, -o, UserKnownHostsFile=/dev/null,
+            -o, ConnectTimeout=3, -o, BatchMode=no, -o, PreferredAuthentications=password, -o, PubkeyAuthentication=no,
+            -o, NumberOfPasswordPrompts=1, -o, LogLevel=ERROR, -p, "{port}", "synthetic@{host}", "echo oracle-ok"]
+      timeout: 8
+    exposed_if: 'oracle-ok'
+    safe_if: 'Permission denied|Connection closed|Received disconnect'
+# generated from fidelity/corpus.py CATALOG (one entry per legal section)
+catalog:
+- key: PasswordAuthentication
+  values:
+  - 'yes'
+  - 'no'
+  class: security
+- section: Match User synthetic
+  key: PasswordAuthentication
+  values:
+  - 'yes'
+  - 'no'
+  class: security
+- section: Match Address 10.77.0.0/16
+  key: PasswordAuthentication
+  values:
+  - 'yes'
+  - 'no'
+  class: security
+- section: Match Group twinops
+  key: PasswordAuthentication
+  values:
+  - 'yes'
+  - 'no'
+  class: security
+- section: Match Address 192.168.0.0/16
+  key: PasswordAuthentication
+  values:
+  - 'yes'
+  - 'no'
+  class: security
+- section: Match User auditor
+  key: PasswordAuthentication
+  values:
+  - 'yes'
+  - 'no'
+  class: security
+- key: AuthenticationMethods
+  values:
+  - any
+  - publickey
+  - publickey,password
+  - password
+  class: security
+- section: Match User synthetic
+  key: AuthenticationMethods
+  values:
+  - any
+  - publickey
+  - publickey,password
+  - password
+  class: security
+- section: Match Group twinops
+  key: AuthenticationMethods
+  values:
+  - any
+  - publickey
+  - publickey,password
+  - password
+  class: security
+- section: Match Address 10.77.0.0/16
+  key: AuthenticationMethods
+  values:
+  - any
+  - publickey
+  - publickey,password
+  - password
+  class: security
+- key: AllowUsers
+  values:
+  - synthetic
+  - auditor
+  - synthetic@10.77.0.1
+  - synthetic@192.168.*
+  - auditor synthetic
+  - '*'
+  class: security
+- key: DenyUsers
+  values:
+  - synthetic
+  - auditor
+  - '*@192.168.*'
+  - synthetic@10.77.*
+  class: security
+- key: AllowGroups
+  values:
+  - twinops
+  - wheel
+  class: security
+- key: DenyGroups
+  values:
+  - twinops
+  - wheel
+  class: security
+- key: PermitRootLogin
+  values:
+  - 'no'
+  - prohibit-password
+  - 'yes'
+  class: security
+- key: PubkeyAuthentication
+  values:
+  - 'yes'
+  - 'no'
+  class: security
+- key: PermitEmptyPasswords
+  values:
+  - 'no'
+  class: security
+- key: MaxAuthTries
+  values:
+  - '3'
+  - '6'
+  class: security
+- key: X11Forwarding
+  values:
+  - 'yes'
+  - 'no'
+  class: operational
+- section: Match User synthetic
+  key: X11Forwarding
+  values:
+  - 'yes'
+  - 'no'
+  class: operational
+- section: Match Group twinops
+  key: X11Forwarding
+  values:
+  - 'yes'
+  - 'no'
+  class: operational
+- key: AllowTcpForwarding
+  values:
+  - 'yes'
+  - 'no'
+  class: operational
+- section: Match User synthetic
+  key: AllowTcpForwarding
+  values:
+  - 'yes'
+  - 'no'
+  class: operational
+- section: Match Address 192.168.0.0/16
+  key: AllowTcpForwarding
+  values:
+  - 'yes'
+  - 'no'
+  class: operational
+- key: ClientAliveInterval
+  values:
+  - '0'
+  - '300'
+  class: operational
+- key: ClientAliveCountMax
+  values:
+  - '3'
+  - '2'
+  class: operational
+- key: LoginGraceTime
+  values:
+  - '30'
+  - '120'
+  class: operational
+- key: LogLevel
+  values:
+  - INFO
+  - VERBOSE
+  class: operational
+- key: MaxSessions
+  values:
+  - '10'
+  - '4'
+  class: operational
+- key: TCPKeepAlive
+  values:
+  - 'yes'
+  - 'no'
+  class: operational
+- key: PrintMotd
+  values:
+  - 'no'
+  - 'yes'
+  class: operational
+- key: UseDNS
+  values:
+  - 'no'
+  class: operational
+- key: PermitTunnel
+  values:
+  - 'no'
+  class: operational
+- key: Banner
+  values:
+  - none
+  class: operational
+- section: Match User auditor
+  key: Banner
+  values:
+  - none
+  class: operational
+array_keys: [AllowUsers, DenyUsers, AllowGroups, DenyGroups]
+base_profiles:
+  platform: [{key: PasswordAuthentication, value: "no"}]
