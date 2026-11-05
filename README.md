@@ -29,6 +29,14 @@ non-loopback client with the stock clients (`redis-cli`, `psql`, `curl`,
 | `experiments/e2_cores.py` | fidelity cores under both base profiles, removal sensitivity |
 | `experiments/e3_drift.py` | drift traces, guard sets, selective synchronization |
 | `experiments/e5_repeat.py` | determinism check: 1,000 cached twins re-run on fresh processes |
+| `experiments/e6_versions.py` | 16 pinned builds (Redis 6.0–7.4, PostgreSQL 12–17, Nginx 1.20–1.27, OpenSSH 8.8–10.0) |
+| `experiments/e7_multiplicity.py` | exhaustive minimum cores (size ≤ 2) vs ddmin |
+| `experiments/e8_realworld.py` | public configurations: acceptance, cores, pivots, curves, guard transfer, static analyzer |
+| `experiments/e9_realdrift.py` | real git histories replayed against re-emulation policies |
+| `experiments/analyze2.py` | statistics and figures for E6–E9 |
+| `fidelity/services/versioned.py` | pinned-build twins (containers on the host network) |
+| `versions/Dockerfile.sshd` | OpenSSH images at pinned versions with synthetic users |
+| `realworld/collect.py`, `realworld/parse.py` | public-file collection (code search, raw reads, blob-less clones) and redacting parser |
 | `experiments/analyze.py` | statistics, figures, static-analyzer comparison (E4) |
 | `results/` | raw JSON for every run, `summary.json`, figures, verdict cache |
 | `paper/` | manuscript: `fidelity-cores.tex` (IEEEtran), `.pdf`, `.docx` (built by `build_docx.py`) |
@@ -64,5 +72,16 @@ To re-run only the analysis from the shipped results, first restore the verdict 
 | Selective sync with learned core∪pivot keys | 24% of directives exported, 99.3% agreement |
 | Key-guarded vs hash-triggered re-emulation (q = 0.3) | 19.9 vs 99.8 per 100 edits, 0.28% stale steps |
 | Careful static analyzer vs real servers | 17,018 / 17,032 verdicts agree; 14 semantic corner cases |
+| Public corpus | 1,092 distinct files (420 Redis, 339 pg_hba, 333 sshd); cores still ≤ 2 directives |
+| Guard transfer synthetic → public | 450/450 verdicts, exporting 23.8% (Redis) / 12.3% (sshd) of directives |
+| Real histories | 426 commits, 19 verdict flips; guard needs 137 re-emulations vs 426 per commit, none stale |
+| Build defaults | official Redis images default `protected-mode no`; Ubuntu 7.0.15 defaults `yes` (11/120 verdicts differ) |
+| Platform base profile on public sshd files | 22% wrong even at full synchronization (absence not reported) |
+
+### Real-world data handling
+Public files are fetched into a scratch directory outside the repository and never committed. `results/rw-corpus.json`
+holds only parsed directives after redaction (every secret replaced by the synthetic lab password) and identifies
+configurations by content hash; no repository names are stored. The pinned-build experiment needs Docker; the OpenSSH
+images are built from `versions/Dockerfile.sshd`.
 
 The credentials are synthetic lab values; no real system, account or secret is involved.

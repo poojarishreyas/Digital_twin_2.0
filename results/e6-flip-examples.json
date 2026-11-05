@@ -1,0 +1,564 @@
+{
+ "redis.unauth_admin|redis:6.0": [
+  {
+   "cid": "re006",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n268435456"
+  },
+  {
+   "cid": "re009",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re010",
+   "native": false,
+   "version": "error",
+   "wire": "exited:\n*** FATAL CONFIG FILE ERROR (Redis 6.0.20) ***\nReading the configuration file, at line 15\n>>> 'user default on nopass ~* &* +@all -@dangerous'\nError in "
+  },
+  {
+   "cid": "re014",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n536870912"
+  },
+  {
+   "cid": "re017",
+   "native": false,
+   "version": "error",
+   "wire": "exited:\n*** FATAL CONFIG FILE ERROR (Redis 6.0.20) ***\nReading the configuration file, at line 11\n>>> 'user default on >lab-only-password ~* &* +@all'\nError in "
+  },
+  {
+   "cid": "re028",
+   "native": false,
+   "version": "error",
+   "wire": "exited:\n*** FATAL CONFIG FILE ERROR (Redis 6.0.20) ***\nReading the configuration file, at line 15\n>>> 'user default on >lab-only-password ~* &* +@all'\nError in "
+  },
+  {
+   "cid": "re029",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re033",
+   "native": true,
+   "version": "error",
+   "wire": "exited:\n*** FATAL CONFIG FILE ERROR (Redis 6.0.20) ***\nReading the configuration file, at line 17\n>>> 'user default on nopass ~* &* +@all'\nError in user declara"
+  },
+  {
+   "cid": "re034",
+   "native": true,
+   "version": "error",
+   "wire": "exited:\n*** FATAL CONFIG FILE ERROR (Redis 6.0.20) ***\nReading the configuration file, at line 15\n>>> 'user default on nopass ~* &* +@all'\nError in user declara"
+  },
+  {
+   "cid": "re040",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n67108864"
+  },
+  {
+   "cid": "re043",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n268435456"
+  },
+  {
+   "cid": "re047",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re051",
+   "native": true,
+   "version": "error",
+   "wire": "exited:\n*** FATAL CONFIG FILE ERROR (Redis 6.0.20) ***\nReading the configuration file, at line 14\n>>> 'user default on nopass ~* &* +@all'\nError in user declara"
+  },
+  {
+   "cid": "re054",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re056",
+   "native": false,
+   "version": "error",
+   "wire": "exited:\n*** FATAL CONFIG FILE ERROR (Redis 6.0.20) ***\nReading the configuration file, at line 14\n>>> 'user default on >lab-only-password ~* &* +@all'\nError in "
+  },
+  {
+   "cid": "re033-d0",
+   "native": false,
+   "version": "error",
+   "wire": "exited:\n*** FATAL CONFIG FILE ERROR (Redis 6.0.20) ***\nReading the configuration file, at line 16\n>>> 'user default on nopass ~* &* +@all'\nError in user declara"
+  },
+  {
+   "cid": "re035-d5",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re033-d6",
+   "native": false,
+   "version": "error",
+   "wire": "exited:\n*** FATAL CONFIG FILE ERROR (Redis 6.0.20) ***\nReading the configuration file, at line 16\n>>> 'user default on nopass ~* &* +@all'\nError in user declara"
+  },
+  {
+   "cid": "re001-d9",
+   "native": false,
+   "version": "error",
+   "wire": "exited:starting oO0OoO0OoO0Oo\n1:C 05 Nov 2026 03:22:14.581 # Redis version=6.0.20, bits=64, commit=00000000, modified=0, pid=1, just started\n1:C 05 Nov 2026 03:"
+  },
+  {
+   "cid": "re037-d11",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re003-d21",
+   "native": false,
+   "version": "error",
+   "wire": "exited:\n*** FATAL CONFIG FILE ERROR (Redis 6.0.20) ***\nReading the configuration file, at line 13\n>>> 'user default on nopass ~* &* +@read +@write'\nError in use"
+  },
+  {
+   "cid": "re051-d24",
+   "native": true,
+   "version": "error",
+   "wire": "exited:\n*** FATAL CONFIG FILE ERROR (Redis 6.0.20) ***\nReading the configuration file, at line 12\n>>> 'user default on nopass ~* &* +@all'\nError in user declara"
+  },
+  {
+   "cid": "re045-d25",
+   "native": false,
+   "version": "error",
+   "wire": "exited:\n*** FATAL CONFIG FILE ERROR (Redis 6.0.20) ***\nReading the configuration file, at line 14\n>>> 'user default on nopass ~* &* +@all -@admin'\nError in user"
+  },
+  {
+   "cid": "re009-d27",
+   "native": false,
+   "version": "error",
+   "wire": "exited:\n*** FATAL CONFIG FILE ERROR (Redis 6.0.20) ***\nReading the configuration file, at line 19\n>>> 'user default on nopass ~* &* +@read +@write'\nError in use"
+  },
+  {
+   "cid": "re009-d28",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re001-d29",
+   "native": false,
+   "version": "error",
+   "wire": "exited:\n*** FATAL CONFIG FILE ERROR (Redis 6.0.20) ***\nReading the configuration file, at line 10\n>>> 'user default on >lab-only-password ~* &* +@all'\nError in "
+  },
+  {
+   "cid": "re033-d31",
+   "native": false,
+   "version": "error",
+   "wire": "exited:\n*** FATAL CONFIG FILE ERROR (Redis 6.0.20) ***\nReading the configuration file, at line 14\n>>> 'user default on nopass ~* &* +@all'\nError in user declara"
+  },
+  {
+   "cid": "re013-d32",
+   "native": false,
+   "version": "error",
+   "wire": "exited:\n*** FATAL CONFIG FILE ERROR (Redis 6.0.20) ***\nReading the configuration file, at line 16\n>>> 'user default on >lab-only-password ~* &* +@all'\nError in "
+  },
+  {
+   "cid": "re013-d35",
+   "native": false,
+   "version": "error",
+   "wire": "exited:\n*** FATAL CONFIG FILE ERROR (Redis 6.0.20) ***\nReading the configuration file, at line 16\n>>> 'user default on nopass ~* &* +@all -@admin'\nError in user"
+  },
+  {
+   "cid": "re033-d36",
+   "native": false,
+   "version": "error",
+   "wire": "exited:\n*** FATAL CONFIG FILE ERROR (Redis 6.0.20) ***\nReading the configuration file, at line 17\n>>> 'user default on nopass ~* &* +@all'\nError in user declara"
+  },
+  {
+   "cid": "re003-d38",
+   "native": false,
+   "version": "error",
+   "wire": "exited:\n*** FATAL CONFIG FILE ERROR (Redis 6.0.20) ***\nReading the configuration file, at line 11\n>>> 'user default on nopass ~* &* +@read +@write'\nError in use"
+  },
+  {
+   "cid": "re051-d39",
+   "native": false,
+   "version": "error",
+   "wire": "exited:\n*** FATAL CONFIG FILE ERROR (Redis 6.0.20) ***\nReading the configuration file, at line 14\n>>> 'user default on nopass ~* &* +@all -@dangerous'\nError in "
+  },
+  {
+   "cid": "re049-d40",
+   "native": false,
+   "version": "error",
+   "wire": "exited:\n*** FATAL CONFIG FILE ERROR (Redis 6.0.20) ***\nReading the configuration file, at line 10\n>>> 'user default on >lab-only-password ~* &* +@all'\nError in "
+  },
+  {
+   "cid": "re049-d45",
+   "native": false,
+   "version": "error",
+   "wire": "exited:\n*** FATAL CONFIG FILE ERROR (Redis 6.0.20) ***\nReading the configuration file, at line 9\n>>> 'user default on >lab-only-password ~* &* +@all'\nError in u"
+  },
+  {
+   "cid": "re003-d46",
+   "native": false,
+   "version": "error",
+   "wire": "exited:\n*** FATAL CONFIG FILE ERROR (Redis 6.0.20) ***\nReading the configuration file, at line 8\n>>> 'user default on >lab-only-password ~* &* +@all'\nError in u"
+  },
+  {
+   "cid": "re035-d49",
+   "native": false,
+   "version": "error",
+   "wire": "exited:starting oO0OoO0OoO0Oo\n1:C 05 Nov 2026 03:22:38.061 # Redis version=6.0.20, bits=64, commit=00000000, modified=0, pid=1, just started\n1:C 05 Nov 2026 03:"
+  },
+  {
+   "cid": "re001-d52",
+   "native": false,
+   "version": "error",
+   "wire": "exited:\n*** FATAL CONFIG FILE ERROR (Redis 6.0.20) ***\nReading the configuration file, at line 10\n>>> 'user default on nopass ~* &* +@all -@admin'\nError in user"
+  },
+  {
+   "cid": "re047-d55",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re047-d56",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re043-d59",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n268435456"
+  }
+ ],
+ "redis.unauth_admin|redis:6.2": [
+  {
+   "cid": "re006",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n268435456"
+  },
+  {
+   "cid": "re009",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re014",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n536870912"
+  },
+  {
+   "cid": "re029",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re040",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n67108864"
+  },
+  {
+   "cid": "re043",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n268435456"
+  },
+  {
+   "cid": "re047",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re054",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re033-d0",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re035-d5",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re033-d6",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re001-d9",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re037-d11",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re009-d28",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re033-d31",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re035-d49",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re047-d55",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re047-d56",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re043-d59",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n268435456"
+  }
+ ],
+ "redis.unauth_admin|redis:7.0": [
+  {
+   "cid": "re014",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n536870912"
+  },
+  {
+   "cid": "re043",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n268435456"
+  },
+  {
+   "cid": "re047",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re054",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re035-d5",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re001-d9",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re033-d31",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re035-d49",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re047-d55",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re047-d56",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re043-d59",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n268435456"
+  }
+ ],
+ "redis.unauth_admin|redis:7.2": [
+  {
+   "cid": "re014",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n536870912"
+  },
+  {
+   "cid": "re043",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n268435456"
+  },
+  {
+   "cid": "re047",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re054",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re035-d5",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re001-d9",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re033-d31",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re035-d49",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re047-d55",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re047-d56",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re043-d59",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n268435456"
+  }
+ ],
+ "redis.unauth_admin|redis:7.4": [
+  {
+   "cid": "re014",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n536870912"
+  },
+  {
+   "cid": "re043",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n268435456"
+  },
+  {
+   "cid": "re047",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re054",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re035-d5",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re001-d9",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re033-d31",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re035-d49",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re047-d55",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re047-d56",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n0"
+  },
+  {
+   "cid": "re043-d59",
+   "native": false,
+   "version": true,
+   "wire": "maxmemory\n268435456"
+  }
+ ]
+}

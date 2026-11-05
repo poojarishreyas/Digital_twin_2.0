@@ -1,0 +1,8 @@
+# OpenSSH server images at pinned versions (linuxserver/openssh-server tags),
+# with the synthetic lab users added locally.  No packages are installed.
+ARG TAG=version-9.7_p1-r4
+FROM linuxserver/openssh-server:${TAG}
+RUN for u in synthetic auditor; do adduser -D -s /bin/sh $u 2>/dev/null || true; echo "$u:lab-only-password" | chpasswd; done \
+ && (addgroup twinops 2>/dev/null || true) && addgroup synthetic twinops \
+ && mkdir -p /run/sshd /var/empty
+ENTRYPOINT ["/usr/sbin/sshd.pam"]

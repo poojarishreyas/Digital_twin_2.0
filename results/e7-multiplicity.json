@@ -1,0 +1,6449 @@
+[
+ {
+  "cid": "re000",
+  "service": "redis",
+  "n": 12,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     [
+      10
+     ]
+    ],
+    "ddmin": [
+     10
+    ]
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     [
+      10
+     ]
+    ],
+    "ddmin": [
+     10
+    ]
+   }
+  }
+ },
+ {
+  "cid": "re001",
+  "service": "redis",
+  "n": 5,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     [
+      3
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     [
+      3
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   }
+  }
+ },
+ {
+  "cid": "re002",
+  "service": "redis",
+  "n": 11,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re003",
+  "service": "redis",
+  "n": 7,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re004",
+  "service": "redis",
+  "n": 8,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     [
+      2
+     ]
+    ],
+    "ddmin": [
+     2
+    ]
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     [
+      2
+     ]
+    ],
+    "ddmin": [
+     2
+    ]
+   }
+  }
+ },
+ {
+  "cid": "re005",
+  "service": "redis",
+  "n": 12,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re006",
+  "service": "redis",
+  "n": 7,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re007",
+  "service": "redis",
+  "n": 10,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     [
+      3
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     [
+      3
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   }
+  }
+ },
+ {
+  "cid": "re008",
+  "service": "redis",
+  "n": 11,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re009",
+  "service": "redis",
+  "n": 13,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re010",
+  "service": "redis",
+  "n": 10,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re011",
+  "service": "redis",
+  "n": 8,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re012",
+  "service": "redis",
+  "n": 9,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     [
+      3
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     [
+      3
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   }
+  }
+ },
+ {
+  "cid": "re013",
+  "service": "redis",
+  "n": 11,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     [
+      3
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     [
+      3
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   }
+  }
+ },
+ {
+  "cid": "re014",
+  "service": "redis",
+  "n": 6,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re015",
+  "service": "redis",
+  "n": 6,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re016",
+  "service": "redis",
+  "n": 7,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   }
+  }
+ },
+ {
+  "cid": "re017",
+  "service": "redis",
+  "n": 6,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re018",
+  "service": "redis",
+  "n": 8,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re019",
+  "service": "redis",
+  "n": 11,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re020",
+  "service": "redis",
+  "n": 6,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re021",
+  "service": "redis",
+  "n": 13,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   }
+  }
+ },
+ {
+  "cid": "re022",
+  "service": "redis",
+  "n": 7,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re023",
+  "service": "redis",
+  "n": 11,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re024",
+  "service": "redis",
+  "n": 12,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re025",
+  "service": "redis",
+  "n": 12,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re026",
+  "service": "redis",
+  "n": 9,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     [
+      7
+     ]
+    ],
+    "ddmin": [
+     7
+    ]
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     [
+      7
+     ]
+    ],
+    "ddmin": [
+     7
+    ]
+   }
+  }
+ },
+ {
+  "cid": "re027",
+  "service": "redis",
+  "n": 10,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   }
+  }
+ },
+ {
+  "cid": "re028",
+  "service": "redis",
+  "n": 8,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re029",
+  "service": "redis",
+  "n": 8,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re030",
+  "service": "redis",
+  "n": 10,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re031",
+  "service": "redis",
+  "n": 8,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re032",
+  "service": "redis",
+  "n": 7,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     [
+      2
+     ]
+    ],
+    "ddmin": [
+     2
+    ]
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     [
+      2
+     ]
+    ],
+    "ddmin": [
+     2
+    ]
+   }
+  }
+ },
+ {
+  "cid": "re033",
+  "service": "redis",
+  "n": 11,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     [
+      2
+     ]
+    ],
+    "ddmin": [
+     2
+    ]
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     [
+      2
+     ]
+    ],
+    "ddmin": [
+     2
+    ]
+   }
+  }
+ },
+ {
+  "cid": "re034",
+  "service": "redis",
+  "n": 8,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     [
+      3
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     [
+      3
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   }
+  }
+ },
+ {
+  "cid": "re035",
+  "service": "redis",
+  "n": 7,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re036",
+  "service": "redis",
+  "n": 5,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re037",
+  "service": "redis",
+  "n": 6,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     [
+      5
+     ]
+    ],
+    "ddmin": [
+     5
+    ]
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     [
+      5
+     ]
+    ],
+    "ddmin": [
+     5
+    ]
+   }
+  }
+ },
+ {
+  "cid": "re038",
+  "service": "redis",
+  "n": 11,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re039",
+  "service": "redis",
+  "n": 12,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re040",
+  "service": "redis",
+  "n": 11,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re041",
+  "service": "redis",
+  "n": 12,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re042",
+  "service": "redis",
+  "n": 8,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re043",
+  "service": "redis",
+  "n": 6,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re044",
+  "service": "redis",
+  "n": 11,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re045",
+  "service": "redis",
+  "n": 10,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re046",
+  "service": "redis",
+  "n": 11,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re047",
+  "service": "redis",
+  "n": 10,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re048",
+  "service": "redis",
+  "n": 7,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   }
+  }
+ },
+ {
+  "cid": "re049",
+  "service": "redis",
+  "n": 8,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re050",
+  "service": "redis",
+  "n": 11,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re051",
+  "service": "redis",
+  "n": 7,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   }
+  }
+ },
+ {
+  "cid": "re052",
+  "service": "redis",
+  "n": 6,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     [
+      4
+     ]
+    ],
+    "ddmin": [
+     4
+    ]
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     [
+      4
+     ]
+    ],
+    "ddmin": [
+     4
+    ]
+   }
+  }
+ },
+ {
+  "cid": "re053",
+  "service": "redis",
+  "n": 11,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   }
+  }
+ },
+ {
+  "cid": "re054",
+  "service": "redis",
+  "n": 8,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re055",
+  "service": "redis",
+  "n": 9,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   }
+  }
+ },
+ {
+  "cid": "re056",
+  "service": "redis",
+  "n": 11,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re057",
+  "service": "redis",
+  "n": 7,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     [
+      2
+     ]
+    ],
+    "ddmin": [
+     2
+    ]
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     [
+      2
+     ]
+    ],
+    "ddmin": [
+     2
+    ]
+   }
+  }
+ },
+ {
+  "cid": "re058",
+  "service": "redis",
+  "n": 7,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "re059",
+  "service": "redis",
+  "n": 11,
+  "res": {
+   "redis.unauth_admin|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "redis.unauth_admin|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po000",
+  "service": "postgresql",
+  "n": 13,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po001",
+  "service": "postgresql",
+  "n": 11,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po002",
+  "service": "postgresql",
+  "n": 11,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     [
+      0,
+      3
+     ]
+    ],
+    "ddmin": [
+     0,
+     3
+    ]
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     [
+      3
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   }
+  }
+ },
+ {
+  "cid": "po003",
+  "service": "postgresql",
+  "n": 8,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po004",
+  "service": "postgresql",
+  "n": 13,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po005",
+  "service": "postgresql",
+  "n": 12,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po006",
+  "service": "postgresql",
+  "n": 13,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po007",
+  "service": "postgresql",
+  "n": 12,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po008",
+  "service": "postgresql",
+  "n": 14,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po009",
+  "service": "postgresql",
+  "n": 12,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     [
+      1,
+      2
+     ]
+    ],
+    "ddmin": [
+     1,
+     2
+    ]
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     [
+      2
+     ]
+    ],
+    "ddmin": [
+     2
+    ]
+   }
+  }
+ },
+ {
+  "cid": "po010",
+  "service": "postgresql",
+  "n": 12,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po011",
+  "service": "postgresql",
+  "n": 8,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po012",
+  "service": "postgresql",
+  "n": 11,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po013",
+  "service": "postgresql",
+  "n": 6,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po014",
+  "service": "postgresql",
+  "n": 10,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     [
+      0,
+      1
+     ],
+     [
+      0,
+      2
+     ]
+    ],
+    "ddmin": [
+     0,
+     1
+    ]
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     [
+      1
+     ],
+     [
+      2
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   }
+  }
+ },
+ {
+  "cid": "po015",
+  "service": "postgresql",
+  "n": 10,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po016",
+  "service": "postgresql",
+  "n": 15,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po017",
+  "service": "postgresql",
+  "n": 12,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     [
+      1,
+      4
+     ]
+    ],
+    "ddmin": [
+     1,
+     4
+    ]
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     [
+      4
+     ]
+    ],
+    "ddmin": [
+     4
+    ]
+   }
+  }
+ },
+ {
+  "cid": "po018",
+  "service": "postgresql",
+  "n": 7,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po019",
+  "service": "postgresql",
+  "n": 11,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po020",
+  "service": "postgresql",
+  "n": 13,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     [
+      1,
+      2
+     ]
+    ],
+    "ddmin": [
+     1,
+     2
+    ]
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     [
+      2
+     ]
+    ],
+    "ddmin": [
+     2
+    ]
+   }
+  }
+ },
+ {
+  "cid": "po021",
+  "service": "postgresql",
+  "n": 13,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     [
+      3,
+      7
+     ]
+    ],
+    "ddmin": [
+     3,
+     7
+    ]
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     [
+      7
+     ]
+    ],
+    "ddmin": [
+     7
+    ]
+   }
+  }
+ },
+ {
+  "cid": "po022",
+  "service": "postgresql",
+  "n": 9,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po023",
+  "service": "postgresql",
+  "n": 9,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     [
+      0,
+      4
+     ]
+    ],
+    "ddmin": [
+     0,
+     4
+    ]
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     [
+      4
+     ]
+    ],
+    "ddmin": [
+     4
+    ]
+   }
+  }
+ },
+ {
+  "cid": "po024",
+  "service": "postgresql",
+  "n": 12,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po025",
+  "service": "postgresql",
+  "n": 8,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     [
+      0,
+      6
+     ]
+    ],
+    "ddmin": [
+     0,
+     6
+    ]
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   }
+  }
+ },
+ {
+  "cid": "po026",
+  "service": "postgresql",
+  "n": 13,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po027",
+  "service": "postgresql",
+  "n": 11,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po028",
+  "service": "postgresql",
+  "n": 13,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po029",
+  "service": "postgresql",
+  "n": 8,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po030",
+  "service": "postgresql",
+  "n": 10,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po031",
+  "service": "postgresql",
+  "n": 9,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po032",
+  "service": "postgresql",
+  "n": 12,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     [
+      1,
+      2
+     ]
+    ],
+    "ddmin": [
+     1,
+     2
+    ]
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     [
+      2
+     ]
+    ],
+    "ddmin": [
+     2
+    ]
+   }
+  }
+ },
+ {
+  "cid": "po033",
+  "service": "postgresql",
+  "n": 7,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     [
+      0,
+      5
+     ]
+    ],
+    "ddmin": [
+     0,
+     5
+    ]
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     [
+      5
+     ]
+    ],
+    "ddmin": [
+     5
+    ]
+   }
+  }
+ },
+ {
+  "cid": "po034",
+  "service": "postgresql",
+  "n": 8,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     [
+      2,
+      6
+     ]
+    ],
+    "ddmin": [
+     2,
+     6
+    ]
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   }
+  }
+ },
+ {
+  "cid": "po035",
+  "service": "postgresql",
+  "n": 9,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po036",
+  "service": "postgresql",
+  "n": 12,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     [
+      0,
+      4
+     ]
+    ],
+    "ddmin": [
+     0,
+     4
+    ]
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     [
+      4
+     ]
+    ],
+    "ddmin": [
+     4
+    ]
+   }
+  }
+ },
+ {
+  "cid": "po037",
+  "service": "postgresql",
+  "n": 15,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po038",
+  "service": "postgresql",
+  "n": 11,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po039",
+  "service": "postgresql",
+  "n": 11,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po040",
+  "service": "postgresql",
+  "n": 12,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po041",
+  "service": "postgresql",
+  "n": 8,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po042",
+  "service": "postgresql",
+  "n": 12,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po043",
+  "service": "postgresql",
+  "n": 11,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po044",
+  "service": "postgresql",
+  "n": 10,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po045",
+  "service": "postgresql",
+  "n": 8,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po046",
+  "service": "postgresql",
+  "n": 9,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po047",
+  "service": "postgresql",
+  "n": 7,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po048",
+  "service": "postgresql",
+  "n": 11,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     [
+      2,
+      8
+     ],
+     [
+      3,
+      8
+     ]
+    ],
+    "ddmin": [
+     3,
+     8
+    ]
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     [
+      8
+     ]
+    ],
+    "ddmin": [
+     8
+    ]
+   }
+  }
+ },
+ {
+  "cid": "po049",
+  "service": "postgresql",
+  "n": 11,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po050",
+  "service": "postgresql",
+  "n": 10,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po051",
+  "service": "postgresql",
+  "n": 13,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po052",
+  "service": "postgresql",
+  "n": 11,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po053",
+  "service": "postgresql",
+  "n": 14,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po054",
+  "service": "postgresql",
+  "n": 11,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po055",
+  "service": "postgresql",
+  "n": 12,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po056",
+  "service": "postgresql",
+  "n": 11,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     [
+      0,
+      5
+     ]
+    ],
+    "ddmin": [
+     0,
+     5
+    ]
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     [
+      5
+     ]
+    ],
+    "ddmin": [
+     5
+    ]
+   }
+  }
+ },
+ {
+  "cid": "po057",
+  "service": "postgresql",
+  "n": 10,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po058",
+  "service": "postgresql",
+  "n": 11,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "po059",
+  "service": "postgresql",
+  "n": 12,
+  "res": {
+   "pg.unauth_sql|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "pg.unauth_sql|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "ng000",
+  "service": "nginx",
+  "n": 7,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   }
+  }
+ },
+ {
+  "cid": "ng001",
+  "service": "nginx",
+  "n": 8,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "ng002",
+  "service": "nginx",
+  "n": 13,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "ng003",
+  "service": "nginx",
+  "n": 14,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     [
+      0
+     ],
+     [
+      2
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     [
+      0
+     ],
+     [
+      2
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "ng004",
+  "service": "nginx",
+  "n": 13,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     [
+      10
+     ]
+    ],
+    "ddmin": [
+     10
+    ]
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     [
+      10
+     ]
+    ],
+    "ddmin": [
+     10
+    ]
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     [
+      12
+     ]
+    ],
+    "ddmin": [
+     12
+    ]
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     [
+      12
+     ]
+    ],
+    "ddmin": [
+     12
+    ]
+   }
+  }
+ },
+ {
+  "cid": "ng005",
+  "service": "nginx",
+  "n": 14,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     [
+      2
+     ],
+     [
+      10
+     ]
+    ],
+    "ddmin": [
+     2
+    ]
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     [
+      2
+     ],
+     [
+      10
+     ]
+    ],
+    "ddmin": [
+     2
+    ]
+   }
+  }
+ },
+ {
+  "cid": "ng006",
+  "service": "nginx",
+  "n": 6,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "ng007",
+  "service": "nginx",
+  "n": 10,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "ng008",
+  "service": "nginx",
+  "n": 10,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     [
+      3
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     [
+      3
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "ng009",
+  "service": "nginx",
+  "n": 10,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "ng010",
+  "service": "nginx",
+  "n": 10,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     [
+      7
+     ]
+    ],
+    "ddmin": [
+     7
+    ]
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     [
+      7
+     ]
+    ],
+    "ddmin": [
+     7
+    ]
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     [
+      9
+     ]
+    ],
+    "ddmin": [
+     9
+    ]
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     [
+      9
+     ]
+    ],
+    "ddmin": [
+     9
+    ]
+   }
+  }
+ },
+ {
+  "cid": "ng011",
+  "service": "nginx",
+  "n": 7,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "ng012",
+  "service": "nginx",
+  "n": 6,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     [
+      5
+     ]
+    ],
+    "ddmin": [
+     5
+    ]
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     [
+      5
+     ]
+    ],
+    "ddmin": [
+     5
+    ]
+   }
+  }
+ },
+ {
+  "cid": "ng013",
+  "service": "nginx",
+  "n": 9,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   }
+  }
+ },
+ {
+  "cid": "ng014",
+  "service": "nginx",
+  "n": 11,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     [
+      4
+     ]
+    ],
+    "ddmin": [
+     4
+    ]
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     [
+      4
+     ]
+    ],
+    "ddmin": [
+     4
+    ]
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   }
+  }
+ },
+ {
+  "cid": "ng015",
+  "service": "nginx",
+  "n": 14,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "ng016",
+  "service": "nginx",
+  "n": 12,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "ng017",
+  "service": "nginx",
+  "n": 7,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "ng018",
+  "service": "nginx",
+  "n": 11,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     [
+      7
+     ]
+    ],
+    "ddmin": [
+     7
+    ]
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     [
+      7
+     ]
+    ],
+    "ddmin": [
+     7
+    ]
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     [
+      9
+     ]
+    ],
+    "ddmin": [
+     9
+    ]
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     [
+      9
+     ]
+    ],
+    "ddmin": [
+     9
+    ]
+   }
+  }
+ },
+ {
+  "cid": "ng019",
+  "service": "nginx",
+  "n": 7,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     [
+      4
+     ]
+    ],
+    "ddmin": [
+     4
+    ]
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     [
+      4
+     ]
+    ],
+    "ddmin": [
+     4
+    ]
+   }
+  }
+ },
+ {
+  "cid": "ng020",
+  "service": "nginx",
+  "n": 11,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "ng021",
+  "service": "nginx",
+  "n": 9,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "ng022",
+  "service": "nginx",
+  "n": 12,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     [
+      3
+     ],
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     [
+      3
+     ],
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "ng023",
+  "service": "nginx",
+  "n": 11,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "ng024",
+  "service": "nginx",
+  "n": 7,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   }
+  }
+ },
+ {
+  "cid": "ng025",
+  "service": "nginx",
+  "n": 13,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     [
+      0
+     ],
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     [
+      0
+     ],
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     [
+      6
+     ],
+     [
+      12
+     ]
+    ],
+    "ddmin": [
+     12
+    ]
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     [
+      6
+     ],
+     [
+      12
+     ]
+    ],
+    "ddmin": [
+     12
+    ]
+   }
+  }
+ },
+ {
+  "cid": "ng026",
+  "service": "nginx",
+  "n": 7,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "ng027",
+  "service": "nginx",
+  "n": 9,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "ng028",
+  "service": "nginx",
+  "n": 13,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     [
+      12
+     ]
+    ],
+    "ddmin": [
+     12
+    ]
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     [
+      12
+     ]
+    ],
+    "ddmin": [
+     12
+    ]
+   }
+  }
+ },
+ {
+  "cid": "ng029",
+  "service": "nginx",
+  "n": 12,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     [
+      0
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     [
+      0
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     [
+      8
+     ],
+     [
+      11
+     ]
+    ],
+    "ddmin": [
+     8
+    ]
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     [
+      8
+     ],
+     [
+      11
+     ]
+    ],
+    "ddmin": [
+     8
+    ]
+   }
+  }
+ },
+ {
+  "cid": "ng030",
+  "service": "nginx",
+  "n": 12,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     [
+      5
+     ]
+    ],
+    "ddmin": [
+     5
+    ]
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     [
+      5
+     ]
+    ],
+    "ddmin": [
+     5
+    ]
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "ng031",
+  "service": "nginx",
+  "n": 11,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     [
+      1
+     ],
+     [
+      5
+     ]
+    ],
+    "ddmin": [
+     5
+    ]
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     [
+      1
+     ],
+     [
+      5
+     ]
+    ],
+    "ddmin": [
+     5
+    ]
+   }
+  }
+ },
+ {
+  "cid": "ng032",
+  "service": "nginx",
+  "n": 12,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "ng033",
+  "service": "nginx",
+  "n": 10,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     [
+      3
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     [
+      3
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   }
+  }
+ },
+ {
+  "cid": "ng034",
+  "service": "nginx",
+  "n": 9,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     [
+      0
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     [
+      0
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "ng035",
+  "service": "nginx",
+  "n": 7,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "ng036",
+  "service": "nginx",
+  "n": 14,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     [
+      2
+     ]
+    ],
+    "ddmin": [
+     2
+    ]
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     [
+      2
+     ]
+    ],
+    "ddmin": [
+     2
+    ]
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     [
+      6
+     ],
+     [
+      12
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     [
+      6
+     ],
+     [
+      12
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   }
+  }
+ },
+ {
+  "cid": "ng037",
+  "service": "nginx",
+  "n": 11,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "ng038",
+  "service": "nginx",
+  "n": 14,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     [
+      0
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     [
+      0
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "ng039",
+  "service": "nginx",
+  "n": 11,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "ng040",
+  "service": "nginx",
+  "n": 9,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   }
+  }
+ },
+ {
+  "cid": "ng041",
+  "service": "nginx",
+  "n": 10,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     [
+      7
+     ]
+    ],
+    "ddmin": [
+     7
+    ]
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     [
+      7
+     ]
+    ],
+    "ddmin": [
+     7
+    ]
+   }
+  }
+ },
+ {
+  "cid": "ng042",
+  "service": "nginx",
+  "n": 12,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     [
+      3
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     [
+      3
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     [
+      7
+     ]
+    ],
+    "ddmin": [
+     7
+    ]
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     [
+      7
+     ]
+    ],
+    "ddmin": [
+     7
+    ]
+   }
+  }
+ },
+ {
+  "cid": "ng043",
+  "service": "nginx",
+  "n": 9,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     [
+      8
+     ]
+    ],
+    "ddmin": [
+     8
+    ]
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     [
+      8
+     ]
+    ],
+    "ddmin": [
+     8
+    ]
+   }
+  }
+ },
+ {
+  "cid": "ng044",
+  "service": "nginx",
+  "n": 12,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "ng045",
+  "service": "nginx",
+  "n": 12,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "ng046",
+  "service": "nginx",
+  "n": 8,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   }
+  }
+ },
+ {
+  "cid": "ng047",
+  "service": "nginx",
+  "n": 10,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     [
+      5
+     ]
+    ],
+    "ddmin": [
+     5
+    ]
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     [
+      5
+     ]
+    ],
+    "ddmin": [
+     5
+    ]
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "ng048",
+  "service": "nginx",
+  "n": 13,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     [
+      4
+     ]
+    ],
+    "ddmin": [
+     4
+    ]
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     [
+      4
+     ]
+    ],
+    "ddmin": [
+     4
+    ]
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     [
+      9
+     ],
+     [
+      11
+     ]
+    ],
+    "ddmin": [
+     9
+    ]
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     [
+      9
+     ],
+     [
+      11
+     ]
+    ],
+    "ddmin": [
+     9
+    ]
+   }
+  }
+ },
+ {
+  "cid": "ng049",
+  "service": "nginx",
+  "n": 15,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     [
+      8
+     ],
+     [
+      10
+     ]
+    ],
+    "ddmin": [
+     8
+    ]
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     [
+      8
+     ],
+     [
+      10
+     ]
+    ],
+    "ddmin": [
+     8
+    ]
+   }
+  }
+ },
+ {
+  "cid": "ng050",
+  "service": "nginx",
+  "n": 8,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "ng051",
+  "service": "nginx",
+  "n": 11,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     [
+      0
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     [
+      0
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     [
+      7
+     ],
+     [
+      10
+     ]
+    ],
+    "ddmin": [
+     7
+    ]
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     [
+      7
+     ],
+     [
+      10
+     ]
+    ],
+    "ddmin": [
+     7
+    ]
+   }
+  }
+ },
+ {
+  "cid": "ng052",
+  "service": "nginx",
+  "n": 12,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     [
+      3
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     [
+      3
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     [
+      9
+     ]
+    ],
+    "ddmin": [
+     9
+    ]
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     [
+      9
+     ]
+    ],
+    "ddmin": [
+     9
+    ]
+   }
+  }
+ },
+ {
+  "cid": "ng053",
+  "service": "nginx",
+  "n": 11,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     [
+      4
+     ]
+    ],
+    "ddmin": [
+     4
+    ]
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     [
+      4
+     ]
+    ],
+    "ddmin": [
+     4
+    ]
+   }
+  }
+ },
+ {
+  "cid": "ng054",
+  "service": "nginx",
+  "n": 11,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     [
+      9
+     ],
+     [
+      10
+     ]
+    ],
+    "ddmin": [
+     9
+    ]
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     [
+      9
+     ],
+     [
+      10
+     ]
+    ],
+    "ddmin": [
+     9
+    ]
+   }
+  }
+ },
+ {
+  "cid": "ng055",
+  "service": "nginx",
+  "n": 9,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "ng056",
+  "service": "nginx",
+  "n": 11,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     [
+      8
+     ]
+    ],
+    "ddmin": [
+     8
+    ]
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     [
+      8
+     ]
+    ],
+    "ddmin": [
+     8
+    ]
+   }
+  }
+ },
+ {
+  "cid": "ng057",
+  "service": "nginx",
+  "n": 11,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     [
+      0
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     [
+      0
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "ng058",
+  "service": "nginx",
+  "n": 6,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     [
+      3
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     [
+      3
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   }
+  }
+ },
+ {
+  "cid": "ng059",
+  "service": "nginx",
+  "n": 12,
+  "res": {
+   "nginx.version_leak|vendor": {
+    "minimum": [
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   },
+   "nginx.version_leak|platform": {
+    "minimum": [
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   },
+   "nginx.admin_open|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "nginx.admin_open|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op000",
+  "service": "openssh",
+  "n": 14,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      6
+     ],
+     [
+      9
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op001",
+  "service": "openssh",
+  "n": 12,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      5
+     ]
+    ],
+    "ddmin": [
+     5
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op002",
+  "service": "openssh",
+  "n": 14,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      3
+     ],
+     [
+      4
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op003",
+  "service": "openssh",
+  "n": 12,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     [
+      0
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   }
+  }
+ },
+ {
+  "cid": "op004",
+  "service": "openssh",
+  "n": 9,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      0
+     ],
+     [
+      3
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op005",
+  "service": "openssh",
+  "n": 11,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      3
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": null
+   }
+  }
+ },
+ {
+  "cid": "op006",
+  "service": "openssh",
+  "n": 8,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   }
+  }
+ },
+ {
+  "cid": "op007",
+  "service": "openssh",
+  "n": 12,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      0
+     ],
+     [
+      8
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op008",
+  "service": "openssh",
+  "n": 16,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      2
+     ],
+     [
+      4
+     ],
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     4
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op009",
+  "service": "openssh",
+  "n": 10,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      0
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op010",
+  "service": "openssh",
+  "n": 12,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      3
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op011",
+  "service": "openssh",
+  "n": 7,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      0
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op012",
+  "service": "openssh",
+  "n": 6,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op013",
+  "service": "openssh",
+  "n": 9,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      1
+     ],
+     [
+      3
+     ],
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": null
+   }
+  }
+ },
+ {
+  "cid": "op014",
+  "service": "openssh",
+  "n": 6,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      2
+     ],
+     [
+      5
+     ]
+    ],
+    "ddmin": [
+     2
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op015",
+  "service": "openssh",
+  "n": 14,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     [
+      0
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   }
+  }
+ },
+ {
+  "cid": "op016",
+  "service": "openssh",
+  "n": 11,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      4
+     ],
+     [
+      7
+     ],
+     [
+      9
+     ]
+    ],
+    "ddmin": [
+     4
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op017",
+  "service": "openssh",
+  "n": 10,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op018",
+  "service": "openssh",
+  "n": 8,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      0
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op019",
+  "service": "openssh",
+  "n": 10,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      0
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op020",
+  "service": "openssh",
+  "n": 11,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      3
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op021",
+  "service": "openssh",
+  "n": 10,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     [
+      8
+     ]
+    ],
+    "ddmin": [
+     8
+    ]
+   }
+  }
+ },
+ {
+  "cid": "op022",
+  "service": "openssh",
+  "n": 12,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   }
+  }
+ },
+ {
+  "cid": "op023",
+  "service": "openssh",
+  "n": 12,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      5
+     ]
+    ],
+    "ddmin": [
+     5
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op024",
+  "service": "openssh",
+  "n": 8,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     [
+      4
+     ]
+    ],
+    "ddmin": [
+     4
+    ]
+   }
+  }
+ },
+ {
+  "cid": "op025",
+  "service": "openssh",
+  "n": 8,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      0
+     ],
+     [
+      3
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op027",
+  "service": "openssh",
+  "n": 8,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      3
+     ],
+     [
+      5
+     ],
+     [
+      7
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op028",
+  "service": "openssh",
+  "n": 10,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      2
+     ]
+    ],
+    "ddmin": [
+     2
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op029",
+  "service": "openssh",
+  "n": 13,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      0
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op030",
+  "service": "openssh",
+  "n": 9,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      1
+     ],
+     [
+      4
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op031",
+  "service": "openssh",
+  "n": 11,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      7
+     ],
+     [
+      9
+     ]
+    ],
+    "ddmin": [
+     7
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op032",
+  "service": "openssh",
+  "n": 11,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   }
+  }
+ },
+ {
+  "cid": "op033",
+  "service": "openssh",
+  "n": 12,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     [
+      3
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   }
+  }
+ },
+ {
+  "cid": "op034",
+  "service": "openssh",
+  "n": 12,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      1
+     ],
+     [
+      5
+     ],
+     [
+      10
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op036",
+  "service": "openssh",
+  "n": 11,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "ssh.password_login|platform": {
+    "minimum": null,
+    "ddmin": null
+   }
+  }
+ },
+ {
+  "cid": "op037",
+  "service": "openssh",
+  "n": 6,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      0
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op038",
+  "service": "openssh",
+  "n": 13,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op039",
+  "service": "openssh",
+  "n": 8,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      2
+     ]
+    ],
+    "ddmin": [
+     2
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op040",
+  "service": "openssh",
+  "n": 12,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      0
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op041",
+  "service": "openssh",
+  "n": 8,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      1
+     ],
+     [
+      4
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op042",
+  "service": "openssh",
+  "n": 11,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      0
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op043",
+  "service": "openssh",
+  "n": 9,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     6
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op045",
+  "service": "openssh",
+  "n": 10,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op046",
+  "service": "openssh",
+  "n": 9,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     [
+      0
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   }
+  }
+ },
+ {
+  "cid": "op047",
+  "service": "openssh",
+  "n": 12,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   }
+  }
+ },
+ {
+  "cid": "op048",
+  "service": "openssh",
+  "n": 9,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      0
+     ],
+     [
+      3
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op049",
+  "service": "openssh",
+  "n": 8,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     [
+      0
+     ],
+     [
+      2
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   }
+  }
+ },
+ {
+  "cid": "op050",
+  "service": "openssh",
+  "n": 13,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      2
+     ],
+     [
+      3
+     ],
+     [
+      10
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op051",
+  "service": "openssh",
+  "n": 10,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      2
+     ],
+     [
+      7
+     ]
+    ],
+    "ddmin": [
+     2
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op052",
+  "service": "openssh",
+  "n": 9,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      4
+     ]
+    ],
+    "ddmin": [
+     4
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op053",
+  "service": "openssh",
+  "n": 13,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     [
+      2
+     ]
+    ],
+    "ddmin": [
+     2
+    ]
+   }
+  }
+ },
+ {
+  "cid": "op054",
+  "service": "openssh",
+  "n": 10,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      2
+     ],
+     [
+      4
+     ]
+    ],
+    "ddmin": [
+     2
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op055",
+  "service": "openssh",
+  "n": 8,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      0
+     ],
+     [
+      6
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op056",
+  "service": "openssh",
+  "n": 10,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "ssh.password_login|platform": {
+    "minimum": null,
+    "ddmin": null
+   }
+  }
+ },
+ {
+  "cid": "op057",
+  "service": "openssh",
+  "n": 8,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     [
+      3
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   }
+  }
+ },
+ {
+  "cid": "op058",
+  "service": "openssh",
+  "n": 6,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     [
+      1
+     ]
+    ],
+    "ddmin": [
+     1
+    ]
+   }
+  }
+ },
+ {
+  "cid": "op059",
+  "service": "openssh",
+  "n": 10,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      5
+     ]
+    ],
+    "ddmin": [
+     5
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op060",
+  "service": "openssh",
+  "n": 11,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     [
+      0
+     ]
+    ],
+    "ddmin": [
+     0
+    ]
+   }
+  }
+ },
+ {
+  "cid": "op061",
+  "service": "openssh",
+  "n": 10,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      2
+     ],
+     [
+      4
+     ],
+     [
+      8
+     ]
+    ],
+    "ddmin": [
+     2
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ },
+ {
+  "cid": "op062",
+  "service": "openssh",
+  "n": 9,
+  "res": {
+   "ssh.password_login|vendor": {
+    "minimum": [
+     [
+      3
+     ]
+    ],
+    "ddmin": [
+     3
+    ]
+   },
+   "ssh.password_login|platform": {
+    "minimum": [
+     []
+    ],
+    "ddmin": []
+   }
+  }
+ }
+]

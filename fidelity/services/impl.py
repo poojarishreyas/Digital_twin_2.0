@@ -68,11 +68,15 @@ class Postgres(Service):
     ready_marker = "database system is ready to accept connections"
     start_timeout = 15.0
 
+    @property
+    def datadir(self):
+        return self.dir / "data"
+
     def user(self):
         return "postgres"
 
     def prepare(self):
-        data = self.dir / "data"
+        data = self.datadir
         os.system(f"chown -R postgres:postgres {self.dir}")
         if not (data / "PG_VERSION").exists():
             subprocess.run(["runuser", "-u", "postgres", "--", f"{PG_BIN}/initdb", "-D", str(data),
@@ -98,7 +102,7 @@ class Postgres(Service):
     def render(self, cfg: Config):
         conf = [f"port = {self.port}", f"unix_socket_directories = '{self.dir}'", "fsync = off",
                 "synchronous_commit = off", f"hba_file = '{self.dir}/pg_hba.conf'",
-                f"ident_file = '{self.dir}/data/pg_ident.conf'", "logging_collector = off"]
+                f"ident_file = '{self.datadir}/pg_ident.conf'", "logging_collector = off"]
         # Local bootstrap rule: never on the network probe path.
         hba = ["local all postgres trust"]
         for d in cfg.directives:
@@ -109,7 +113,7 @@ class Postgres(Service):
         return {"postgresql.conf": "\n".join(conf) + "\n", "pg_hba.conf": "\n".join(hba) + "\n"}
 
     def command(self):
-        return [f"{PG_BIN}/postgres", "-D", str(self.dir / "data"), "-c", f"config_file={self.dir}/postgresql.conf"]
+        return [f"{PG_BIN}/postgres", "-D", str(self.datadir), "-c", f"config_file={self.dir}/postgresql.conf"]
 
     def probe(self):
         env = {"PGPASSWORD": "", "PGCONNECT_TIMEOUT": "3", "PGSSLMODE": "prefer", "PGPASSFILE": "/nonexistent/pgpass"}

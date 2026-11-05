@@ -1,0 +1,847 @@
+{
+ "e6": {
+  "redis.unauth_admin": {
+   "redis:6.0": {
+    "n": 120,
+    "error": 26,
+    "exposed": 40,
+    "disagree_native": 40,
+    "disagree_binary": 14
+   },
+   "redis:6.2": {
+    "n": 120,
+    "error": 0,
+    "exposed": 49,
+    "disagree_native": 19,
+    "disagree_binary": 19
+   },
+   "redis:7.0": {
+    "n": 120,
+    "error": 0,
+    "exposed": 41,
+    "disagree_native": 11,
+    "disagree_binary": 11
+   },
+   "redis:7.2": {
+    "n": 120,
+    "error": 0,
+    "exposed": 41,
+    "disagree_native": 11,
+    "disagree_binary": 11
+   },
+   "redis:7.4": {
+    "n": 120,
+    "error": 0,
+    "exposed": 41,
+    "disagree_native": 11,
+    "disagree_binary": 11
+   },
+   "native": {
+    "n": 120,
+    "error": 0,
+    "exposed": 30
+   },
+   "_configs_with_any_difference": 40,
+   "_configs": 120,
+   "_images": [
+    "redis:6.0",
+    "redis:6.2",
+    "redis:7.0",
+    "redis:7.2",
+    "redis:7.4"
+   ]
+  },
+  "pg.unauth_sql": {
+   "postgres:12": {
+    "n": 120,
+    "error": 0,
+    "exposed": 28,
+    "disagree_native": 0,
+    "disagree_binary": 0
+   },
+   "postgres:14": {
+    "n": 120,
+    "error": 0,
+    "exposed": 28,
+    "disagree_native": 0,
+    "disagree_binary": 0
+   },
+   "postgres:16": {
+    "n": 120,
+    "error": 0,
+    "exposed": 28,
+    "disagree_native": 0,
+    "disagree_binary": 0
+   },
+   "postgres:17": {
+    "n": 120,
+    "error": 0,
+    "exposed": 28,
+    "disagree_native": 0,
+    "disagree_binary": 0
+   },
+   "native": {
+    "n": 120,
+    "error": 0,
+    "exposed": 28
+   },
+   "_configs_with_any_difference": 0,
+   "_configs": 120,
+   "_images": [
+    "postgres:12",
+    "postgres:14",
+    "postgres:16",
+    "postgres:17"
+   ]
+  },
+  "nginx.version_leak": {
+   "nginx:1.20": {
+    "n": 120,
+    "error": 0,
+    "exposed": 69,
+    "disagree_native": 0,
+    "disagree_binary": 0
+   },
+   "nginx:1.24": {
+    "n": 120,
+    "error": 0,
+    "exposed": 69,
+    "disagree_native": 0,
+    "disagree_binary": 0
+   },
+   "nginx:1.27": {
+    "n": 120,
+    "error": 0,
+    "exposed": 69,
+    "disagree_native": 0,
+    "disagree_binary": 0
+   },
+   "native": {
+    "n": 120,
+    "error": 0,
+    "exposed": 69
+   },
+   "_configs_with_any_difference": 0,
+   "_configs": 120,
+   "_images": [
+    "nginx:1.20",
+    "nginx:1.24",
+    "nginx:1.27"
+   ]
+  },
+  "nginx.admin_open": {
+   "nginx:1.20": {
+    "n": 120,
+    "error": 0,
+    "exposed": 72,
+    "disagree_native": 0,
+    "disagree_binary": 0
+   },
+   "nginx:1.24": {
+    "n": 120,
+    "error": 0,
+    "exposed": 72,
+    "disagree_native": 0,
+    "disagree_binary": 0
+   },
+   "nginx:1.27": {
+    "n": 120,
+    "error": 0,
+    "exposed": 72,
+    "disagree_native": 0,
+    "disagree_binary": 0
+   },
+   "native": {
+    "n": 120,
+    "error": 0,
+    "exposed": 72
+   },
+   "_configs_with_any_difference": 0,
+   "_configs": 120,
+   "_images": [
+    "nginx:1.20",
+    "nginx:1.24",
+    "nginx:1.27"
+   ]
+  },
+  "ssh.password_login": {
+   "fidelity-sshd:8.8_p1-r1": {
+    "n": 120,
+    "error": 0,
+    "exposed": 40,
+    "disagree_native": 0,
+    "disagree_binary": 0
+   },
+   "fidelity-sshd:9.3_p2-r1": {
+    "n": 120,
+    "error": 0,
+    "exposed": 40,
+    "disagree_native": 0,
+    "disagree_binary": 0
+   },
+   "fidelity-sshd:9.7_p1-r4": {
+    "n": 120,
+    "error": 0,
+    "exposed": 40,
+    "disagree_native": 0,
+    "disagree_binary": 0
+   },
+   "fidelity-sshd:10.0_p1-r10": {
+    "n": 120,
+    "error": 0,
+    "exposed": 40,
+    "disagree_native": 0,
+    "disagree_binary": 0
+   },
+   "native": {
+    "n": 120,
+    "error": 0,
+    "exposed": 40
+   },
+   "_configs_with_any_difference": 0,
+   "_configs": 120,
+   "_images": [
+    "fidelity-sshd:8.8_p1-r1",
+    "fidelity-sshd:9.3_p2-r1",
+    "fidelity-sshd:9.7_p1-r4",
+    "fidelity-sshd:10.0_p1-r10"
+   ]
+  }
+ },
+ "e6_core_stability": {
+  "redis.unauth_admin": {
+   "configs": 60,
+   "same_core_keys_all_versions": 56
+  },
+  "pg.unauth_sql": {
+   "configs": 60,
+   "same_core_keys_all_versions": 60
+  },
+  "nginx.version_leak": {
+   "configs": 60,
+   "same_core_keys_all_versions": 60
+  },
+  "nginx.admin_open": {
+   "configs": 60,
+   "same_core_keys_all_versions": 60
+  },
+  "ssh.password_login": {
+   "configs": 60,
+   "same_core_keys_all_versions": 60
+  }
+ },
+ "e7": {
+  "vendor": {
+   "pairs": 300,
+   "ddmin_is_minimum": 300,
+   "unique_minimum": 266,
+   "multiple_minimum": 34,
+   "max_minimum_cores": 3,
+   "mean_minimum_cores": 1.1366666666666667,
+   "none_le2": 0,
+   "count_hist": {
+    "1": 266,
+    "2": 27,
+    "3": 7
+   }
+  },
+  "platform": {
+   "pairs": 296,
+   "ddmin_is_minimum": 296,
+   "unique_minimum": 282,
+   "multiple_minimum": 14,
+   "max_minimum_cores": 2,
+   "mean_minimum_cores": 1.0472972972972974,
+   "none_le2": 0,
+   "count_hist": {
+    "1": 282,
+    "2": 14
+   }
+  }
+ },
+ "e8": {
+  "parse": {
+   "redis": {
+    "files": 878,
+    "not_config": 90,
+    "empty": 0,
+    "duplicate": 368,
+    "kept": 420,
+    "dropped": {
+     "port": 607,
+     "daemonize": 431,
+     "supervised": 234,
+     "pidfile": 381,
+     "logfile": 451,
+     "always-show-logo": 296,
+     "save": 1240,
+     "dbfilename": 441,
+     "dir": 493,
+     "appendonly": 592,
+     "appendfilename": 391,
+     "unixsocket": 22,
+     "unixsocketperm": 18,
+     "tls-port": 34,
+     "tls-cert-file": 31,
+     "tls-key-file": 31,
+     "tls-auth-clients": 19,
+     "tls-protocols": 15,
+     "set-proc-title": 87,
+     "proc-title-template": 85,
+     "aclfile": 21,
+     "masterauth": 92,
+     "masteruser": 26,
+     "cluster-config-file": 32,
+     "tls-replication": 9,
+     "tls-cluster": 8,
+     "cluster-enabled": 51,
+     "loadmodule": 26,
+     "appenddirname": 73,
+     "syslog-enabled": 14,
+     "syslog-ident": 6,
+     "cluster-announce-ip": 8,
+     "tls-ca-cert-file": 28,
+     "tls-ciphersuites": 2,
+     "tls-ciphers": 4,
+     "tls-prefer-server-ciphers": 6,
+     "replicaof": 19,
+     "slaveof": 20,
+     "replica-announce-ip": 1,
+     "tls-dh-params-file": 1,
+     "sentinel": 44,
+     "include": 1,
+     "tls-session-cache-size": 2,
+     "tls-session-cache-timeout": 2,
+     "syslog-facility": 2
+    },
+    "directives": 10707
+   },
+   "openssh": {
+    "files": 795,
+    "not_config": 357,
+    "empty": 0,
+    "duplicate": 105,
+    "kept": 333,
+    "dropped": {
+     "usepam": 251,
+     "include": 57,
+     "hostkey": 449,
+     "port": 237,
+     "addressfamily": 60,
+     "listenaddress": 119,
+     "pidfile": 46,
+     "hostcertificate": 6,
+     "hostkeyagent": 1
+    },
+    "directives": 4662
+   },
+   "postgresql": {
+    "files": 690,
+    "not_config": 21,
+    "empty": 1,
+    "duplicate": 329,
+    "kept": 339,
+    "dropped": {
+     "malformed": 113
+    },
+    "directives": 2363
+   }
+  },
+  "redis": {
+   "configs": 420,
+   "accepted": 375,
+   "rejected": 45,
+   "reject_causes": {
+    "unknown or malformed directive": 33,
+    "other": 5,
+    "invalid value": 7
+   },
+   "exposed": 72,
+   "n_median": 11,
+   "n_mean": 22.754666666666665,
+   "n_max": 87
+  },
+  "postgresql": {
+   "configs": 339,
+   "accepted": 329,
+   "rejected": 10,
+   "reject_causes": {
+    "invalid pg_hba rule": 5,
+    "other": 5
+   },
+   "exposed": 34,
+   "n_median": 7,
+   "n_mean": 6.9787234042553195,
+   "n_max": 33
+  },
+  "openssh": {
+   "configs": 333,
+   "accepted": 290,
+   "rejected": 43,
+   "reject_causes": {
+    "invalid value or combination": 31,
+    "unknown option": 11,
+    "missing file": 1
+   },
+   "exposed": 95,
+   "n_median": 11.0,
+   "n_mean": 13.093103448275862,
+   "n_max": 47
+  },
+  "redis_full": {
+   "sample": 150,
+   "n_mean": 21.433333333333334,
+   "vendor": {
+    "conflict": 0,
+    "max": 1,
+    "median": 0.0,
+    "mean": 0.17333333333333334,
+    "le2": 1.0,
+    "hist": {
+     "1": 26,
+     "0": 124
+    },
+    "mean_frac": 0.029704129174179427,
+    "mean_tests": 2.8333333333333335,
+    "max_tests": 24,
+    "keys": [
+     [
+      "protected-mode",
+      26
+     ]
+    ]
+   },
+   "platform": {
+    "conflict": 0,
+    "max": 1,
+    "median": 0.0,
+    "mean": 0.17333333333333334,
+    "le2": 1.0,
+    "hist": {
+     "1": 26,
+     "0": 124
+    },
+    "mean_frac": 0.029704129174179427,
+    "mean_tests": 2.8333333333333335,
+    "max_tests": 24,
+    "keys": [
+     [
+      "protected-mode",
+      26
+     ]
+    ]
+   },
+   "pivots": {
+    "total": 36,
+    "in_core": 26,
+    "keys": [
+     [
+      "protected-mode",
+      26
+     ],
+     [
+      "requirepass",
+      6
+     ],
+     [
+      "user",
+      3
+     ],
+     [
+      "rename-command",
+      1
+     ]
+    ],
+    "configs_with_pivot": 35
+   },
+   "curve": {
+    "platform|0.0": 0.17333333333333334,
+    "platform|0.25": 0.15789473684210525,
+    "platform|0.5": 0.09693877551020408,
+    "platform|0.75": 0.07407407407407407,
+    "platform|0.9": 0.02252252252252252,
+    "platform|1.0": 0.0,
+    "vendor|0.0": 0.17333333333333334,
+    "vendor|0.25": 0.16374269005847952,
+    "vendor|0.5": 0.09013605442176871,
+    "vendor|0.75": 0.07992202729044834,
+    "vendor|0.9": 0.03153153153153153,
+    "vendor|1.0": 0.0
+   },
+   "gsync": {
+    "core|vendor": {
+     "acc": 0.9066666666666666,
+     "kept": 0.0656060696277941,
+     "n": 150
+    },
+    "union|vendor": {
+     "acc": 1.0,
+     "kept": 0.2381785193681714,
+     "n": 150
+    },
+    "expert|vendor": {
+     "acc": 1.0,
+     "kept": 0.3088006965719911,
+     "n": 150
+    },
+    "core|platform": {
+     "acc": 0.9066666666666666,
+     "kept": 0.0656060696277941,
+     "n": 150
+    },
+    "union|platform": {
+     "acc": 1.0,
+     "kept": 0.2381785193681714,
+     "n": 150
+    },
+    "expert|platform": {
+     "acc": 1.0,
+     "kept": 0.3088006965719911,
+     "n": 150
+    }
+   }
+  },
+  "postgresql_full": {
+   "sample": 150,
+   "n_mean": 6.666666666666667,
+   "vendor": {
+    "conflict": 0,
+    "max": 2,
+    "median": 0.0,
+    "mean": 0.21333333333333335,
+    "le2": 1.0,
+    "hist": {
+     "0": 134,
+     "2": 16
+    },
+    "mean_frac": 0.03643915343915344,
+    "mean_tests": 3.4266666666666667,
+    "max_tests": 22,
+    "keys": [
+     [
+      "listen_addresses",
+      16
+     ],
+     [
+      "hba",
+      16
+     ]
+    ]
+   },
+   "platform": {
+    "conflict": 0,
+    "max": 1,
+    "median": 0.0,
+    "mean": 0.10666666666666667,
+    "le2": 1.0,
+    "hist": {
+     "0": 134,
+     "1": 16
+    },
+    "mean_frac": 0.01821957671957672,
+    "mean_tests": 2.5533333333333332,
+    "max_tests": 10,
+    "keys": [
+     [
+      "hba",
+      16
+     ]
+    ]
+   },
+   "pivots": {
+    "total": 33,
+    "in_core": 32,
+    "keys": [
+     [
+      "hba",
+      17
+     ],
+     [
+      "listen_addresses",
+      16
+     ]
+    ],
+    "configs_with_pivot": 17
+   },
+   "curve": {
+    "platform|0.0": 0.10666666666666667,
+    "platform|0.25": 0.09326424870466321,
+    "platform|0.5": 0.058333333333333334,
+    "platform|0.75": 0.03281519861830743,
+    "platform|0.9": 0.026262626262626262,
+    "platform|1.0": 0.0,
+    "vendor|0.0": 0.10666666666666667,
+    "vendor|0.25": 0.10880829015544041,
+    "vendor|0.5": 0.08166666666666667,
+    "vendor|0.75": 0.05872193436960276,
+    "vendor|0.9": 0.03232323232323232,
+    "vendor|1.0": 0.0
+   },
+   "gsync": {
+    "core|vendor": {
+     "acc": 1.0,
+     "kept": 1.0,
+     "n": 150
+    },
+    "union|vendor": {
+     "acc": 1.0,
+     "kept": 1.0,
+     "n": 150
+    },
+    "expert|vendor": {
+     "acc": 1.0,
+     "kept": 1.0,
+     "n": 150
+    },
+    "core|platform": {
+     "acc": 1.0,
+     "kept": 1.0,
+     "n": 150
+    },
+    "union|platform": {
+     "acc": 1.0,
+     "kept": 1.0,
+     "n": 150
+    },
+    "expert|platform": {
+     "acc": 1.0,
+     "kept": 1.0,
+     "n": 150
+    }
+   }
+  },
+  "openssh_full": {
+   "sample": 150,
+   "n_mean": 13.093333333333334,
+   "vendor": {
+    "conflict": 0,
+    "max": 1,
+    "median": 1.0,
+    "mean": 0.6866666666666666,
+    "le2": 1.0,
+    "hist": {
+     "1": 103,
+     "0": 47
+    },
+    "mean_frac": 0.06373454591585707,
+    "mean_tests": 5.64,
+    "max_tests": 12,
+    "keys": [
+     [
+      "PasswordAuthentication",
+      59
+     ],
+     [
+      "AllowUsers",
+      32
+     ],
+     [
+      "AuthenticationMethods",
+      9
+     ],
+     [
+      "AllowGroups",
+      3
+     ]
+    ]
+   },
+   "platform": {
+    "conflict": 33,
+    "max": 1,
+    "median": 0,
+    "mean": 0.13675213675213677,
+    "le2": 1.0,
+    "hist": {
+     "0": 101,
+     "1": 16
+    },
+    "mean_frac": 0.02213012533525354,
+    "mean_tests": 2.623931623931624,
+    "max_tests": 10,
+    "keys": [
+     [
+      "PasswordAuthentication",
+      16
+     ]
+    ]
+   },
+   "pivots": {
+    "total": 60,
+    "in_core": 58,
+    "keys": [
+     [
+      "PasswordAuthentication",
+      34
+     ],
+     [
+      "AllowUsers",
+      16
+     ],
+     [
+      "AuthenticationMethods",
+      5
+     ],
+     [
+      "AllowGroups",
+      3
+     ],
+     [
+      "AuthorizedKeysCommandUser",
+      2
+     ]
+    ],
+    "configs_with_pivot": 58
+   },
+   "curve": {
+    "platform|0.0": 0.31333333333333335,
+    "platform|0.25": 0.2920962199312715,
+    "platform|0.5": 0.25963149078726966,
+    "platform|0.75": 0.24398625429553264,
+    "platform|0.9": 0.20765027322404372,
+    "platform|1.0": 0.22,
+    "vendor|0.0": 0.6866666666666666,
+    "vendor|0.25": 0.48625429553264604,
+    "vendor|0.5": 0.24958123953098826,
+    "vendor|0.75": 0.10309278350515463,
+    "vendor|0.9": 0.03825136612021858,
+    "vendor|1.0": 0.0
+   },
+   "gsync": {
+    "core|vendor": {
+     "acc": 1.0,
+     "kept": 0.1233669894236925,
+     "n": 150
+    },
+    "union|vendor": {
+     "acc": 1.0,
+     "kept": 0.1233669894236925,
+     "n": 150
+    },
+    "expert|vendor": {
+     "acc": 1.0,
+     "kept": 0.273862285437462,
+     "n": 150
+    },
+    "core|platform": {
+     "acc": 0.78,
+     "kept": 0.1233669894236925,
+     "n": 150
+    },
+    "union|platform": {
+     "acc": 0.78,
+     "kept": 0.1233669894236925,
+     "n": 150
+    },
+    "expert|platform": {
+     "acc": 0.78,
+     "kept": 0.273862285437462,
+     "n": 150
+    }
+   }
+  },
+  "curve_pooled": {
+   "platform|0.0": 0.19777777777777777,
+   "platform|0.25": 0.1821983273596177,
+   "platform|0.5": 0.13837535014005603,
+   "platform|0.75": 0.11887694145758662,
+   "platform|0.9": 0.09206989247311828,
+   "platform|1.0": 0.07333333333333333,
+   "vendor|0.0": 0.32222222222222224,
+   "vendor|0.25": 0.25686977299880526,
+   "vendor|0.5": 0.14061624649859944,
+   "vendor|0.75": 0.08064516129032258,
+   "vendor|0.9": 0.034274193548387094,
+   "vendor|1.0": 0.0
+  },
+  "gsync_pooled": {
+   "core|vendor": {
+    "acc": 0.9688888888888889,
+    "kept": 0.3963243530171622,
+    "n": 450,
+    "errors": 14
+   },
+   "union|vendor": {
+    "acc": 1.0,
+    "kept": 0.4538485029306213,
+    "n": 450,
+    "errors": 0
+   },
+   "expert|vendor": {
+    "acc": 1.0,
+    "kept": 0.5275543273364843,
+    "n": 450,
+    "errors": 0
+   },
+   "core|platform": {
+    "acc": 0.8955555555555555,
+    "kept": 0.3963243530171622,
+    "n": 450,
+    "errors": 47
+   },
+   "union|platform": {
+    "acc": 0.9266666666666666,
+    "kept": 0.4538485029306213,
+    "n": 450,
+    "errors": 33
+   },
+   "expert|platform": {
+    "acc": 0.9266666666666666,
+    "kept": 0.5275543273364843,
+    "n": 450,
+    "errors": 33
+   }
+  },
+  "static_careful": {
+   "redis.unauth_admin": {
+    "acc": 0.992,
+    "n": 375,
+    "errors": 3
+   },
+   "ssh.password_login": {
+    "acc": 0.9896551724137931,
+    "n": 290,
+    "errors": 3
+   },
+   "pg.unauth_sql": {
+    "acc": 1.0,
+    "n": 329,
+    "errors": 0
+   }
+  }
+ },
+ "e9": {
+  "overall": {
+   "commits": 426,
+   "parsed_changes": 246,
+   "flips": 19,
+   "files": 216,
+   "by_service": {
+    "redis": 81,
+    "postgresql": 62,
+    "openssh": 73
+   }
+  },
+  "policies": {
+   "hash": {
+    "resync": 246,
+    "stale": 0
+   },
+   "union": {
+    "resync": 137,
+    "stale": 0
+   },
+   "expert": {
+    "resync": 159,
+    "stale": 0
+   },
+   "core": {
+    "resync": 118,
+    "stale": 0
+   },
+   "commit": {
+    "resync": 426,
+    "stale": 0
+   }
+  }
+ }
+}

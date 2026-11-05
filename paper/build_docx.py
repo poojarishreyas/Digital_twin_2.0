@@ -7,7 +7,8 @@ single-column title block, two-column body, Times New Roman 10 pt, Roman
 section numbers in small caps, TABLE captions above tables, Fig. captions
 below figures, 8 pt references.
 
-Run from the paper/ directory:  python3 build_docx.py
+Run from the paper/ directory after compiling the PDF (labels come from the .aux file):
+    python3 build_docx.py
 """
 import copy
 import re
@@ -30,38 +31,96 @@ ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"]
 FONT = "Times New Roman"
 
 
+STANDALONE_PRE = r"""\documentclass[varwidth=8.6cm,border=3pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{mathptmx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,fit,calc}
+\usepackage{algpseudocode}
+\newcommand{\Vb}{\mathsf{V}}
+\algrenewcommand\algorithmicrequire{\textbf{Input:}}
+\algrenewcommand\algorithmicensure{\textbf{Output:}}
+\begin{document}
+"""
+
+
+def render_png(body: str, name: str) -> str:
+    """Compile a LaTeX fragment with the standalone class and rasterize it."""
+    out = HERE / "figs" / f"{name}.png"
+    with tempfile.TemporaryDirectory() as tmp:
+        t = Path(tmp) / f"{name}.tex"
+        t.write_text(STANDALONE_PRE + body + "\n\\end{document}\n")
+        r = subprocess.run(["pdflatex", "-interaction=nonstopmode", t.name], cwd=tmp, capture_output=True, text=True)
+        if r.returncode:
+            err = [l for l in r.stdout.splitlines() if l.startswith("!")]
+            raise RuntimeError(f"{name}: {err[:3]}\n{t.read_text()[:1500]}")
+        subprocess.run(["pdftoppm", "-r", "300", "-png", "-singlefile", t.with_suffix(".pdf").name, str(out.with_suffix(""))],
+                       cwd=tmp, check=True)
+    return f"figs/{name}.png"
+
+
 def prepare(tex: str) -> str:
-    a = tex.index(r"\begin{tikzpicture}")
-    b = tex.index(r"\end{tikzpicture}") + len(r"\end{tikzpicture}")
-    tex = tex[:a] + r"\includegraphics[width=\columnwidth]{figs/fig-loop.png}" + tex[b:]
+    labels = {}
+    aux = HERE / "fidelity-cores.aux"
+    for m in re.finditer(r"\\newlabel\{([^}]+)\}\{\{(?:\\mbox  \{)?([^}]+)\}", aux.read_text()):
+        labels[m.group(1)] = m.group(2)
+    tex = re.sub(r"\\ref\{([^}]+)\}", lambda m: labels[m.group(1)], tex)
+    # TikZ pictures -> images (fig:example, fig:loop)
+    i = 0
+    while r"\begin{tikzpicture}" in tex:
+        a = tex.index(r"\begin{tikzpicture}")
+        b = tex.index(r"\end{tikzpicture}") + len(r"\end{tikzpicture}")
+        i += 1
+        png = render_png(tex[a:b], f"docx-tikz-{i}")
+        tex = tex[:a] + rf"\includegraphics[width=\columnwidth]{{{png}}}" + tex[b:]
+    # algorithms -> images with a ruled title, as a figure whose caption names the algorithm
+    j = 0
+    while r"\begin{algorithm}" in tex:
+        a = tex.index(r"\begin{algorithm}")
+        b = tex.index(r"\end{algorithm}") + len(r"\end{algorithm}")
+        block = tex[a:b]
+        j += 1
+        cap = re.search(r"\\caption\{(.*?)\}\\label", block).group(1)
+        body = block[block.index(r"\begin{algorithmic}"):block.index(r"\end{algorithmic}") + len(r"\end{algorithmic}")]
+        png = render_png(r"\noindent\rule{\linewidth}{0.6pt}\\ \textbf{Algorithm " + str(j) + "} " + cap +
+                         r"\\[-0.6ex]\rule{\linewidth}{0.4pt}" + "\n" + body + "\n\\par\\vspace{-0.8ex}\\noindent\\rule{\\linewidth}{0.6pt}",
+                         f"docx-alg-{j}")
+        tex = tex[:a] + rf"\begin{{center}}\includegraphics[width=\columnwidth]{{{png}}}\end{{center}}" + tex[b:]
     tex = tex.replace(r"\begin{figure*}[t]", r"\begin{figure}[t]").replace(r"\end{figure*}", r"\end{figure}")
     tex = tex.replace(r"\includegraphics[width=\textwidth]{figs/fig-fidelity-curve.png}",
                       r"\includegraphics[width=\columnwidth]{figs/fig-fidelity-curve-stacked.png}")
+    tex = tex.replace(r"\includegraphics[width=\textwidth]{figs/fig-rw-curve.png}",
+                      r"\includegraphics[width=\columnwidth]{figs/fig-rw-curve-stacked.png}")
+    # research-question list labels
+    tex = re.sub(r"\\item\[\\RQ\{(\d)\}\]", r"\\item \\textbf{RQ\1:}", tex)
+    tex = re.sub(r"\\RQ\{(\d)\}", r"\\textbf{RQ\1}", tex)
 
+    # tables: flatten grouped headers and section rows that pandoc drops
     def plain_math(block):
-        subs = [(r"$G_{\text{core}}\cup G_{\text{pivot}}$", "G\\textsubscript{core} ∪ G\\textsubscript{pivot}"),
-                (r"$G_{\text{core}}$", "G\\textsubscript{core}"), (r"$G_{\text{pivot}}$", "G\\textsubscript{pivot}"),
-                (r"$G_{\text{expert}}$", "G\\textsubscript{expert}"), (r"$\varphi$", "φ"),
-                (r"$|K|{=}0$", "|K| = 0"), (r"$K$", "K"), (r"$\Vb$", "V"), (r"$\Pb$", "P"),
-                (r"$q=0.3$", "q = 0.3"), (r"$k=2$", "k = 2"), (r"$k=4$", "k = 4"), (r"$k=8$", "k = 8"),
-                (r"$\times$", "×"), (r"Mean $|K|$", "Mean |K|")]
-        for a, b in subs:
-            block = block.replace(a, b)
+        subs = [(r"$G_{\text{core}}\cup G_{\text{pivot}}$", r"G\textsubscript{core} ∪ G\textsubscript{pivot}"),
+                (r"$G_{\text{core}}$", r"G\textsubscript{core}"), (r"$G_{\text{pivot}}$", r"G\textsubscript{pivot}"),
+                (r"$G_{\text{expert}}$", r"G\textsubscript{expert}"), (r"$\varphi$", "φ"), (r"$\overline{n}$", "mean n"),
+                (r"$\overline{|K|}$", "mean |K|"), (r"max $|K|$", "max |K|"), (r"in $K$", "in K"),
+                (r"$\Vb$", "V"), (r"$\Pb$", "P"), (r"$q=0.3$", "q = 0.3"), (r"$k=2$", "k = 2"), (r"$k=4$", "k = 4"),
+                (r"$k=8$", "k = 8"), (r"$\times$", "×"), ("\\footnotesize\n", "")]
+        for x, y in subs:
+            block = block.replace(x, y)
+        block = re.sub(r"\\multirow\{\d+\}\{\*\}\{([^}]*)\}", r"\1", block)
+        block = re.sub(r"\\cmidrule\([lr]+\)\{[0-9-]+\}", "", block)
+        block = block.replace(r"& \multicolumn{3}{c}{Synthetic held-out} & \multicolumn{3}{c}{Public, transfer (V)}\\", "")
+        block = block.replace("Guard set & Exp. & Acc. V & Acc. P & Redis & SSH & PG\\\\",
+                              "Guard set & Synth. exported & Synth. acc. V & Synth. acc. P & Public Redis & Public SSH & Public PG\\\\")
+        block = re.sub(r"\\multicolumn\{4\}\{@\{\}l\}\{Exported share, public \(([^)]*)\)\}",
+                       r"Exported, public (\1) & & &", block)
+        block = block.replace(r"& \multicolumn{2}{c}{Synthetic, naive} & \multicolumn{2}{c}{Synthetic, careful} & Public\\", "")
+        block = block.replace("φ & Acc. & FP / FN & Acc. & FP / FN & careful\\\\",
+                              "φ & Naive acc. & Naive FP / FN & Careful acc. & Careful FP / FN & Public careful acc.\\\\")
+        block = re.sub(r"\\multicolumn\{4\}\{@\{\}l\}\{\\emph\{([^}]*)\}\}", r"\\emph{\1} & & &", block)
+        block = re.sub(r"\\multicolumn\{\d+\}\{@\{\}p\{[0-9.]+\\columnwidth\}@\{\}\}\{(.*?)\}\n\\end\{tabular\}",
+                       lambda m: "\\end{tabular}\n\n\\emph{Note.} " + m.group(1) + "\n", block, flags=re.S)
         return block
     tex = re.sub(r"\\begin\{table\}.*?\\end\{table\}", lambda m: plain_math(m.group(0)), tex, flags=re.S)
-    tex = re.sub(r"\\multirow\{2\}\{\*\}\{([^}]*)\}", r"\1", tex)
-    tex = tex.replace("Nginx /admin/ open & & & 31 & \\\\", "Nginx /admin/ open & 6 / 12 & 10.4 (6--15) & 31 & 0.03\\\\")
-    tex = tex.replace(r"""& \multicolumn{3}{c}{Naive} & \multicolumn{3}{c}{Careful}\\
-\cmidrule(lr){2-4}\cmidrule(lr){5-7}
-$\varphi$ & Acc. & FP & FN & Acc. & FP & FN\\""",
-                      r"$\varphi$ & Naive acc. & FP & FN & Careful acc. & FP & FN\\")
-    tex = re.sub(r"\\multicolumn\{\d+\}\{@\{\}p\{[0-9.]+\\columnwidth\}@\{\}\}\{\\footnotesize (.*?)\}\n\\end\{tabular\}",
-                 lambda m: "\\end{tabular}\n\n\\emph{Note.} " + m.group(1) + "\n", tex, flags=re.S)
-    tex = tex.replace("\\footnotesize\n\\begin{tabular}", "\\begin{tabular}")
-    tex = tex.replace(r"""& \multicolumn{3}{c}{Naive} & \multicolumn{3}{c}{Careful}\\
-\cmidrule(lr){2-4}\cmidrule(lr){5-7}
-φ & Acc. & FP & FN & Acc. & FP & FN\\""", r"Property & Naive acc. & FP & FN & Careful acc. & FP & FN\\")
-    tex = tex.replace(r"$\overline{|K|}$", r"Mean |K|")
     tex = tex.replace(r"\begin{IEEEkeywords}", r"KEYWORDSMARK ").replace(r"\end{IEEEkeywords}", "")
     keys = re.findall(r"\\bibitem\{([^}]+)\}", tex)
     num = {k: i + 1 for i, k in enumerate(keys)}
@@ -71,10 +130,6 @@ $\varphi$ & Acc. & FP & FN & Acc. & FP & FN\\""",
     items = re.split(r"\\bibitem\{[^}]+\}", tex[a:b])[1:]
     items[-1] = items[-1].replace(r"\end{thebibliography}", "")
     tex = tex[:a] + "\\section*{References}\n\n" + "\n\n".join(f"REFMARK[{i+1}] {t.strip()}" for i, t in enumerate(items)) + "\n" + tex[b:]
-    labels = {"sec:concepts": "III", "sec:harness": "IV", "sec:results": "V", "sec:discussion": "VI",
-              "sec:static": "V-E", "tab:corpus": "I", "tab:cores": "II", "tab:gsync": "III", "tab:resync": "IV",
-              "tab:static": "V", "fig:loop": "1", "fig:curve": "2", "fig:cores": "3", "fig:resync": "4"}
-    tex = re.sub(r"\\ref\{([^}]+)\}", lambda m: labels[m.group(1)], tex)
     return tex
 
 

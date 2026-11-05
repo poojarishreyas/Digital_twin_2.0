@@ -15,6 +15,7 @@ in group ``twinops`` and role ``readers``), as an expert reviewer would.
 from __future__ import annotations
 
 import ipaddress
+import re
 from fnmatch import fnmatch
 
 from .config import Config
@@ -90,16 +91,32 @@ def _redis(cfg):
 
 
 def _hba_match(rule: str) -> bool:
-    typ, db, user, addr, method = rule.split()[:5]
-    if typ == "hostssl":
+    """pg_hba matching for a non-SSL, non-GSS TCP connection from 10.77.0.1 to the
+    same host, as role synthetic (member of readers) to database synthetic."""
+    f = rule.split()
+    if not f or f[0] not in ("host", "hostnossl", "hostnogssenc") or len(f) < 5:
         return False
-    if db not in ("all", "synthetic"):
+    dbs, users, addr = f[1].split(","), f[2].split(","), f[3]
+    if not any(x in ("all", "synthetic", "sameuser", "samerole") for x in dbs):
         return False
-    if user not in ("all", "synthetic", "+readers"):
+    if not any(x in ("all", "synthetic", "+readers", "+synthetic") for x in users):
         return False
-    if addr == "samenet":
+    if addr in ("all", "samehost", "samenet"):
         return True
-    return CLIENT in ipaddress.ip_network(addr)
+    try:
+        if "/" in addr:
+            return CLIENT in ipaddress.ip_network(addr, strict=False)
+        if re.fullmatch(r"[0-9.]+", addr) and len(f) > 4 and re.fullmatch(r"[0-9.]+", f[4]):
+            return CLIENT in ipaddress.ip_network(f"{addr}/{f[4]}", strict=False)
+        return CLIENT == ipaddress.ip_address(addr)
+    except ValueError:
+        return False  # host names and domain suffixes are not resolved
+
+
+def _hba_method(rule: str) -> str:
+    f = rule.split()
+    i = 4 if "/" in f[3] or f[3] in ("all", "samehost", "samenet") or not re.fullmatch(r"[0-9.]+", f[3]) else 5
+    return f[i] if len(f) > i else ""
 
 
 def _pg(cfg):
@@ -108,7 +125,7 @@ def _pg(cfg):
         return False
     for d in cfg.directives:
         if d.key == "hba" and _hba_match(d.value):
-            return d.value.split()[-1] == "trust"
+            return _hba_method(d.value) == "trust"
     return False
 
 
