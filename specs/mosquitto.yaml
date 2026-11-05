@@ -8,6 +8,7 @@ config:
         user root
         persistence false
         log_dest stdout
+        log_type notice
         pid_file {dir}/mosquitto.pid
         {{main}}
   sections:

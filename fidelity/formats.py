@@ -22,6 +22,18 @@ from .config import Config
 PLACE = re.compile(r"\{\{([A-Za-z0-9_:/.-]+)\}\}")
 
 
+class Yaml12Loader(yaml.SafeLoader):
+    """YAML 1.2 core-schema booleans: only true/false.  PyYAML defaults to YAML
+    1.1, where on/off/yes/no are booleans; servers such as mongod (yaml-cpp)
+    read them as strings, so 1.1 semantics would silently change values."""
+
+
+Yaml12Loader.yaml_implicit_resolvers = {k: [r for r in v if r[0] != "tag:yaml.org,2002:bool"]
+                                        for k, v in yaml.SafeLoader.yaml_implicit_resolvers.items()}
+Yaml12Loader.add_implicit_resolver("tag:yaml.org,2002:bool", re.compile(r"^(?:true|True|TRUE|false|False|FALSE)$"),
+                                   list("tTfF"))
+
+
 def subst(text: str, ctx: dict[str, Any]) -> str:
     """Replace {host}, {port}, {dir} ... without touching other braces."""
     for k, v in ctx.items():
@@ -48,7 +60,7 @@ def _line(sec: dict, key: str, value: str) -> str:
 
 def _yaml_value(v: str):
     try:
-        return yaml.safe_load(v)
+        return yaml.load(v, Loader=Yaml12Loader)
     except yaml.YAMLError:
         return v
 
@@ -144,7 +156,7 @@ def parse(spec: dict, text: str):
         lines.append(0)
     if kind == "yaml":
         try:
-            doc = yaml.safe_load(text) or {}
+            doc = yaml.load(text, Loader=Yaml12Loader) or {}
         except yaml.YAMLError:
             return [], [], {"unparseable": 1}
         if not isinstance(doc, dict):
