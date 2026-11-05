@@ -454,7 +454,7 @@ def main():
                     para_fmt(p, None, 0, 0)
                     p.paragraph_format.first_line_indent = Inches(0)
 
-    d.core_properties.title = "Fidelity Cores: How Much Configuration Does a Security Service Twin Actually Need?"
+    d.core_properties.title = "Fidelity Cores and Pivots: Verdict-Preserving Configuration Minimization for Security Service Twins"
     d.core_properties.author = "Author Name(s)"
     d.save(OUT)
     print("wrote", OUT)

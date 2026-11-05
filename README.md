@@ -1,8 +1,7 @@
 # Fidelity Cores — experiments for verdict-relevant security twins
 
 This repository holds the measurement harness, raw results and manuscript for
-the paper *"Fidelity Cores: Measuring How Much Configuration a Security Service
-Twin Actually Needs"*. It extends the Digital Twin platform
+the paper *"Fidelity Cores and Pivots: Verdict-Preserving Configuration Minimization for Security Service Twins"*. It extends the Digital Twin platform
 ([poojarishreyas/Digital_twin](https://github.com/poojarishreyas/Digital_twin)), whose
 configuration-synchronized service twins showed that twins built from defaults
 give wrong security verdicts. This work asks the next question: **which part of a
