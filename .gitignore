@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.blg
+results/verdict-cache.sqlite

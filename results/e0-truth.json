@@ -1,0 +1,2402 @@
+[
+ {
+  "cid": "re000",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 12,
+  "verdict": true,
+  "wire": "maxmemory\n0"
+ },
+ {
+  "cid": "re001",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 5,
+  "verdict": true,
+  "wire": "maxmemory\n0"
+ },
+ {
+  "cid": "re002",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 11,
+  "verdict": false,
+  "wire": "NOAUTH Authentication required."
+ },
+ {
+  "cid": "re003",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 7,
+  "verdict": false,
+  "wire": "NOAUTH Authentication required."
+ },
+ {
+  "cid": "re004",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 8,
+  "verdict": true,
+  "wire": "maxmemory\n536870912"
+ },
+ {
+  "cid": "re005",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 12,
+  "verdict": false,
+  "wire": "NOAUTH Authentication required."
+ },
+ {
+  "cid": "re006",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 7,
+  "verdict": false,
+  "wire": "DENIED Redis is running in protected mode because protected mode is enabled and no password is set for the default user. In this mode connections are only accep"
+ },
+ {
+  "cid": "re007",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 10,
+  "verdict": true,
+  "wire": "maxmemory\n0"
+ },
+ {
+  "cid": "re008",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 11,
+  "verdict": false,
+  "wire": "DENIED Redis is running in protected mode because protected mode is enabled and no password is set for the default user. In this mode connections are only accep"
+ },
+ {
+  "cid": "re009",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 13,
+  "verdict": false,
+  "wire": "DENIED Redis is running in protected mode because protected mode is enabled and no password is set for the default user. In this mode connections are only accep"
+ },
+ {
+  "cid": "re010",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 10,
+  "verdict": false,
+  "wire": "NOPERM this user has no permissions to run the 'config|get' command"
+ },
+ {
+  "cid": "re011",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 8,
+  "verdict": false,
+  "wire": "DENIED Redis is running in protected mode because protected mode is enabled and no password is set for the default user. In this mode connections are only accep"
+ },
+ {
+  "cid": "re012",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 9,
+  "verdict": true,
+  "wire": "maxmemory\n0"
+ },
+ {
+  "cid": "re013",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 11,
+  "verdict": true,
+  "wire": "maxmemory\n268435456"
+ },
+ {
+  "cid": "re014",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 6,
+  "verdict": false,
+  "wire": "DENIED Redis is running in protected mode because protected mode is enabled and no password is set for the default user. In this mode connections are only accep"
+ },
+ {
+  "cid": "re015",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 6,
+  "verdict": false,
+  "wire": "DENIED Redis is running in protected mode because protected mode is enabled and no password is set for the default user. In this mode connections are only accep"
+ },
+ {
+  "cid": "re016",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 7,
+  "verdict": true,
+  "wire": "maxmemory\n0"
+ },
+ {
+  "cid": "re017",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 6,
+  "verdict": false,
+  "wire": "NOAUTH Authentication required."
+ },
+ {
+  "cid": "re018",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 8,
+  "verdict": false,
+  "wire": "NOAUTH Authentication required."
+ },
+ {
+  "cid": "re019",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 11,
+  "verdict": false,
+  "wire": "NOAUTH Authentication required."
+ },
+ {
+  "cid": "re020",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 6,
+  "verdict": false,
+  "wire": "ERR unknown command 'CONFIG', with args beginning with: 'GET' 'maxmemory'"
+ },
+ {
+  "cid": "re021",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 13,
+  "verdict": true,
+  "wire": "maxmemory\n536870912"
+ },
+ {
+  "cid": "re022",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 7,
+  "verdict": false,
+  "wire": "NOAUTH Authentication required."
+ },
+ {
+  "cid": "re023",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 11,
+  "verdict": false,
+  "wire": "DENIED Redis is running in protected mode because protected mode is enabled and no password is set for the default user. In this mode connections are only accep"
+ },
+ {
+  "cid": "re024",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 12,
+  "verdict": false,
+  "wire": "DENIED Redis is running in protected mode because protected mode is enabled and no password is set for the default user. In this mode connections are only accep"
+ },
+ {
+  "cid": "re025",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 12,
+  "verdict": false,
+  "wire": "ERR unknown command 'CONFIG', with args beginning with: 'GET' 'maxmemory'"
+ },
+ {
+  "cid": "re026",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 9,
+  "verdict": true,
+  "wire": "maxmemory\n0"
+ },
+ {
+  "cid": "re027",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 10,
+  "verdict": true,
+  "wire": "maxmemory\n0"
+ },
+ {
+  "cid": "re028",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 8,
+  "verdict": false,
+  "wire": "NOAUTH Authentication required."
+ },
+ {
+  "cid": "re029",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 8,
+  "verdict": false,
+  "wire": "DENIED Redis is running in protected mode because protected mode is enabled and no password is set for the default user. In this mode connections are only accep"
+ },
+ {
+  "cid": "re030",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 10,
+  "verdict": false,
+  "wire": "NOAUTH Authentication required."
+ },
+ {
+  "cid": "re031",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 8,
+  "verdict": false,
+  "wire": "ERR unknown command 'CONFIG', with args beginning with: 'GET' 'maxmemory'"
+ },
+ {
+  "cid": "re032",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 7,
+  "verdict": true,
+  "wire": "maxmemory\n0"
+ },
+ {
+  "cid": "re033",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 11,
+  "verdict": true,
+  "wire": "maxmemory\n0"
+ },
+ {
+  "cid": "re034",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 8,
+  "verdict": true,
+  "wire": "maxmemory\n67108864"
+ },
+ {
+  "cid": "re035",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 7,
+  "verdict": false,
+  "wire": "DENIED Redis is running in protected mode because protected mode is enabled and no password is set for the default user. In this mode connections are only accep"
+ },
+ {
+  "cid": "re036",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 5,
+  "verdict": false,
+  "wire": "DENIED Redis is running in protected mode because protected mode is enabled and no password is set for the default user. In this mode connections are only accep"
+ },
+ {
+  "cid": "re037",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 6,
+  "verdict": true,
+  "wire": "maxmemory\n0"
+ },
+ {
+  "cid": "re038",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 11,
+  "verdict": false,
+  "wire": "NOAUTH Authentication required."
+ },
+ {
+  "cid": "re039",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 12,
+  "verdict": false,
+  "wire": "NOAUTH Authentication required."
+ },
+ {
+  "cid": "re040",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 11,
+  "verdict": false,
+  "wire": "DENIED Redis is running in protected mode because protected mode is enabled and no password is set for the default user. In this mode connections are only accep"
+ },
+ {
+  "cid": "re041",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 12,
+  "verdict": false,
+  "wire": "NOAUTH Authentication required."
+ },
+ {
+  "cid": "re042",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 8,
+  "verdict": false,
+  "wire": "ERR unknown command 'CONFIG', with args beginning with: 'GET' 'maxmemory'"
+ },
+ {
+  "cid": "re043",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 6,
+  "verdict": false,
+  "wire": "DENIED Redis is running in protected mode because protected mode is enabled and no password is set for the default user. In this mode connections are only accep"
+ },
+ {
+  "cid": "re044",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 11,
+  "verdict": false,
+  "wire": "DENIED Redis is running in protected mode because protected mode is enabled and no password is set for the default user. In this mode connections are only accep"
+ },
+ {
+  "cid": "re045",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 10,
+  "verdict": false,
+  "wire": "NOAUTH Authentication required."
+ },
+ {
+  "cid": "re046",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 11,
+  "verdict": false,
+  "wire": "ERR unknown command 'CONFIG', with args beginning with: 'GET' 'maxmemory'"
+ },
+ {
+  "cid": "re047",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 10,
+  "verdict": false,
+  "wire": "DENIED Redis is running in protected mode because protected mode is enabled and no password is set for the default user. In this mode connections are only accep"
+ },
+ {
+  "cid": "re048",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 7,
+  "verdict": true,
+  "wire": "maxmemory\n0"
+ },
+ {
+  "cid": "re049",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 8,
+  "verdict": false,
+  "wire": "NOAUTH Authentication required."
+ },
+ {
+  "cid": "re050",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 11,
+  "verdict": false,
+  "wire": "NOAUTH Authentication required."
+ },
+ {
+  "cid": "re051",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 7,
+  "verdict": true,
+  "wire": "maxmemory\n0"
+ },
+ {
+  "cid": "re052",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 6,
+  "verdict": true,
+  "wire": "maxmemory\n0"
+ },
+ {
+  "cid": "re053",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 11,
+  "verdict": true,
+  "wire": "maxmemory\n67108864"
+ },
+ {
+  "cid": "re054",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 8,
+  "verdict": false,
+  "wire": "DENIED Redis is running in protected mode because protected mode is enabled and no password is set for the default user. In this mode connections are only accep"
+ },
+ {
+  "cid": "re055",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 9,
+  "verdict": true,
+  "wire": "maxmemory\n67108864"
+ },
+ {
+  "cid": "re056",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 11,
+  "verdict": false,
+  "wire": "Could not connect to Redis at 10.77.0.1:16380: Connection refused"
+ },
+ {
+  "cid": "re057",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 7,
+  "verdict": true,
+  "wire": "maxmemory\n0"
+ },
+ {
+  "cid": "re058",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 7,
+  "verdict": false,
+  "wire": "DENIED Redis is running in protected mode because protected mode is enabled and no password is set for the default user. In this mode connections are only accep"
+ },
+ {
+  "cid": "re059",
+  "service": "redis",
+  "prop": "redis.unauth_admin",
+  "n": 11,
+  "verdict": false,
+  "wire": "Could not connect to Redis at 10.77.0.1:16382: Connection refused"
+ },
+ {
+  "cid": "po000",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 13,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15441 failed: Connection refused\n\tIs the server running on that host and accepting TCP/IP connections?"
+ },
+ {
+  "cid": "po001",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 11,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15443 failed: fe_sendauth: no password supplied"
+ },
+ {
+  "cid": "po002",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 11,
+  "verdict": true,
+  "wire": "1"
+ },
+ {
+  "cid": "po003",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 8,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15442 failed: fe_sendauth: no password supplied"
+ },
+ {
+  "cid": "po004",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 13,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15441 failed: Connection refused\n\tIs the server running on that host and accepting TCP/IP connections?"
+ },
+ {
+  "cid": "po005",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 12,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15443 failed: Connection refused\n\tIs the server running on that host and accepting TCP/IP connections?"
+ },
+ {
+  "cid": "po006",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 13,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15440 failed: Connection refused\n\tIs the server running on that host and accepting TCP/IP connections?"
+ },
+ {
+  "cid": "po007",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 12,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15442 failed: fe_sendauth: no password supplied"
+ },
+ {
+  "cid": "po008",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 14,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15441 failed: fe_sendauth: no password supplied"
+ },
+ {
+  "cid": "po009",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 12,
+  "verdict": true,
+  "wire": "1"
+ },
+ {
+  "cid": "po010",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 12,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15440 failed: FATAL:  pg_hba.conf rejects connection for host \"10.77.0.1\", user \"synthetic\", database \"sy"
+ },
+ {
+  "cid": "po011",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 8,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15441 failed: Connection refused\n\tIs the server running on that host and accepting TCP/IP connections?"
+ },
+ {
+  "cid": "po012",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 11,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15442 failed: FATAL:  pg_hba.conf rejects connection for host \"10.77.0.1\", user \"synthetic\", database \"sy"
+ },
+ {
+  "cid": "po013",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 6,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15443 failed: FATAL:  pg_hba.conf rejects connection for host \"10.77.0.1\", user \"synthetic\", database \"sy"
+ },
+ {
+  "cid": "po014",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 10,
+  "verdict": true,
+  "wire": "1"
+ },
+ {
+  "cid": "po015",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 10,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15440 failed: Connection refused\n\tIs the server running on that host and accepting TCP/IP connections?"
+ },
+ {
+  "cid": "po016",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 15,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15442 failed: fe_sendauth: no password supplied"
+ },
+ {
+  "cid": "po017",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 12,
+  "verdict": true,
+  "wire": "1"
+ },
+ {
+  "cid": "po018",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 7,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15441 failed: fe_sendauth: no password supplied"
+ },
+ {
+  "cid": "po019",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 11,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15440 failed: fe_sendauth: no password supplied"
+ },
+ {
+  "cid": "po020",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 13,
+  "verdict": true,
+  "wire": "1"
+ },
+ {
+  "cid": "po021",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 13,
+  "verdict": true,
+  "wire": "1"
+ },
+ {
+  "cid": "po022",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 9,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15440 failed: fe_sendauth: no password supplied"
+ },
+ {
+  "cid": "po023",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 9,
+  "verdict": true,
+  "wire": "1"
+ },
+ {
+  "cid": "po024",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 12,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15442 failed: FATAL:  pg_hba.conf rejects connection for host \"10.77.0.1\", user \"synthetic\", database \"sy"
+ },
+ {
+  "cid": "po025",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 8,
+  "verdict": true,
+  "wire": "1"
+ },
+ {
+  "cid": "po026",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 13,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15440 failed: Connection refused\n\tIs the server running on that host and accepting TCP/IP connections?"
+ },
+ {
+  "cid": "po027",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 11,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15441 failed: fe_sendauth: no password supplied"
+ },
+ {
+  "cid": "po028",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 13,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15442 failed: Connection refused\n\tIs the server running on that host and accepting TCP/IP connections?"
+ },
+ {
+  "cid": "po029",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 8,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15443 failed: Connection refused\n\tIs the server running on that host and accepting TCP/IP connections?"
+ },
+ {
+  "cid": "po030",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 10,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15440 failed: fe_sendauth: no password supplied"
+ },
+ {
+  "cid": "po031",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 9,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15442 failed: fe_sendauth: no password supplied"
+ },
+ {
+  "cid": "po032",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 12,
+  "verdict": true,
+  "wire": "1"
+ },
+ {
+  "cid": "po033",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 7,
+  "verdict": true,
+  "wire": "1"
+ },
+ {
+  "cid": "po034",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 8,
+  "verdict": true,
+  "wire": "1"
+ },
+ {
+  "cid": "po035",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 9,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15442 failed: Connection refused\n\tIs the server running on that host and accepting TCP/IP connections?"
+ },
+ {
+  "cid": "po036",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 12,
+  "verdict": true,
+  "wire": "1"
+ },
+ {
+  "cid": "po037",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 15,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15443 failed: FATAL:  pg_hba.conf rejects connection for host \"10.77.0.1\", user \"synthetic\", database \"sy"
+ },
+ {
+  "cid": "po038",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 11,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15442 failed: Connection refused\n\tIs the server running on that host and accepting TCP/IP connections?"
+ },
+ {
+  "cid": "po039",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 11,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15441 failed: fe_sendauth: no password supplied"
+ },
+ {
+  "cid": "po040",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 12,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15440 failed: fe_sendauth: no password supplied"
+ },
+ {
+  "cid": "po041",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 8,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15443 failed: Connection refused\n\tIs the server running on that host and accepting TCP/IP connections?"
+ },
+ {
+  "cid": "po042",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 12,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15442 failed: FATAL:  pg_hba.conf rejects connection for host \"10.77.0.1\", user \"synthetic\", database \"sy"
+ },
+ {
+  "cid": "po043",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 11,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15440 failed: FATAL:  pg_hba.conf rejects connection for host \"10.77.0.1\", user \"synthetic\", database \"sy"
+ },
+ {
+  "cid": "po044",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 10,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15441 failed: fe_sendauth: no password supplied"
+ },
+ {
+  "cid": "po045",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 8,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15443 failed: fe_sendauth: no password supplied"
+ },
+ {
+  "cid": "po046",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 9,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15442 failed: fe_sendauth: no password supplied"
+ },
+ {
+  "cid": "po047",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 7,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15441 failed: Connection refused\n\tIs the server running on that host and accepting TCP/IP connections?"
+ },
+ {
+  "cid": "po048",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 11,
+  "verdict": true,
+  "wire": "1"
+ },
+ {
+  "cid": "po049",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 11,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15443 failed: Connection refused\n\tIs the server running on that host and accepting TCP/IP connections?"
+ },
+ {
+  "cid": "po050",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 10,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15442 failed: Connection refused\n\tIs the server running on that host and accepting TCP/IP connections?"
+ },
+ {
+  "cid": "po051",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 13,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15441 failed: Connection refused\n\tIs the server running on that host and accepting TCP/IP connections?"
+ },
+ {
+  "cid": "po052",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 11,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15440 failed: fe_sendauth: no password supplied"
+ },
+ {
+  "cid": "po053",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 14,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15442 failed: Connection refused\n\tIs the server running on that host and accepting TCP/IP connections?"
+ },
+ {
+  "cid": "po054",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 11,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15443 failed: fe_sendauth: no password supplied"
+ },
+ {
+  "cid": "po055",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 12,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15440 failed: Connection refused\n\tIs the server running on that host and accepting TCP/IP connections?"
+ },
+ {
+  "cid": "po056",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 11,
+  "verdict": true,
+  "wire": "1"
+ },
+ {
+  "cid": "po057",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 10,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15442 failed: Connection refused\n\tIs the server running on that host and accepting TCP/IP connections?"
+ },
+ {
+  "cid": "po058",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 11,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15443 failed: fe_sendauth: no password supplied"
+ },
+ {
+  "cid": "po059",
+  "service": "postgresql",
+  "prop": "pg.unauth_sql",
+  "n": 12,
+  "verdict": false,
+  "wire": "psql: error: connection to server at \"10.77.0.1\", port 15440 failed: Connection refused\n\tIs the server running on that host and accepting TCP/IP connections?"
+ },
+ {
+  "cid": "ng000",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 7,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|404"
+ },
+ {
+  "cid": "ng000",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 7,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|404"
+ },
+ {
+  "cid": "ng001",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 8,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|200"
+ },
+ {
+  "cid": "ng001",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 8,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|200"
+ },
+ {
+  "cid": "ng002",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 13,
+  "verdict": false,
+  "wire": "HTTP/1.1 403 Forbidden\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 146\nCon|200"
+ },
+ {
+  "cid": "ng002",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 13,
+  "verdict": true,
+  "wire": "HTTP/1.1 403 Forbidden\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 146\nCon|200"
+ },
+ {
+  "cid": "ng003",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 14,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8\nContent-Length:|200"
+ },
+ {
+  "cid": "ng003",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 14,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8\nContent-Length:|200"
+ },
+ {
+  "cid": "ng004",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 13,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 7\nLast-Modifie|403"
+ },
+ {
+  "cid": "ng004",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 13,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 7\nLast-Modifie|403"
+ },
+ {
+  "cid": "ng005",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 14,
+  "verdict": false,
+  "wire": "HTTP/1.1 403 Forbidden\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 146\nCon|403"
+ },
+ {
+  "cid": "ng005",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 14,
+  "verdict": false,
+  "wire": "HTTP/1.1 403 Forbidden\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 146\nCon|403"
+ },
+ {
+  "cid": "ng006",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 6,
+  "verdict": true,
+  "wire": "HTTP/1.1 403 Forbidden\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent|200"
+ },
+ {
+  "cid": "ng006",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 6,
+  "verdict": true,
+  "wire": "HTTP/1.1 403 Forbidden\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent|200"
+ },
+ {
+  "cid": "ng007",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 10,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8\nContent-Length:|200"
+ },
+ {
+  "cid": "ng007",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 10,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8\nContent-Length:|200"
+ },
+ {
+  "cid": "ng008",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 10,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 7\nLast-Modifie|200"
+ },
+ {
+  "cid": "ng008",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 10,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 7\nLast-Modifie|200"
+ },
+ {
+  "cid": "ng009",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 10,
+  "verdict": false,
+  "wire": "HTTP/1.1 403 Forbidden\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 146\nCon|200"
+ },
+ {
+  "cid": "ng009",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 10,
+  "verdict": true,
+  "wire": "HTTP/1.1 403 Forbidden\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 146\nCon|200"
+ },
+ {
+  "cid": "ng010",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 10,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 7\nLast-Modifie|404"
+ },
+ {
+  "cid": "ng010",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 10,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 7\nLast-Modifie|404"
+ },
+ {
+  "cid": "ng011",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 7,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8|200"
+ },
+ {
+  "cid": "ng011",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 7,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8|200"
+ },
+ {
+  "cid": "ng012",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 6,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|404"
+ },
+ {
+  "cid": "ng012",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 6,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|404"
+ },
+ {
+  "cid": "ng013",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 9,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|403"
+ },
+ {
+  "cid": "ng013",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 9,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|403"
+ },
+ {
+  "cid": "ng014",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 11,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8\nContent-Length:|401"
+ },
+ {
+  "cid": "ng014",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 11,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8\nContent-Length:|401"
+ },
+ {
+  "cid": "ng015",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 14,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|200"
+ },
+ {
+  "cid": "ng015",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 14,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|200"
+ },
+ {
+  "cid": "ng016",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 12,
+  "verdict": false,
+  "wire": "HTTP/1.1 403 Forbidden\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8\nContent-|200"
+ },
+ {
+  "cid": "ng016",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 12,
+  "verdict": true,
+  "wire": "HTTP/1.1 403 Forbidden\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8\nContent-|200"
+ },
+ {
+  "cid": "ng017",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 7,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|200"
+ },
+ {
+  "cid": "ng017",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 7,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|200"
+ },
+ {
+  "cid": "ng018",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 11,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8\nContent-Length:|404"
+ },
+ {
+  "cid": "ng018",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 11,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8\nContent-Length:|404"
+ },
+ {
+  "cid": "ng019",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 7,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8|403"
+ },
+ {
+  "cid": "ng019",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 7,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8|403"
+ },
+ {
+  "cid": "ng020",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 11,
+  "verdict": true,
+  "wire": "HTTP/1.1 401 Unauthorized\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nCont|200"
+ },
+ {
+  "cid": "ng020",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 11,
+  "verdict": true,
+  "wire": "HTTP/1.1 401 Unauthorized\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nCont|200"
+ },
+ {
+  "cid": "ng021",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 9,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 7\nLast-Modifie|200"
+ },
+ {
+  "cid": "ng021",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 9,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 7\nLast-Modifie|200"
+ },
+ {
+  "cid": "ng022",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 12,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 7\nLast-Modifie|200"
+ },
+ {
+  "cid": "ng022",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 12,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 7\nLast-Modifie|200"
+ },
+ {
+  "cid": "ng023",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 11,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8|200"
+ },
+ {
+  "cid": "ng023",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 11,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8|200"
+ },
+ {
+  "cid": "ng024",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 7,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|403"
+ },
+ {
+  "cid": "ng024",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 7,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|403"
+ },
+ {
+  "cid": "ng025",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 13,
+  "verdict": false,
+  "wire": "HTTP/1.1 403 Forbidden\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8\nContent-|403"
+ },
+ {
+  "cid": "ng025",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 13,
+  "verdict": false,
+  "wire": "HTTP/1.1 403 Forbidden\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8\nContent-|403"
+ },
+ {
+  "cid": "ng026",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 7,
+  "verdict": true,
+  "wire": "HTTP/1.1 403 Forbidden\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent|200"
+ },
+ {
+  "cid": "ng026",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 7,
+  "verdict": true,
+  "wire": "HTTP/1.1 403 Forbidden\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent|200"
+ },
+ {
+  "cid": "ng027",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 9,
+  "verdict": true,
+  "wire": "HTTP/1.1 401 Unauthorized\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nCont|200"
+ },
+ {
+  "cid": "ng027",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 9,
+  "verdict": true,
+  "wire": "HTTP/1.1 401 Unauthorized\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nCont|200"
+ },
+ {
+  "cid": "ng028",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 13,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|403"
+ },
+ {
+  "cid": "ng028",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 13,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|403"
+ },
+ {
+  "cid": "ng029",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 12,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8\nContent-Length:|401"
+ },
+ {
+  "cid": "ng029",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 12,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8\nContent-Length:|401"
+ },
+ {
+  "cid": "ng030",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 12,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 7\nLast-Modifie|200"
+ },
+ {
+  "cid": "ng030",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 12,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 7\nLast-Modifie|200"
+ },
+ {
+  "cid": "ng031",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 11,
+  "verdict": true,
+  "wire": "HTTP/1.1 403 Forbidden\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charse|403"
+ },
+ {
+  "cid": "ng031",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 11,
+  "verdict": false,
+  "wire": "HTTP/1.1 403 Forbidden\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charse|403"
+ },
+ {
+  "cid": "ng032",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 12,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8\nContent-Length:|200"
+ },
+ {
+  "cid": "ng032",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 12,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8\nContent-Length:|200"
+ },
+ {
+  "cid": "ng033",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 10,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|401"
+ },
+ {
+  "cid": "ng033",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 10,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|401"
+ },
+ {
+  "cid": "ng034",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 9,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 7\nLast-Modifie|200"
+ },
+ {
+  "cid": "ng034",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 9,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 7\nLast-Modifie|200"
+ },
+ {
+  "cid": "ng035",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 7,
+  "verdict": true,
+  "wire": "HTTP/1.1 401 Unauthorized\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nCont|200"
+ },
+ {
+  "cid": "ng035",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 7,
+  "verdict": true,
+  "wire": "HTTP/1.1 401 Unauthorized\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nCont|200"
+ },
+ {
+  "cid": "ng036",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 14,
+  "verdict": false,
+  "wire": "HTTP/1.1 403 Forbidden\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 146\nCon|403"
+ },
+ {
+  "cid": "ng036",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 14,
+  "verdict": false,
+  "wire": "HTTP/1.1 403 Forbidden\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 146\nCon|403"
+ },
+ {
+  "cid": "ng037",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 11,
+  "verdict": false,
+  "wire": "HTTP/1.1 403 Forbidden\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 146\nCon|200"
+ },
+ {
+  "cid": "ng037",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 11,
+  "verdict": true,
+  "wire": "HTTP/1.1 403 Forbidden\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 146\nCon|200"
+ },
+ {
+  "cid": "ng038",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 14,
+  "verdict": false,
+  "wire": "HTTP/1.1 403 Forbidden\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 146\nCon|200"
+ },
+ {
+  "cid": "ng038",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 14,
+  "verdict": true,
+  "wire": "HTTP/1.1 403 Forbidden\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 146\nCon|200"
+ },
+ {
+  "cid": "ng039",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 11,
+  "verdict": false,
+  "wire": "HTTP/1.1 401 Unauthorized\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8\nConte|200"
+ },
+ {
+  "cid": "ng039",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 11,
+  "verdict": true,
+  "wire": "HTTP/1.1 401 Unauthorized\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8\nConte|200"
+ },
+ {
+  "cid": "ng040",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 9,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8|403"
+ },
+ {
+  "cid": "ng040",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 9,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8|403"
+ },
+ {
+  "cid": "ng041",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 10,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8|403"
+ },
+ {
+  "cid": "ng041",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 10,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8|403"
+ },
+ {
+  "cid": "ng042",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 12,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8\nContent-Length:|404"
+ },
+ {
+  "cid": "ng042",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 12,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8\nContent-Length:|404"
+ },
+ {
+  "cid": "ng043",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 9,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|404"
+ },
+ {
+  "cid": "ng043",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 9,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|404"
+ },
+ {
+  "cid": "ng044",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 12,
+  "verdict": true,
+  "wire": "HTTP/1.1 401 Unauthorized\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; cha|200"
+ },
+ {
+  "cid": "ng044",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 12,
+  "verdict": true,
+  "wire": "HTTP/1.1 401 Unauthorized\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; cha|200"
+ },
+ {
+  "cid": "ng045",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 12,
+  "verdict": true,
+  "wire": "HTTP/1.1 403 Forbidden\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent|200"
+ },
+ {
+  "cid": "ng045",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 12,
+  "verdict": true,
+  "wire": "HTTP/1.1 403 Forbidden\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent|200"
+ },
+ {
+  "cid": "ng046",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 8,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|404"
+ },
+ {
+  "cid": "ng046",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 8,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|404"
+ },
+ {
+  "cid": "ng047",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 10,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8\nContent-Length:|200"
+ },
+ {
+  "cid": "ng047",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 10,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8\nContent-Length:|200"
+ },
+ {
+  "cid": "ng048",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 13,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8\nContent-Length:|401"
+ },
+ {
+  "cid": "ng048",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 13,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8\nContent-Length:|401"
+ },
+ {
+  "cid": "ng049",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 15,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|401"
+ },
+ {
+  "cid": "ng049",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 15,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|401"
+ },
+ {
+  "cid": "ng050",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 8,
+  "verdict": true,
+  "wire": "HTTP/1.1 403 Forbidden\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent|200"
+ },
+ {
+  "cid": "ng050",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 8,
+  "verdict": true,
+  "wire": "HTTP/1.1 403 Forbidden\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent|200"
+ },
+ {
+  "cid": "ng051",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 11,
+  "verdict": false,
+  "wire": "HTTP/1.1 403 Forbidden\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8\nContent-|403"
+ },
+ {
+  "cid": "ng051",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 11,
+  "verdict": false,
+  "wire": "HTTP/1.1 403 Forbidden\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8\nContent-|403"
+ },
+ {
+  "cid": "ng052",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 12,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 7\nLast-Modifie|403"
+ },
+ {
+  "cid": "ng052",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 12,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 7\nLast-Modifie|403"
+ },
+ {
+  "cid": "ng053",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 11,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|401"
+ },
+ {
+  "cid": "ng053",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 11,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|401"
+ },
+ {
+  "cid": "ng054",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 11,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|401"
+ },
+ {
+  "cid": "ng054",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 11,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|401"
+ },
+ {
+  "cid": "ng055",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 9,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8\nContent-Length:|200"
+ },
+ {
+  "cid": "ng055",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 9,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html; charset=utf-8\nContent-Length:|200"
+ },
+ {
+  "cid": "ng056",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 11,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|403"
+ },
+ {
+  "cid": "ng056",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 11,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|403"
+ },
+ {
+  "cid": "ng057",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 11,
+  "verdict": false,
+  "wire": "HTTP/1.1 401 Unauthorized\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 172\n|200"
+ },
+ {
+  "cid": "ng057",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 11,
+  "verdict": true,
+  "wire": "HTTP/1.1 401 Unauthorized\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 172\n|200"
+ },
+ {
+  "cid": "ng058",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 6,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|404"
+ },
+ {
+  "cid": "ng058",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 6,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx/1.24.0 (Ubuntu)\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length|404"
+ },
+ {
+  "cid": "ng059",
+  "service": "nginx",
+  "prop": "nginx.version_leak",
+  "n": 12,
+  "verdict": false,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 7\nLast-Modifie|200"
+ },
+ {
+  "cid": "ng059",
+  "service": "nginx",
+  "prop": "nginx.admin_open",
+  "n": 12,
+  "verdict": true,
+  "wire": "HTTP/1.1 200 OK\nServer: nginx\nDate: Thu, 05 Nov 2026 02:26:28 GMT\nContent-Type: text/html\nContent-Length: 7\nLast-Modifie|200"
+ },
+ {
+  "cid": "op000",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 14,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op001",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 12,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op002",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 14,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey,password)."
+ },
+ {
+  "cid": "op003",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 12,
+  "verdict": true,
+  "wire": "oracle-ok"
+ },
+ {
+  "cid": "op004",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 9,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op005",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 11,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op006",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 8,
+  "verdict": true,
+  "wire": "oracle-ok"
+ },
+ {
+  "cid": "op007",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 12,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op008",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 16,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op009",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 10,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op010",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 12,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey,password)."
+ },
+ {
+  "cid": "op011",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 7,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op012",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 6,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey,password)."
+ },
+ {
+  "cid": "op013",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 9,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op014",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 6,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op015",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 14,
+  "verdict": true,
+  "wire": "oracle-ok"
+ },
+ {
+  "cid": "op016",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 11,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op017",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 10,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op018",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 8,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey,password)."
+ },
+ {
+  "cid": "op019",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 10,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op020",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 11,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op021",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 10,
+  "verdict": true,
+  "wire": "oracle-ok"
+ },
+ {
+  "cid": "op022",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 12,
+  "verdict": true,
+  "wire": "oracle-ok"
+ },
+ {
+  "cid": "op023",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 12,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op024",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 8,
+  "verdict": true,
+  "wire": "oracle-ok"
+ },
+ {
+  "cid": "op025",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 8,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op027",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 8,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op028",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 10,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op029",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 13,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op030",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 9,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op031",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 11,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op032",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 11,
+  "verdict": true,
+  "wire": "oracle-ok"
+ },
+ {
+  "cid": "op033",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 12,
+  "verdict": true,
+  "wire": "oracle-ok"
+ },
+ {
+  "cid": "op034",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 12,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op036",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 11,
+  "verdict": true,
+  "wire": "oracle-ok"
+ },
+ {
+  "cid": "op037",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 6,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op038",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 13,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op039",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 8,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op040",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 12,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op041",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 8,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op042",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 11,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op043",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 9,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey,password)."
+ },
+ {
+  "cid": "op045",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 10,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op046",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 9,
+  "verdict": true,
+  "wire": "oracle-ok"
+ },
+ {
+  "cid": "op047",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 12,
+  "verdict": true,
+  "wire": "oracle-ok"
+ },
+ {
+  "cid": "op048",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 9,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op049",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 8,
+  "verdict": true,
+  "wire": "oracle-ok"
+ },
+ {
+  "cid": "op050",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 13,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op051",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 10,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op052",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 9,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op053",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 13,
+  "verdict": true,
+  "wire": "oracle-ok"
+ },
+ {
+  "cid": "op054",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 10,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op055",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 8,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op056",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 10,
+  "verdict": true,
+  "wire": "oracle-ok"
+ },
+ {
+  "cid": "op057",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 8,
+  "verdict": true,
+  "wire": "oracle-ok"
+ },
+ {
+  "cid": "op058",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 6,
+  "verdict": true,
+  "wire": "oracle-ok"
+ },
+ {
+  "cid": "op059",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 10,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey,password)."
+ },
+ {
+  "cid": "op060",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 11,
+  "verdict": true,
+  "wire": "oracle-ok"
+ },
+ {
+  "cid": "op061",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 10,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ },
+ {
+  "cid": "op062",
+  "service": "openssh",
+  "prop": "ssh.password_login",
+  "n": 9,
+  "verdict": false,
+  "wire": "synthetic@10.77.0.1: Permission denied (publickey)."
+ }
+]

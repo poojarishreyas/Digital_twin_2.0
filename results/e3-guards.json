@@ -1,0 +1,229 @@
+{
+ "redis.unauth_admin": {
+  "core": [
+   "protected-mode"
+  ],
+  "removal": [
+   "protected-mode",
+   "rename-command",
+   "requirepass",
+   "user"
+  ],
+  "expert": [
+   "bind",
+   "protected-mode",
+   "rename-command",
+   "requirepass",
+   "user"
+  ],
+  "all": [
+   "activerehashing",
+   "bind",
+   "databases",
+   "hz",
+   "latency-monitor-threshold",
+   "lazyfree-lazy-eviction",
+   "loglevel",
+   "maxclients",
+   "maxmemory",
+   "maxmemory-policy",
+   "notify-keyspace-events",
+   "protected-mode",
+   "rename-command",
+   "requirepass",
+   "slowlog-log-slower-than",
+   "tcp-backlog",
+   "tcp-keepalive",
+   "timeout",
+   "user"
+  ],
+  "union": [
+   "protected-mode",
+   "rename-command",
+   "requirepass",
+   "user"
+  ]
+ },
+ "pg.unauth_sql": {
+  "core": [
+   "hba",
+   "listen_addresses"
+  ],
+  "removal": [
+   "hba",
+   "listen_addresses"
+  ],
+  "expert": [
+   "hba",
+   "listen_addresses",
+   "password_encryption"
+  ],
+  "all": [
+   "authentication_timeout",
+   "effective_cache_size",
+   "hba",
+   "idle_in_transaction_session_timeout",
+   "listen_addresses",
+   "log_connections",
+   "log_disconnections",
+   "log_line_prefix",
+   "log_min_duration_statement",
+   "maintenance_work_mem",
+   "max_connections",
+   "password_encryption",
+   "shared_buffers",
+   "statement_timeout",
+   "work_mem"
+  ],
+  "union": [
+   "hba",
+   "listen_addresses"
+  ]
+ },
+ "nginx.admin_open": {
+  "core": [
+   "auth_basic",
+   "deny",
+   "internal"
+  ],
+  "removal": [
+   "allow",
+   "auth_basic",
+   "deny",
+   "internal",
+   "satisfy"
+  ],
+  "expert": [
+   "allow",
+   "auth_basic",
+   "deny",
+   "internal",
+   "satisfy",
+   "server_tokens"
+  ],
+  "all": [
+   "add_header",
+   "allow",
+   "auth_basic",
+   "autoindex",
+   "charset",
+   "client_body_timeout",
+   "client_max_body_size",
+   "deny",
+   "etag",
+   "expires",
+   "gzip",
+   "internal",
+   "keepalive_timeout",
+   "satisfy",
+   "send_timeout",
+   "sendfile",
+   "server_tokens",
+   "tcp_nodelay"
+  ],
+  "union": [
+   "allow",
+   "auth_basic",
+   "deny",
+   "internal",
+   "satisfy"
+  ]
+ },
+ "nginx.version_leak": {
+  "core": [
+   "server_tokens"
+  ],
+  "removal": [
+   "server_tokens"
+  ],
+  "expert": [
+   "allow",
+   "auth_basic",
+   "deny",
+   "internal",
+   "satisfy",
+   "server_tokens"
+  ],
+  "all": [
+   "add_header",
+   "allow",
+   "auth_basic",
+   "autoindex",
+   "charset",
+   "client_body_timeout",
+   "client_max_body_size",
+   "deny",
+   "etag",
+   "expires",
+   "gzip",
+   "internal",
+   "keepalive_timeout",
+   "satisfy",
+   "send_timeout",
+   "sendfile",
+   "server_tokens",
+   "tcp_nodelay"
+  ],
+  "union": [
+   "server_tokens"
+  ]
+ },
+ "ssh.password_login": {
+  "core": [
+   "AllowGroups",
+   "AllowUsers",
+   "AuthenticationMethods",
+   "DenyGroups",
+   "PasswordAuthentication"
+  ],
+  "removal": [
+   "AllowUsers",
+   "AuthenticationMethods",
+   "DenyGroups",
+   "PasswordAuthentication"
+  ],
+  "expert": [
+   "AllowGroups",
+   "AllowUsers",
+   "AuthenticationMethods",
+   "DenyGroups",
+   "DenyUsers",
+   "MaxAuthTries",
+   "PasswordAuthentication",
+   "PermitEmptyPasswords",
+   "PermitRootLogin",
+   "PubkeyAuthentication"
+  ],
+  "all": [
+   "AllowGroups",
+   "AllowTcpForwarding",
+   "AllowUsers",
+   "AuthenticationMethods",
+   "Banner",
+   "ClientAliveCountMax",
+   "ClientAliveInterval",
+   "DenyGroups",
+   "DenyUsers",
+   "LogLevel",
+   "LoginGraceTime",
+   "MaxAuthTries",
+   "MaxSessions",
+   "PasswordAuthentication",
+   "PermitEmptyPasswords",
+   "PermitRootLogin",
+   "PermitTunnel",
+   "PrintMotd",
+   "PubkeyAuthentication",
+   "TCPKeepAlive",
+   "UseDNS",
+   "X11Forwarding"
+  ],
+  "union": [
+   "AllowGroups",
+   "AllowUsers",
+   "AuthenticationMethods",
+   "DenyGroups",
+   "PasswordAuthentication"
+  ]
+ }
+}
