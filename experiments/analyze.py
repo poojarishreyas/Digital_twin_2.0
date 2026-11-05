@@ -92,6 +92,28 @@ fig.tight_layout(rect=(0, 0.17, 1, 1))
 fig.savefig(RESULTS / "fig-fidelity-curve.png")
 plt.close(fig)
 
+# single-column stacked variant (used by the Word build)
+fig, axes = plt.subplots(2, 1, figsize=(3.5, 4.6), sharex=True)
+for ax, base, title in zip(axes, ("vendor", "platform"), ("(a) Base profile V: vendor defaults", "(b) Base profile P: platform default twin")):
+    for i, p in enumerate(PROPS):
+        ys = [100 * E1[f"{base}|{p}|{lv}"]["error"] for lv in levels]
+        ax.plot([100 * l for l in levels], ys, color=COLORS[i], marker=MARKERS[i], ms=3, lw=1.1, ls=STYLES[i], label=LABEL[p])
+    ys = [100 * E1[f"{base}|all|{lv}"]["error"] for lv in levels]
+    lo = [100 * E1[f"{base}|all|{lv}"]["ci"][0] for lv in levels]
+    hi = [100 * E1[f"{base}|all|{lv}"]["ci"][1] for lv in levels]
+    ax.fill_between([100 * l for l in levels], lo, hi, color="#0b0b0b", alpha=0.10, lw=0)
+    ax.plot([100 * l for l in levels], ys, color="#0b0b0b", lw=1.7, label="All properties (95% CI)")
+    ax.set_title(title, fontsize=8)
+    ax.set_ylabel("Verdict error (%)")
+    ax.set_xlim(0, 100)
+    ax.set_ylim(bottom=0)
+axes[1].set_xlabel("Directives synchronized at random (%)")
+h, l = axes[0].get_legend_handles_labels()
+fig.legend(h, l, loc="lower center", ncol=2, fontsize=6.5, bbox_to_anchor=(0.5, 0.0))
+fig.tight_layout(rect=(0, 0.13, 1, 1))
+fig.savefig(RESULTS / "fig-fidelity-curve-stacked.png")
+plt.close(fig)
+
 # ----------------------------------------------------------------- E2
 cores = load("e2-cores.json")
 cfgs = {c.cid: c for c in load_corpus()}

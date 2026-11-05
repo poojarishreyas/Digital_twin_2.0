@@ -28,9 +28,10 @@ non-loopback client with the stock clients (`redis-cli`, `psql`, `curl`,
 | `experiments/e1_curve.py` | fidelity curve: random partial synchronization |
 | `experiments/e2_cores.py` | fidelity cores under both base profiles, removal sensitivity |
 | `experiments/e3_drift.py` | drift traces, guard sets, selective synchronization |
+| `experiments/e5_repeat.py` | determinism check: 1,000 cached twins re-run on fresh processes |
 | `experiments/analyze.py` | statistics, figures, static-analyzer comparison (E4) |
 | `results/` | raw JSON for every run, `summary.json`, figures, verdict cache |
-| `paper/` | manuscript (LaTeX/IEEEtran, PDF and DOCX) |
+| `paper/` | manuscript: `fidelity-cores.tex` (IEEEtran), `.pdf`, `.docx` (built by `build_docx.py`) |
 
 ## Reproduce
 
@@ -49,5 +50,19 @@ cd experiments
 python3 e0_truth.py && python3 e1_curve.py && python3 e2_cores.py && python3 e3_drift.py && python3 analyze.py
 python3 -m pytest -q ../tests
 ```
+
+To re-run only the analysis from the shipped results, first restore the verdict cache:
+`gunzip -k results/verdict-cache.sqlite.gz`, then `cd experiments && python3 analyze.py`.
+
+## Headline results
+
+| Finding | Value |
+|---|---|
+| Largest fidelity core (300 configuration–property pairs, vendor base) | 2 directives (median 0, mean 5.1% of a file) |
+| Verdict error with 90% of directives mirrored at random | 6.6% (95% CI 5.5–7.8) |
+| Pivots lying outside the core | 76 of 194 (39%) |
+| Selective sync with learned core∪pivot keys | 24% of directives exported, 99.3% agreement |
+| Key-guarded vs hash-triggered re-emulation (q = 0.3) | 19.9 vs 99.8 per 100 edits, 0.28% stale steps |
+| Careful static analyzer vs real servers | 17,018 / 17,032 verdicts agree; 14 semantic corner cases |
 
 The credentials are synthetic lab values; no real system, account or secret is involved.

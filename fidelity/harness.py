@@ -93,7 +93,7 @@ def save(entries: dict, path: Path = CACHE) -> None:
     con.close()
 
 
-def run_jobs(jobs: list, workers: int = 4, label: str = "") -> list:
+def run_jobs(jobs: list, workers: int = 4, label: str = "", persist: bool = True) -> list:
     """jobs = [(fn, args)], fn(evaluator, *args) -> result.  Order preserved."""
     snapshot = load_cache()
     manager = mp.Manager()
@@ -107,10 +107,11 @@ def run_jobs(jobs: list, workers: int = 4, label: str = "") -> list:
         for i, res in enumerate(pool.imap(_call, jobs, chunksize=1)):
             results[i], new = res
             pending.update(new)
-            if len(pending) > 200:
+            if persist and len(pending) > 200:
                 save(pending)
                 pending = {}
             if label and (i + 1) % max(1, len(jobs) // 20) == 0:
                 print(f"[{label}] {i+1}/{len(jobs)} {time.monotonic()-t0:.0f}s", flush=True)
-    save(pending)
+    if persist:
+        save(pending)
     return results
