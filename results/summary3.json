@@ -510,5 +510,250 @@
     }
    }
   }
+ },
+ "e13": {
+  "mosquitto": {
+   "stats": {
+    "files": 701,
+    "not_config": 6,
+    "no_known_key": 27,
+    "duplicate": 254,
+    "kept": 414
+   },
+   "accepted": 368,
+   "rejected": 46,
+   "reject_examples": [
+    [
+     "exited:1793858915: Error: Invalid bridge configuration.\n1793858915: Error found at /tmp/fi",
+     3
+    ],
+    [
+     "exited:1793858836: Error: Invalid bridge configuration.\n1793858836: Error found at /tmp/fi",
+     2
+    ],
+    [
+     "exited:1793858866: Error: Unknown configuration variable \"'\\\"\".\n1793858866: Error found at",
+     2
+    ],
+    [
+     "exited:1793858875: Error: Unknown configuration variable \"'\\\"\".\n1793858875: Error found at",
+     2
+    ]
+   ],
+   "exposed": 182,
+   "n_mean": 7.144021739130435,
+   "sample": 60,
+   "core_V": {
+    "max": 2,
+    "mean": 1.5333333333333334,
+    "hist": {
+     "2": 32,
+     "1": 28
+    }
+   },
+   "conflict_P": 0,
+   "pivots": {
+    "total": 86,
+    "in_core": 68,
+    "keys": [
+     [
+      "listener",
+      49
+     ],
+     [
+      "allow_anonymous",
+      31
+     ],
+     [
+      "password_file",
+      2
+     ],
+     [
+      "persistence",
+      1
+     ],
+     [
+      "per_listener_settings",
+      1
+     ],
+     [
+      "protocol",
+      1
+     ]
+    ]
+   },
+   "gsync": {
+    "core": {
+     "acc": 0.9166666666666666,
+     "kept": 0.6708974248376423
+    },
+    "union": {
+     "acc": 0.9166666666666666,
+     "kept": 0.687639817911557
+    },
+    "expert": {
+     "acc": 0.95,
+     "kept": 0.5216418595494683
+    }
+   }
+  },
+  "mongodb": {
+   "stats": {
+    "files": 708,
+    "not_config": 142,
+    "no_known_key": 39,
+    "duplicate": 359,
+    "kept": 168
+   },
+   "accepted": 88,
+   "rejected": 80,
+   "reject_examples": [
+    [
+     "exited:BadValue: logAppend must equal true if logRotate is set to reopen\ntry 'mongod --hel",
+     25
+    ],
+    [
+     "exited:Shut down expired pre-images and documents removers\":\"0 ms\",\"Wait for the oplog cap",
+     5
+    ],
+    [
+     "exited:Unrecognized option: net.http.enabled\ntry 'mongod --help' for more information\n",
+     5
+    ],
+    [
+     "exited:Shut down expired pre-images and documents removers\":\"1 ms\",\"Wait for the oplog cap",
+     3
+    ]
+   ],
+   "exposed": 25,
+   "n_mean": 3.590909090909091,
+   "sample": 60,
+   "core_V": {
+    "max": 1,
+    "mean": 0.3,
+    "hist": {
+     "1": 18,
+     "0": 42
+    }
+   },
+   "conflict_P": 15,
+   "pivots": {
+    "total": 38,
+    "in_core": 18,
+    "keys": [
+     [
+      "security.authorization",
+      20
+     ],
+     [
+      "net.bindIp",
+      15
+     ],
+     [
+      "net.bindIpAll",
+      3
+     ]
+    ]
+   },
+   "gsync": {
+    "core": {
+     "acc": 1.0,
+     "kept": 0.6321924603174603
+    },
+    "union": {
+     "acc": 1.0,
+     "kept": 0.6321924603174603
+    },
+    "expert": {
+     "acc": 1.0,
+     "kept": 0.6830952380952381
+    }
+   }
+  },
+  "mariadb": {
+   "stats": {
+    "files": 917,
+    "not_config": 170,
+    "no_known_key": 25,
+    "duplicate": 349,
+    "kept": 373
+   },
+   "accepted": 213,
+   "rejected": 160,
+   "reject_examples": [
+    [
+     "exited:2026-11-05  6:14:57 0 [Warning] Failed to normalize the argument for --secure-file-",
+     5
+    ],
+    [
+     "exited:2026-11-05  6:15:00 0 [Warning] Failed to normalize the argument for --secure-file-",
+     3
+    ],
+    [
+     "exited:db_page_size=16384 requires innodb_buffer_pool_size >= 6 MiB current 5 MiB\n2026-11-",
+     3
+    ],
+    [
+     "exited:2026-11-05  6:15:01 0 [Warning] Failed to normalize the argument for --secure-file-",
+     3
+    ]
+   ],
+   "exposed": 25,
+   "n_mean": 11.985915492957746,
+   "sample": 60,
+   "core_V": {
+    "max": 1,
+    "mean": 0.15,
+    "hist": {
+     "0": 51,
+     "1": 9
+    }
+   },
+   "conflict_P": 7,
+   "pivots": {
+    "total": 31,
+    "in_core": 9,
+    "keys": [
+     [
+      "character-set-server",
+      14
+     ],
+     [
+      "skip-grant-tables",
+      9
+     ],
+     [
+      "default-storage-engine",
+      2
+     ],
+     [
+      "skip-networking",
+      2
+     ],
+     [
+      "character_set_server",
+      2
+     ],
+     [
+      "default_storage_engine",
+      1
+     ]
+    ]
+   },
+   "gsync": {
+    "core": {
+     "acc": 0.9666666666666667,
+     "kept": 0.146855807756295
+    },
+    "union": {
+     "acc": 1.0,
+     "kept": 0.19104163151108428
+    },
+    "expert": {
+     "acc": 1.0,
+     "kept": 0.2213721230802984
+    }
+   }
+  }
  }
 }

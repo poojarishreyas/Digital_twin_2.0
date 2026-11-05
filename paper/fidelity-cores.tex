@@ -503,21 +503,43 @@ The four families above use hand-written adapters. To test whether the model is 
 
 \textbf{Change gate on real commits.} Replaying the key-guarded gate over the 426 public commits of Section~\ref{sec:rw}, 10 commits introduced an exposure (5 Redis, 4 PostgreSQL, 1 OpenSSH). The gate would have re-emulated 137 commits and blocked all 10, missing none.
 
+\textbf{Public files for the spec-only services.} We repeated the public-corpus pipeline of Section~\ref{sec:rw}, driven only by the specs' parse rules, on \texttt{mosquitto.conf}, \texttt{mongod.conf} and \texttt{my.cnf} files from GitHub (Table~\ref{tab:general-public}). Admission exposed environment and version effects again: 80 of 168 MongoDB files failed, 25 of them because removing the environment-bound \texttt{logAppend} invalidates a retained \texttt{logRotate: reopen} (a normalization artifact) and others because of removed options such as \texttt{net.http}. 160 of 373 MariaDB files failed, mostly on file paths and memory sizes the twin cannot provide. Among admitted files, 182 of 368 Mosquitto configurations (49\%) accepted anonymous publishers in the twin setting. Cores never exceeded two directives. Guards learned from synthetic data transferred without loss to MongoDB and MariaDB (100\% of 60 sampled verdicts each, exporting 63\% and 19\% of directives) but not entirely to Mosquitto, where the expert list reached 95\% and the learned set 92\%. The misses involved keys absent from the catalog, such as a listener switched to the WebSocket \texttt{protocol}. MariaDB also revealed a \emph{validity pivot}: in 14 files, removing \texttt{character-set-server} left a mismatched \texttt{collation-server} and the server refused to start. A pivot can therefore protect a verdict by keeping the configuration valid rather than by any security semantics.
+
+\begin{table}[t]
+\caption{Public files for the spec-only services}
+\label{tab:general-public}
+\centering
+\setlength{\tabcolsep}{1.5pt}
+\footnotesize
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+Service & Files & Admit. & Exp. & max $|K|$ & Union & Expert\\
+\midrule
+Mosquitto & 414 & 368 & 182 & 2 & 92\%/69\% & 95\%/52\%\\
+MongoDB & 168 & 88 & 25 & 1 & 100\%/63\% & 100\%/68\%\\
+MariaDB & 373 & 213 & 25 & 1 & 100\%/19\% & 100\%/22\%\\
+\bottomrule
+\multicolumn{7}{@{}p{0.97\columnwidth}@{}}{\footnotesize Files: distinct after normalization. Union/Expert: accuracy / exported share. Guard transfer and cores on a seeded sample of 60 admitted files per service, base $\Vb$; guard sets learned on synthetic data (E10).}
+\end{tabular}
+\end{table}
+
+\textbf{Tooling.} The machinery is packaged as a command-line tool. \texttt{analyze} reports, for a real file, each verdict with its core, its pivots labeled as enabling or protective, security-labeled lines without effect, and keys left to server defaults, with SARIF output for code-scanning pipelines. \texttt{export} emits the guard-key subset with explicit \emph{unset} markers (Proposition~\ref{prop:silent}). \texttt{fingerprint} compares the default security behavior of builds; on Redis it flagged 8 of 19 probe configurations that differ between the Ubuntu package and the official 7.0.15 image. \texttt{gate} implements the key-guarded change check evaluated above.
+
 \begin{table}[t]
 \caption{Spec-only services (40 configurations, 400 drift edits each, base $\Vb$)}
 \label{tab:general}
 \centering
-\setlength{\tabcolsep}{2.4pt}
+\setlength{\tabcolsep}{1.6pt}
 \footnotesize
 \begin{tabular}{@{}lcccccc@{}}
 \toprule
-Service & Exp. & max $|K|$ & Piv. (in $K$) & Expert acc./exp. & H / E / O\\
+Service & Exp. & max $|K|$ & Piv.\ (in $K$) & Expert & H / E / O\\
 \midrule
-Mosquitto & 9 & 2 & 56 (24) & 100\% / 37\% & 93.2 / 29.8 / 3.5\\
-MongoDB & 17 & 1 & 24 (17) & 100\% / 30\% & 99.5 / 27.8 / 6.0\\
-MariaDB & 11 & 1 & 29 (11) & 100\% / 26\% & 99.0 / 27.5 / 8.5\\
+Mosquitto & 9 & 2 & 56 (24) & 100\%/37\% & 93.2/29.8/3.5\\
+MongoDB & 17 & 1 & 24 (17) & 100\%/30\% & 99.5/27.8/6.0\\
+MariaDB & 11 & 1 & 29 (11) & 100\%/26\% & 99.0/27.5/8.5\\
 \bottomrule
-\multicolumn{6}{@{}p{0.97\columnwidth}@{}}{\footnotesize H/E/O: re-emulations per 100 edits ($q=0.3$) for hash-triggered, expert guard and oracle. The expert guard left 0.25\% of Mosquitto steps stale (one late flip) and none for the others.}
+\multicolumn{6}{@{}p{0.97\columnwidth}@{}}{\footnotesize Expert: held-out accuracy / exported share. H/E/O: re-emulations per 100 edits ($q=0.3$) for hash-triggered, expert guard and oracle. The expert guard left 0.25\% of Mosquitto steps stale (one late flip) and none for the others.}
 \end{tabular}
 \end{table}
 
