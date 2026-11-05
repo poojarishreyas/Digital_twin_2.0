@@ -90,6 +90,8 @@ def prepare(tex: str) -> str:
     tex = tex.replace(r"\begin{figure*}[t]", r"\begin{figure}[t]").replace(r"\end{figure*}", r"\end{figure}")
     tex = tex.replace(r"\includegraphics[width=\textwidth]{figs/fig-fidelity-curve.png}",
                       r"\includegraphics[width=\columnwidth]{figs/fig-fidelity-curve-stacked.png}")
+    tex = tex.replace(r"\includegraphics[width=\textwidth]{figs/fig-newservices-curve.png}",
+                      r"\includegraphics[width=\columnwidth]{figs/fig-newservices-curve-stacked.png}")
     tex = tex.replace(r"\includegraphics[width=\textwidth]{figs/fig-rw-curve.png}",
                       r"\includegraphics[width=\columnwidth]{figs/fig-rw-curve-stacked.png}")
     # research-question list labels

@@ -1,0 +1,514 @@
+{
+ "e11": {
+  "verdicts": 614,
+  "agree": 614,
+  "by_service": {
+   "nginx": [
+    268,
+    268
+   ],
+   "openssh": [
+    112,
+    112
+   ],
+   "postgresql": [
+    118,
+    118
+   ],
+   "redis": [
+    116,
+    116
+   ]
+  }
+ },
+ "e12": {
+  "commits": 426,
+  "parsed_changes": 246,
+  "introduced": 10,
+  "removed": 9,
+  "by_service": {
+   "redis": 5,
+   "postgresql": 4,
+   "openssh": 1
+  },
+  "gate": {
+   "union": {
+    "re_emulations": 137,
+    "blocked": 10,
+    "missed_introductions": 0
+   },
+   "expert": {
+    "re_emulations": 159,
+    "blocked": 10,
+    "missed_introductions": 0
+   }
+  }
+ },
+ "e10": {
+  "mosquitto": {
+   "candidates": 70,
+   "accepted": 40,
+   "rejected": 16,
+   "reject_causes": {
+    "start error": 4,
+    "exited": 12
+   },
+   "reject_examples": [
+    "exited:1793858206: Error: per_listener_settings must be set before any other security settings.\n1793858206: Error found at /tmp/fidelity-run",
+    "exited:206: mosquitto version 2.0.22 starting\n1793858206: Config loaded from /tmp/fidelity-run/spec-mosquitto-eclipse-mosquitto-2.0-3/mosqui",
+    "exited:08: mosquitto version 2.0.22 starting\n1793858208: Config loaded from /tmp/fidelity-run/spec-mosquitto-eclipse-mosquitto-2.0-1/mosquit",
+    "exited:1793858208: Warning: Mosquitto should not be run as root/administrator.\n1793858208: mosquitto version 2.0.22 starting\n1793858208: Con"
+   ],
+   "exposed": 9,
+   "n_mean": 8.175,
+   "core_V": {
+    "max": 2,
+    "mean": 1.125,
+    "hist": {
+     "2": 11,
+     "1": 23,
+     "0": 6
+    },
+    "conflict": 0,
+    "tests_mean": 7.1
+   },
+   "core_P": {
+    "max": 2,
+    "mean": 0.9166666666666666,
+    "hist": {
+     "2": 10,
+     "0": 13,
+     "1": 13
+    },
+    "conflict": 4,
+    "tests_mean": 6.25
+   },
+   "pivots": {
+    "total": 56,
+    "in_core": 24,
+    "keys": [
+     [
+      "listener",
+      18
+     ],
+     [
+      "allow_anonymous",
+      12
+     ],
+     [
+      "allow_zero_length_clientid",
+      3
+     ],
+     [
+      "persistent_client_expiration",
+      3
+     ],
+     [
+      "connection_messages",
+      2
+     ],
+     [
+      "acl_file",
+      2
+     ]
+    ]
+   },
+   "curve": {
+    "platform|0.0": 0.65,
+    "platform|0.25": 0.48333333333333334,
+    "platform|0.5": 0.3416666666666667,
+    "platform|0.75": 0.26666666666666666,
+    "platform|1.0": 0.1,
+    "vendor|0.0": 0.85,
+    "vendor|0.25": 0.49166666666666664,
+    "vendor|0.5": 0.4166666666666667,
+    "vendor|0.75": 0.25,
+    "vendor|1.0": 0.0
+   },
+   "guards": {
+    "core": [
+     "allow_anonymous",
+     "allow_zero_length_clientid",
+     "connection_messages",
+     "listener",
+     "log_type",
+     "max_connections",
+     "max_inflight_messages",
+     "max_keepalive",
+     "password_file",
+     "set_tcp_nodelay",
+     "sys_interval"
+    ],
+    "union": [
+     "allow_anonymous",
+     "allow_zero_length_clientid",
+     "connection_messages",
+     "listener",
+     "log_type",
+     "max_connections",
+     "max_inflight_messages",
+     "max_keepalive",
+     "max_queued_messages",
+     "password_file",
+     "persistent_client_expiration",
+     "set_tcp_nodelay",
+     "sys_interval"
+    ],
+    "expert": [
+     "acl_file",
+     "allow_anonymous",
+     "listener",
+     "password_file",
+     "per_listener_settings"
+    ]
+   },
+   "gsync": {
+    "core|vendor": {
+     "acc": 0.8,
+     "kept": 0.7009433621933622,
+     "n": 20
+    },
+    "core|platform": {
+     "acc": 0.85,
+     "kept": 0.7009433621933622,
+     "n": 20
+    },
+    "union|vendor": {
+     "acc": 0.85,
+     "kept": 0.820254329004329,
+     "n": 20
+    },
+    "union|platform": {
+     "acc": 0.9,
+     "kept": 0.820254329004329,
+     "n": 20
+    },
+    "expert|vendor": {
+     "acc": 1.0,
+     "kept": 0.3667965367965368,
+     "n": 20
+    },
+    "expert|platform": {
+     "acc": 0.9,
+     "kept": 0.3667965367965368,
+     "n": 20
+    }
+   },
+   "drift": {
+    "traces": 20,
+    "edits": 400,
+    "flips": 14,
+    "policies": {
+     "hash": {
+      "resync_per100": 93.25,
+      "stale_pct": 0.0,
+      "late_flips": 0
+     },
+     "union": {
+      "resync_per100": 80.25,
+      "stale_pct": 0.0,
+      "late_flips": 0
+     },
+     "expert": {
+      "resync_per100": 29.75,
+      "stale_pct": 0.25,
+      "late_flips": 1
+     },
+     "oracle": {
+      "resync_per100": 3.5,
+      "stale_pct": 0.0,
+      "late_flips": 0
+     }
+    }
+   }
+  },
+  "mongodb": {
+   "candidates": 70,
+   "accepted": 40,
+   "rejected": 1,
+   "reject_causes": {
+    "start error": 1
+   },
+   "reject_examples": [
+    "exited:Error parsing YAML config: duplicate key: net.bindIp\ntry 'mongod --help' for more information\n"
+   ],
+   "exposed": 17,
+   "n_mean": 7.65,
+   "core_V": {
+    "max": 1,
+    "mean": 0.425,
+    "hist": {
+     "1": 17,
+     "0": 23
+    },
+    "conflict": 0,
+    "tests_mean": 3.85
+   },
+   "core_P": {
+    "max": 2,
+    "mean": 0.5161290322580645,
+    "hist": {
+     "0": 23,
+     "2": 8
+    },
+    "conflict": 9,
+    "tests_mean": 5.870967741935484
+   },
+   "pivots": {
+    "total": 24,
+    "in_core": 17,
+    "keys": [
+     [
+      "net.bindIp",
+      10
+     ],
+     [
+      "security.authorization",
+      7
+     ],
+     [
+      "net.bindIpAll",
+      7
+     ]
+    ]
+   },
+   "curve": {
+    "platform|0.0": 0.425,
+    "platform|0.25": 0.425,
+    "platform|0.5": 0.36666666666666664,
+    "platform|0.75": 0.325,
+    "platform|1.0": 0.225,
+    "vendor|0.0": 0.425,
+    "vendor|0.25": 0.35833333333333334,
+    "vendor|0.5": 0.3,
+    "vendor|0.75": 0.14166666666666666,
+    "vendor|1.0": 0.0
+   },
+   "guards": {
+    "core": [
+     "net.bindIp",
+     "net.bindIpAll",
+     "security.authorization"
+    ],
+    "union": [
+     "net.bindIp",
+     "net.bindIpAll",
+     "security.authorization"
+    ],
+    "expert": [
+     "net.bindIp",
+     "net.bindIpAll",
+     "security.authorization",
+     "security.javascriptEnabled",
+     "setParameter.enableLocalhostAuthBypass"
+    ]
+   },
+   "gsync": {
+    "core|vendor": {
+     "acc": 1.0,
+     "kept": 0.19085497835497836,
+     "n": 20
+    },
+    "core|platform": {
+     "acc": 0.8,
+     "kept": 0.19085497835497836,
+     "n": 20
+    },
+    "union|vendor": {
+     "acc": 1.0,
+     "kept": 0.19085497835497836,
+     "n": 20
+    },
+    "union|platform": {
+     "acc": 0.8,
+     "kept": 0.19085497835497836,
+     "n": 20
+    },
+    "expert|vendor": {
+     "acc": 1.0,
+     "kept": 0.2952236652236652,
+     "n": 20
+    },
+    "expert|platform": {
+     "acc": 0.8,
+     "kept": 0.2952236652236652,
+     "n": 20
+    }
+   },
+   "drift": {
+    "traces": 20,
+    "edits": 400,
+    "flips": 24,
+    "policies": {
+     "hash": {
+      "resync_per100": 99.5,
+      "stale_pct": 0.0,
+      "late_flips": 0
+     },
+     "union": {
+      "resync_per100": 18.75,
+      "stale_pct": 0.0,
+      "late_flips": 0
+     },
+     "expert": {
+      "resync_per100": 27.75,
+      "stale_pct": 0.0,
+      "late_flips": 0
+     },
+     "oracle": {
+      "resync_per100": 6.0,
+      "stale_pct": 0.0,
+      "late_flips": 0
+     }
+    }
+   }
+  },
+  "mariadb": {
+   "candidates": 70,
+   "accepted": 40,
+   "rejected": 2,
+   "reject_causes": {
+    "exited": 2
+   },
+   "reject_examples": [
+    "exited:ool\n2026-11-05  4:57:37 0 [Note] Plugin 'FEEDBACK' is disabled.\n2026-11-05  4:57:37 0 [Note] Plugin 'wsrep-provider' is disabled.\n202",
+    "exited:026-11-05  4:58:01 0 [Note] InnoDB: Loading buffer pool(s) from /tmp/fidelity-run/spec-mariadb-mariadb-11.4-3/data/ib_buffer_pool\n202"
+   ],
+   "exposed": 11,
+   "n_mean": 7.775,
+   "core_V": {
+    "max": 1,
+    "mean": 0.275,
+    "hist": {
+     "0": 29,
+     "1": 11
+    },
+    "conflict": 0,
+    "tests_mean": 3.35
+   },
+   "core_P": {
+    "max": 2,
+    "mean": 0.24242424242424243,
+    "hist": {
+     "0": 29,
+     "2": 4
+    },
+    "conflict": 7,
+    "tests_mean": 3.909090909090909
+   },
+   "pivots": {
+    "total": 29,
+    "in_core": 11,
+    "keys": [
+     [
+      "skip-grant-tables",
+      11
+     ],
+     [
+      "skip-networking",
+      7
+     ],
+     [
+      "require-secure-transport",
+      6
+     ],
+     [
+      "bind-address",
+      5
+     ]
+    ]
+   },
+   "curve": {
+    "platform|0.0": 0.275,
+    "platform|0.25": 0.26666666666666666,
+    "platform|0.5": 0.275,
+    "platform|0.75": 0.21666666666666667,
+    "platform|1.0": 0.175,
+    "vendor|0.0": 0.275,
+    "vendor|0.25": 0.3333333333333333,
+    "vendor|0.5": 0.325,
+    "vendor|0.75": 0.19166666666666668,
+    "vendor|1.0": 0.0
+   },
+   "guards": {
+    "core": [
+     "bind-address",
+     "skip-grant-tables"
+    ],
+    "union": [
+     "bind-address",
+     "require-secure-transport",
+     "skip-grant-tables",
+     "skip-networking"
+    ],
+    "expert": [
+     "bind-address",
+     "local-infile",
+     "require-secure-transport",
+     "skip-grant-tables",
+     "skip-name-resolve",
+     "skip-networking"
+    ]
+   },
+   "gsync": {
+    "core|vendor": {
+     "acc": 0.65,
+     "kept": 0.15321789321789323,
+     "n": 20
+    },
+    "core|platform": {
+     "acc": 0.8,
+     "kept": 0.15321789321789323,
+     "n": 20
+    },
+    "union|vendor": {
+     "acc": 1.0,
+     "kept": 0.2054834054834055,
+     "n": 20
+    },
+    "union|platform": {
+     "acc": 0.8,
+     "kept": 0.2054834054834055,
+     "n": 20
+    },
+    "expert|vendor": {
+     "acc": 1.0,
+     "kept": 0.2605465367965368,
+     "n": 20
+    },
+    "expert|platform": {
+     "acc": 0.8,
+     "kept": 0.2605465367965368,
+     "n": 20
+    }
+   },
+   "drift": {
+    "traces": 20,
+    "edits": 400,
+    "flips": 34,
+    "policies": {
+     "hash": {
+      "resync_per100": 99.0,
+      "stale_pct": 0.0,
+      "late_flips": 0
+     },
+     "union": {
+      "resync_per100": 20.25,
+      "stale_pct": 0.0,
+      "late_flips": 0
+     },
+     "expert": {
+      "resync_per100": 27.5,
+      "stale_pct": 0.0,
+      "late_flips": 0
+     },
+     "oracle": {
+      "resync_per100": 8.5,
+      "stale_pct": 0.0,
+      "late_flips": 0
+     }
+    }
+   }
+  }
+ }
+}

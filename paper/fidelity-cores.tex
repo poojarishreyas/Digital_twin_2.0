@@ -85,6 +85,7 @@ We study the dependence of verdicts on directives empirically, against unmodifie
 \item \textbf{Formal model.} We define verdict-relative fidelity for service twins in terms of fidelity curves, fidelity cores (sufficiency), pivots (necessity) and key guard sets. We prove that key locality and base silence are sufficient conditions for exact selective synchronization and stale-free key-guarded re-emulation (Section~\ref{sec:concepts}).
 \item \textbf{Measurement harness.} A harness renders configurations onto unmodified servers and 16 pinned builds and obtains verdicts through wire-level probes issued by stock clients (Section~\ref{sec:design}).
 \item \textbf{Three corpora.} We assemble 240 seeded configurations with 14,400 drift edits, 1,092 distinct public configuration files, and 216 public file histories comprising 426 commits. Raw public files are not redistributed.
+\item \textbf{Declarative service adapters} that reproduce the hand-written adapters exactly and extend the analysis to Mosquitto, MongoDB and MariaDB without code (Section~\ref{sec:general}).
 \item \textbf{Empirical findings} for all seven questions (Section~\ref{sec:results}), distilled into \textbf{design rules} for twin platforms (Section~\ref{sec:discussion}).
 \end{itemize}
 
@@ -493,6 +494,40 @@ SSH password login & 72.3\% & 843 / 90 & 100\% & 0 / 0 & 99.0\%\\
 \subsection{Computational cost}
 The study executed approximately 60,000 distinct twin evaluations. On native servers, median wall-clock time per evaluation (start, probe, stop) was 26\,ms for Nginx, 79\,ms for PostgreSQL, 131\,ms for Redis and 161\,ms for OpenSSH. Container builds added roughly 0.3\,s, or approximately 2\,s for PostgreSQL. At this cost, computing cores and pivots and evaluating every edit is practical within a production platform rather than only in offline analysis.
 
+\section{Generalization: Declarative Service Adapters}\label{sec:general}
+The four families above use hand-written adapters. To test whether the model is service-specific, we replaced adapters with declarative YAML specifications. Each spec declares file templates and line formats (flat key--value, INI with flag lines, nested YAML via dotted keys, brace blocks, rule files, dynamic \texttt{Match} blocks), a parser for real files, the runtime (native binary or pinned image), readiness, preparation steps, and wire probes with verdict regexes. Cores, pivots, curves, guards and drift policies run unchanged on any spec.
+
+\textbf{Equivalence.} Specs for Redis, PostgreSQL, Nginx and OpenSSH reproduced all 614 verdicts of the hand-written adapters on the 240 corpus configurations and 240 drift versions.
+
+\textbf{Three spec-only services.} Mosquitto 2.0 (MQTT, anonymous publish), MongoDB 7.0 (unauthenticated \texttt{listDatabases}) and MariaDB 11.4 (passwordless remote root) were added without code, each with 40 admitted configurations and 400 drift edits (Table~\ref{tab:general}, Fig.~\ref{fig:newcurve}). The structural findings carried over: cores never exceeded two directives, between 29\% (MongoDB) and 62\% (MariaDB) of pivots lay outside the vendor core, and the platform profile conflicted with 4--9 sources per service. Fidelity curves again decayed slowly; under $\Pb$, 17.5--22.5\% of MongoDB and MariaDB verdicts remained wrong at full synchronization. The expert guard reproduced every held-out verdict and cut re-emulation from 93--100 to 28--30 per 100 edits. Learned guards matched it for MongoDB and MariaDB but over-fitted on Mosquitto, where operational keys entered the learned set and the export share rose to 82\%, which supports keeping the expert list as a floor. The specs also exposed version semantics: on MariaDB 11.4, \texttt{skip-grant-tables} does not imply \texttt{skip-networking}, so a remote client logs in as root without a password, and Mosquitto 2.0 denies anonymous clients once any listener is declared unless \texttt{allow\_anonymous} is set. Writing the specs surfaced two harness pitfalls worth recording for practitioners: YAML 1.1 parsers read \texttt{off} as a Boolean where mongod reads a string, and quiet logging settings can hide a server's readiness line.
+
+\textbf{Change gate on real commits.} Replaying the key-guarded gate over the 426 public commits of Section~\ref{sec:rw}, 10 commits introduced an exposure (5 Redis, 4 PostgreSQL, 1 OpenSSH). The gate would have re-emulated 137 commits and blocked all 10, missing none.
+
+\begin{table}[t]
+\caption{Spec-only services (40 configurations, 400 drift edits each, base $\Vb$)}
+\label{tab:general}
+\centering
+\setlength{\tabcolsep}{2.4pt}
+\footnotesize
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+Service & Exp. & max $|K|$ & Piv. (in $K$) & Expert acc./exp. & H / E / O\\
+\midrule
+Mosquitto & 9 & 2 & 56 (24) & 100\% / 37\% & 93.2 / 29.8 / 3.5\\
+MongoDB & 17 & 1 & 24 (17) & 100\% / 30\% & 99.5 / 27.8 / 6.0\\
+MariaDB & 11 & 1 & 29 (11) & 100\% / 26\% & 99.0 / 27.5 / 8.5\\
+\bottomrule
+\multicolumn{6}{@{}p{0.97\columnwidth}@{}}{\footnotesize H/E/O: re-emulations per 100 edits ($q=0.3$) for hash-triggered, expert guard and oracle. The expert guard left 0.25\% of Mosquitto steps stale (one late flip) and none for the others.}
+\end{tabular}
+\end{table}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figs/fig-newservices-curve.png}
+\caption{Fidelity curves for the three services added purely through declarative specs.}
+\label{fig:newcurve}
+\end{figure*}
+
 \section{Discussion}\label{sec:discussion}
 
 \textbf{Design rules for twin platforms.} The results yield five concrete rules.
@@ -520,7 +555,7 @@ The study executed approximately 60,000 distinct twin evaluations. On native ser
 All servers ran in an isolated container against synthetic accounts and a synthetic password, and no external system was probed. Public files were obtained through GitHub code search and anonymous reads of public repositories. Raw files were retained outside the released artifact, and secrets were replaced prior to storing any parsed result. The released data identify configurations solely by content hash and contain no repository names, so no reported verdict can be attributed to a specific project. Exposure figures describe the twin setting, not the systems from which the files originate.
 
 \section{Conclusion}
-We investigated how much configuration a security service twin requires, and the answer has two parts. \emph{Reproducing} a verdict requires very little: at most two directives in every case measured, synthetic or public. \emph{Maintaining} that verdict as files evolve and as platforms supply defaults requires tracking the larger set of directives whose removal would invert it, representing unassigned keys explicitly, and executing the same build as the source rather than merely the same version. Treating fidelity as a property of verdicts rather than of files allows a twin platform to export a quarter of a configuration and re-emulate only a fraction as often, while agreeing with the real servers on every public verdict we tested. It also explains why twins constructed from defaults, or from most of a file, can be confidently wrong. The harness, generator, normalized corpora, raw results and analysis scripts accompany this paper.
+We investigated how much configuration a security service twin requires, and the answer has two parts. \emph{Reproducing} a verdict requires very little: at most two directives in every case measured, synthetic or public. \emph{Maintaining} that verdict as files evolve and as platforms supply defaults requires tracking the larger set of directives whose removal would invert it, representing unassigned keys explicitly, and executing the same build as the source rather than merely the same version. Treating fidelity as a property of verdicts rather than of files allows a twin platform to export a quarter of a configuration and re-emulate only a fraction as often, while agreeing with the real servers on every public verdict we tested. It also explains why twins constructed from defaults, or from most of a file, can be confidently wrong. The same conclusions held for three further services added purely through declarative specifications. The harness, service specifications, generator, normalized corpora, raw results and analysis scripts accompany this paper.
 
 \begin{thebibliography}{00}
 \bibitem{dtplatform} ``Digital Twin: Discovery, emulation and bounded hunting,'' source code and evaluation artifacts, GitHub repository poojarishreyas/Digital\_twin, 2026. [Online]. Available: \url{https://github.com/poojarishreyas/Digital_twin}
