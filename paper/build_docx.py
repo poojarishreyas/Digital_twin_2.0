@@ -87,6 +87,8 @@ def prepare(tex: str) -> str:
                          r"\\[-0.6ex]\rule{\linewidth}{0.4pt}" + "\n" + body + "\n\\par\\vspace{-0.8ex}\\noindent\\rule{\\linewidth}{0.6pt}",
                          f"docx-alg-{j}")
         tex = tex[:a] + rf"\begin{{center}}\includegraphics[width=\columnwidth]{{{png}}}\end{{center}}" + tex[b:]
+    tex = tex.replace(r"\includegraphics[width=0.86\textwidth]{figs/fig-fidelity-curve.png}",
+                      r"\includegraphics[width=\columnwidth]{figs/fig-fidelity-curve-stacked.png}")
     tex = tex.replace(r"\begin{figure*}[t]", r"\begin{figure}[t]").replace(r"\end{figure*}", r"\end{figure}")
     tex = tex.replace(r"\includegraphics[width=\textwidth]{figs/fig-fidelity-curve.png}",
                       r"\includegraphics[width=\columnwidth]{figs/fig-fidelity-curve-stacked.png}")
