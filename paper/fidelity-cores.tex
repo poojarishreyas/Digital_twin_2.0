@@ -34,7 +34,7 @@ email@organization.org}}
 \maketitle
 
 \begin{abstract}
-Service-level security digital twins validate claims about production systems by executing their configuration in isolation, so a twin's correctness is bounded by the configuration it mirrors. We characterize which directives determine a security verdict and how verdict accuracy degrades under partial mirroring. We introduce \emph{fidelity cores} (1-minimal verdict-preserving directive subsets), \emph{pivots} (directives whose individual removal inverts the verdict) and \emph{guard sets} (keys whose edits require re-emulation), and prove sufficient conditions for exact guard-based synchronization. We instrumented Redis, PostgreSQL, Nginx and OpenSSH, plus 16 pinned builds, over 240 seeded configurations with 14,400 drift edits, 1,092 public configuration files and 426 real commits, in about 60,000 server runs. No core exceeded two directives in any corpus. Partial twins were nonetheless brittle: with 90\% of directives mirrored at random, 6.6\% of verdicts were wrong, because 39\% of pivots fall outside the core. Guard sets learned solely from synthetic data reproduced all 450 tested public verdicts while exporting 24\% of Redis and 12\% of OpenSSH directives. On real commit histories they reduced re-emulations from 426 to 137 and detected all 19 verdict changes. Two fidelity hazards are invisible to version numbers. The official Redis 7.0.15 image disables protected mode by default where the Ubuntu build enables it, and a platform default profile misclassified 22\% of public sshd configurations even at full synchronization. A documentation-based static analyzer still diverged from server behavior on a small set of semantic corner cases.
+A security digital twin tests claims about a production service by running its configuration in isolation, so a twin can only be as right as the configuration it copies. We ask which directives actually decide a security verdict, and what goes wrong when a twin copies only some of them. We introduce \emph{fidelity cores} (1-minimal verdict-preserving directive subsets), \emph{pivots} (directives whose individual removal inverts the verdict) and \emph{guard sets} (keys whose edits require re-emulation), and prove sufficient conditions for exact guard-based synchronization. We instrumented Redis, PostgreSQL, Nginx and OpenSSH, plus 16 pinned builds, over 240 seeded configurations with 14,400 drift edits, 1,092 public configuration files and 426 real commits, in about 60,000 server runs. No core exceeded two directives in any corpus. Yet partial twins were brittle: with 90\% of directives mirrored at random, 6.6\% of verdicts were wrong, because 39\% of pivots fall outside the core. Guard sets learned solely from synthetic data reproduced all 450 tested public verdicts while exporting 24\% of Redis and 12\% of OpenSSH directives. On real commit histories they reduced re-emulations from 426 to 137 and detected all 19 verdict changes. Two hazards hide behind version numbers. The official Redis 7.0.15 image disables protected mode by default where the Ubuntu build enables it, and a platform default profile misclassified 22\% of public sshd configurations even at full synchronization. Even a careful static analyzer still disagreed with the servers on a few subtle corner cases.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -43,11 +43,11 @@ digital twin, configuration fidelity, security validation, delta debugging, conf
 
 \section{Introduction}
 
-Service configuration files are dominated by operational parameters: buffer sizes, logging formats, keep-alive intervals. The security posture of a service is typically decided by a handful of directives, sometimes a single one. A security digital twin that replicates the entire file is faithful but costly to construct, to keep synchronized and to entrust with customer data. A twin that replicates too little returns verdicts that are confidently wrong. Our earlier configuration-synchronized twin platform~\cite{dtplatform} quantified the second failure mode. Twins rendered from default settings reached an F1 score of 0.40 on a declared benchmark, whereas synchronized twins were correct on every conclusive run. That result establishes \emph{that} configuration fidelity matters. It does not establish \emph{how much} configuration a verdict requires, or \emph{which} directives.
+Most of a configuration file is housekeeping: buffer sizes, log formats, keep-alive timers. Whether a service is exposed usually comes down to a handful of lines, sometimes just one. A twin that copies the whole file is faithful, but expensive to build, to keep in sync and to trust with customer data. A twin that copies too little gives answers that are confidently wrong. Our earlier configuration-synchronized twin platform~\cite{dtplatform} quantified the second failure mode. Twins rendered from default settings reached an F1 score of 0.40 on a declared benchmark, whereas synchronized twins were correct on every conclusive run. That told us \emph{that} configuration matters. It did not tell us \emph{how much} of it a verdict needs, or \emph{which} part.
 
-The answer has direct engineering consequences for twin-based validation services. Every exported directive enlarges the customer data held by a shared control plane. Every configuration change triggers re-emulation when synchronization is keyed on content hashes, and re-emulation is the dominant cost in the pipeline. When a twin reports a weakness, operators need to attribute it to specific lines and to know which lines are preventing exposure. All three requirements reduce to a single question: what is the functional dependence of a security verdict on individual directives?
+The answer has direct engineering consequences for twin-based validation services. Every exported directive enlarges the customer data held by a shared control plane. Every configuration change triggers re-emulation when synchronization is keyed on content hashes, and re-emulation is the dominant cost in the pipeline. When a twin reports a weakness, operators need to attribute it to specific lines and to know which lines are preventing exposure. All three needs come down to one question: how does a security verdict depend on individual directives?
 
-Fig.~\ref{fig:example} illustrates why this dependence is not apparent from inspection. The Nginx configuration contains a server-wide \texttt{deny all} and HTTP basic authentication, both conventionally regarded as protective. The \texttt{/admin/} path is nevertheless reachable without credentials, because \texttt{satisfy any} allows a matching \texttt{allow} rule to substitute for authentication. The verdict is determined by directives that do not appear security-relevant, and a twin that omits either of them inverts it.
+Fig.~\ref{fig:example} shows why this is not obvious from reading the file. The Nginx configuration contains a server-wide \texttt{deny all} and HTTP basic authentication, both conventionally regarded as protective. The \texttt{/admin/} path is nevertheless reachable without credentials, because \texttt{satisfy any} allows a matching \texttt{allow} rule to substitute for authentication. The lines that decide the outcome are not the ones that look important, and a twin that drops either of them gets the answer wrong.
 
 \begin{figure}[t]
 \centering
@@ -89,7 +89,7 @@ We study the dependence of verdicts on directives empirically, against unmodifie
 \item \textbf{Empirical findings} for all seven questions (Section~\ref{sec:results}), distilled into \textbf{design rules} for twin platforms (Section~\ref{sec:discussion}).
 \end{itemize}
 
-The results exhibit two properties that appear contradictory. Verdicts are \emph{concentrated}: no core in any corpus exceeded two directives. Verdicts are also \emph{brittle}: mirroring 90\% of a configuration uniformly at random still produced a wrong verdict in one case in fifteen. The two are reconciled by the observation that the directives preventing exposure are frequently disjoint from those that cause it. A minimal explanation of a verdict therefore provides little information about which edits will invalidate it.
+The results pull in two directions, and that tension is the story. Verdicts are \emph{concentrated}: no core in any corpus exceeded two directives. Verdicts are also \emph{brittle}: mirroring 90\% of a configuration uniformly at random still produced a wrong verdict in one case in fifteen. The two fit together once you see that the lines keeping a service safe are often not the lines that make it unsafe. A minimal explanation of a verdict says little about what will break it.
 
 \section{Background and Related Work}\label{sec:related}
 
@@ -210,56 +210,23 @@ Any base can be made $G$-silent if the agent reports \emph{absence}. For each gu
 \end{algorithmic}
 \end{algorithm}
 
-\begin{algorithm}[t]
-\caption{Guard learning and guarded re-emulation}\label{alg:guard}
-\begin{algorithmic}[1]
-\Require training configurations $\mathcal{C}$, expert keys $E_\varphi$, edit stream
-\State $G_\varphi \gets \bigcup_{C\in\mathcal{C}} \mathrm{keys}(K_C)\cup\mathrm{keys}(\Pi_C)$ \Comment{Alg.~\ref{alg:core}}
-\State optionally $G_\varphi \gets G_\varphi \cup E_\varphi$ \Comment{expert floor}
-\State export $C|_{G}$ and an \emph{unset} marker per absent $k\in G_\varphi$
-\For{each edit $e$}
-  \If{$\mathrm{keys}(e)\cap G_\varphi\neq\emptyset$} re-emulate, refresh verdict
-  \Else\ keep the previous verdict
-  \EndIf
-\EndFor
-\end{algorithmic}
-\end{algorithm}
 
-Algorithms~\ref{alg:core} and~\ref{alg:guard} specify how the model is computed and applied.
+
+Algorithm~\ref{alg:core} computes cores and pivots. A guard set is then the union of the core and pivot keys seen on training configurations, optionally with an expert list as a floor; the agent exports $C|_G$ with an \emph{unset} marker for every absent guard key, and re-emulates only after edits that touch $G$.
 
 \section{Experimental Methodology}\label{sec:design}
 
-\begin{figure}[t]
-\centering
-\begin{tikzpicture}[font=\scriptsize, node distance=2.5mm and 5mm,
-  box/.style={draw=black!70, rounded corners=1.5pt, align=center, text width=21mm, minimum height=8mm, inner sep=2pt, fill=black!3},
-  arr/.style={-{Stealth[length=1.6mm]}, draw=black!70}]
-\node[box] (src) {Source config $C$\\(ordered directives)};
-\node[box, right=of src] (sub) {Twin input\\$S\subseteq C$ plus base $B$};
-\node[box, right=of sub] (srv) {Real server or\\pinned build};
-\node[box, below=5mm of srv] (probe) {Wire probe from\\non-loopback client};
-\node[box, left=of probe] (ver) {Verdict\\yes / no / error};
-\node[box, left=of ver] (cmp) {Compare with\\$v^\star=v_\varphi(T_\Vb(C))$};
-\draw[arr] (src) -- (sub);
-\draw[arr] (sub) -- (srv);
-\draw[arr] (srv) -- (probe);
-\draw[arr] (probe) -- (ver);
-\draw[arr] (ver) -- (cmp);
-\draw[arr, dashed] (cmp) -- node[right, align=left, font=\tiny]{next $S$: ddmin,\\curve, drift} (src);
-\end{tikzpicture}
-\caption{Measurement loop. Every verdict is obtained from an unmodified server instantiated from rendered files and probed over TCP with its stock client.}
-\label{fig:loop}
-\end{figure}
+
 
 \subsection{Servers, scaffolding and probes}
-Each evaluation renders the configuration, instantiates a fresh server process, awaits readiness, issues the probe and terminates the process (Fig.~\ref{fig:loop}). Ports, PID files, data directories, host keys and the document tree constitute fixed per-slot scaffolding and are therefore excluded as fidelity variables. Server and client communicate over a non-loopback address, since Redis protected mode discriminates loopback clients. The five properties are:
+Each evaluation renders the configuration, instantiates a fresh server process, awaits readiness, issues the probe and terminates the process. Ports, PID files, data directories, host keys and the document tree constitute fixed per-slot scaffolding and are therefore excluded as fidelity variables. Server and client communicate over a non-loopback address, since Redis protected mode discriminates loopback clients. The five properties are:
 \begin{itemize}
 \item \textbf{Redis}: \texttt{redis-cli CONFIG GET maxmemory} succeeds without credentials. Because this is an administrative command, ACL categories and command renaming affect the outcome.
 \item \textbf{PostgreSQL}: \texttt{psql -w} as role \texttt{synthetic} executes \texttt{SELECT 1} without a password.
 \item \textbf{Nginx (two)}: the \texttt{Server} header returned for \texttt{GET /} discloses a version; \texttt{GET /admin/} returns status 200.
 \item \textbf{OpenSSH}: user \texttt{synthetic} authenticates with a synthetic password and executes a command.
 \end{itemize}
-Probes classify only recognized outcomes, such as \texttt{NOAUTH}, ``no pg\_hba.conf entry'' or ``Permission denied''. Unrecognized outcomes are retried once and otherwise labeled inconclusive; none remained inconclusive after retry. The reference servers were the Ubuntu 24.04 builds of Redis 7.0.15, PostgreSQL 16.15, Nginx 1.24.0 and OpenSSH 9.6p1, deployed in a 4-vCPU, 16\,GB container with four parallel worker slots. A verdict cache keyed on the canonical twin eliminated redundant executions. Re-executing 1,000 cached twins on fresh processes reproduced all 1,273 verdicts, confirming determinism.
+Probes classify only recognized outcomes, such as \texttt{NOAUTH}, ``no pg\_hba.conf entry'' or ``Permission denied''. Unrecognized outcomes are retried once and otherwise labeled inconclusive; none remained inconclusive after retry. The reference servers were the Ubuntu 24.04 builds of Redis 7.0.15, PostgreSQL 16.15, Nginx 1.24.0 and OpenSSH 9.6p1, deployed in a 4-vCPU, 16\,GB container with four parallel worker slots. A verdict cache keyed on the canonical twin eliminated redundant executions. Re-executing 1,000 cached twins on fresh processes reproduced all 1,273 verdicts. A native evaluation (start, probe, stop) took a median of 26--161\,ms depending on the service, about 60,000 in total.
 
 \subsection{Pinned builds}
 For \RQ{5}, the same renderers and probes drive 16 pinned container builds attached to the host network namespace, so that each binds exactly the addresses of a native server. The builds comprise Redis 6.0, 6.2, 7.0, 7.2 and 7.4 (official images); PostgreSQL 12, 14, 16 and 17; Nginx 1.20, 1.24 and 1.27; and OpenSSH 8.8p1, 9.3p2, 9.7p1 and 10.0p2.
@@ -296,22 +263,17 @@ Error rates are averaged per configuration and then across configurations. 95\% 
 \label{fig:curve}
 \end{figure*}
 
-Error decreases approximately linearly with the fraction of directives mirrored (Fig.~\ref{fig:curve}); there is no early plateau at which mirroring ``most'' of a configuration suffices. Under $\Vb$, aggregate synthetic error was 45.3\% with no directives mirrored, 28.3\% at one half (95\% CI 25.2--31.5\%), 11.6\% at 80\% and 6.6\% (5.5--7.8\%) at 90\%. SSH exhibits the highest initial error (71.7\%), because the vendor default permits password authentication while most sources restrict it in some way. PostgreSQL error remains near 23\% until most rules are present, since a trust rule takes effect only in conjunction with \texttt{listen\_addresses} and all preceding matching rules. Public configurations exhibit the same profile (Section~\ref{sec:rw}).
+Error falls roughly in a straight line as more directives are copied (Fig.~\ref{fig:curve}); there is no point where copying ``most'' of a file is good enough. Under $\Vb$, aggregate synthetic error was 45.3\% with no directives mirrored, 28.3\% at one half (95\% CI 25.2--31.5\%), 11.6\% at 80\% and 6.6\% (5.5--7.8\%) at 90\%. SSH exhibits the highest initial error (71.7\%), because the vendor default permits password authentication while most sources restrict it in some way. PostgreSQL error remains near 23\% until most rules are present, since a trust rule takes effect only in conjunction with \texttt{listen\_addresses} and all preceding matching rules. Public configurations exhibit the same profile (Section~\ref{sec:rw}).
 
-The direction of error depends on the base profile. Across partial levels under $\Vb$, false alarms exceeded false-safe verdicts by 3,658 to 1,980, because random truncation tends to remove a defensive directive while retaining the exposure. The platform profile $\Pb$ halves SSH error at low fidelity but never converges to zero. At full synchronization it still misclassified 1.3\% of synthetic verdicts, all for SSH, because sources relying on the vendor default for \texttt{PasswordAuthentication} were overridden by the platform value ``no''. In 88 runs this value additionally prevented sshd from starting, as it contradicted an \texttt{AuthenticationMethods} directive in the source. A base profile is therefore not a neutral completion: it injects configuration the source never contained.
+Which way the twin errs depends on the base profile. Across partial levels under $\Vb$, false alarms exceeded false-safe verdicts by 3,658 to 1,980, because random truncation tends to remove a defensive directive while retaining the exposure. The platform profile $\Pb$ halves SSH error at low fidelity but never converges to zero. At full synchronization it still misclassified 1.3\% of synthetic verdicts, all for SSH, because sources relying on the vendor default for \texttt{PasswordAuthentication} were overridden by the platform value ``no''. In 88 runs this value additionally prevented sshd from starting, as it contradicted an \texttt{AuthenticationMethods} directive in the source. A base profile is not a neutral filler: it is configuration the source never had.
 
 \subsection{\RQ{2}: Cores are small and mostly unique but exclude pivots}
 
-\begin{figure}[t]
-\centering
-\includegraphics[width=\columnwidth]{figs/fig-core-size.png}
-\caption{Distribution of fidelity-core sizes on the synthetic corpus under the vendor [V] and platform [P] base profiles. Gray: the base alone reproduces the source verdict.}
-\label{fig:cores}
-\end{figure}
 
-Across all 300 synthetic configuration--property pairs under $\Vb$, the maximum core size was two, the median zero and the mean 0.50, approximately 5.1\% of a configuration (Fig.~\ref{fig:cores}). Cores of size two occurred only for PostgreSQL exposures, which require both \texttt{listen\_addresses} and the first matching trust rule. Exhaustive enumeration of all subsets of up to two directives confirmed that the ddmin core was a \emph{minimum} core in all 300 pairs under $\Vb$ and all 296 under $\Pb$. The minimum core was unique in 266 pairs (89\%). The remaining 34 admitted two or three minimum cores, 20 of them for SSH, where authentication is frequently blocked by several independent mechanisms. Core computation required 3.2--5.1 server runs on average on the synthetic corpus (at most 22) and 2.6--5.6 on public files (at most 24, for files of up to 87 directives).
 
-Small cores do not imply a small relevant set (Table~\ref{tab:cores}). Of 194 synthetic pivots, 76 (39\%) lie outside the vendor core. For Nginx \texttt{/admin/}, only 22 of 62 pivots belong to the core, reproducing the pattern of Fig.~\ref{fig:example}. Conversely, 79--91\% of directives labeled \emph{security} belong to no vendor core, including \texttt{PermitRootLogin}, \texttt{PubkeyAuthentication} and pg\_hba rules shadowed by an earlier match. A security label characterizes a key; a core characterizes a specific verdict. Public Redis files are more than twice as long as their synthetic counterparts and public sshd files moderately longer, yet their cores are equally small. In public Redis files, 10 of 36 pivots (\texttt{requirepass}, ACL \texttt{user} directives and \texttt{rename-command}) lie outside the core, each preventing exposure in a server configured with \texttt{protected-mode no}.
+Across all 300 synthetic configuration--property pairs under $\Vb$, the maximum core size was two, the median zero and the mean 0.50, approximately 5.1\% of a configuration. Cores of size two occurred only for PostgreSQL exposures, which require both \texttt{listen\_addresses} and the first matching trust rule. Exhaustive enumeration of all subsets of up to two directives confirmed that the ddmin core was a \emph{minimum} core in all 300 pairs under $\Vb$ and all 296 under $\Pb$. The minimum core was unique in 266 pairs (89\%). The remaining 34 admitted two or three minimum cores, 20 of them for SSH, where authentication is frequently blocked by several independent mechanisms. Core computation required 3.2--5.1 server runs on average on the synthetic corpus (at most 22) and 2.6--5.6 on public files (at most 24, for files of up to 87 directives).
+
+Small cores do not mean only a few lines matter (Table~\ref{tab:cores}). Of 194 synthetic pivots, 76 (39\%) lie outside the vendor core. For Nginx \texttt{/admin/}, only 22 of 62 pivots belong to the core, reproducing the pattern of Fig.~\ref{fig:example}. Conversely, 79--91\% of directives labeled \emph{security} belong to no vendor core, including \texttt{PermitRootLogin}, \texttt{PubkeyAuthentication} and pg\_hba rules shadowed by an earlier match. A security label is a statement about a key; a core is a statement about one verdict. Public Redis files are more than twice as long as their synthetic counterparts and public sshd files moderately longer, yet their cores are equally small. In public Redis files, 10 of 36 pivots (\texttt{requirepass}, ACL \texttt{user} directives and \texttt{rename-command}) lie outside the core, each preventing exposure in a server configured with \texttt{protected-mode no}.
 
 \begin{table}[t]
 \caption{Cores (sufficiency) versus pivots (necessity), base $\Vb$}
@@ -376,7 +338,7 @@ $G_{\text{expert}}$ & 34.8\% & 100\% & 94.9\% & 100\% & 100\% & 100\%\\
 \label{fig:resync}
 \end{figure}
 
-Hash-triggered re-emulation is never stale, but nearly all of its executions are redundant: at $q=0.3$ the true verdict changed on only 4.8 of every 100 synthetic edits (Table~\ref{tab:resync}, Fig.~\ref{fig:resync}). Periodic re-emulation, the natural low-cost alternative, performed poorly. Re-emulating every fourth edit cost 25 executions per 100 edits, left 6.35\% of steps stale and detected only 93 of 289 flips immediately. The learned union guard required 19.9 executions per 100 edits, a five-fold reduction relative to hash-triggered re-emulation, at 0.28\% stale steps. Its four late flips were all caused by \texttt{bind} or \texttt{DenyUsers} edits. The expert guard was never stale, at 29.7 executions per 100 edits. Guards also specialize per property: for Nginx version disclosure the learned guard reduces to \texttt{server\_tokens} and re-emulated on 6.2 of 100 edits. Periodic audits and online guard extension reduced residual staleness to 0.13\% and 0.03\% respectively, at a cost comparable to the expert list. The ordering was stable for $q=0.1$ and $q=0.5$. The union guard required 6.5 and 32.2 executions per 100 edits (1.05\% and 0.58\% stale), and the expert guard 9.9 and 49.6 (never stale).
+Re-emulating on every hash change is never stale, but almost all of that work is wasted: at $q=0.3$ the true verdict changed on only 4.8 of every 100 synthetic edits (Table~\ref{tab:resync}, Fig.~\ref{fig:resync}). Re-emulating on a fixed schedule, the obvious cheap alternative, did badly. Re-emulating every fourth edit cost 25 executions per 100 edits, left 6.35\% of steps stale and detected only 93 of 289 flips immediately. The learned union guard required 19.9 executions per 100 edits, a five-fold reduction relative to hash-triggered re-emulation, at 0.28\% stale steps. Its four late flips were all caused by \texttt{bind} or \texttt{DenyUsers} edits. The expert guard was never stale, at 29.7 executions per 100 edits. Guards also specialize per property: for Nginx version disclosure the learned guard reduces to \texttt{server\_tokens} and re-emulated on 6.2 of 100 edits. Periodic audits and online guard extension reduced residual staleness to 0.13\% and 0.03\% respectively, at a cost comparable to the expert list. The ordering was stable for $q=0.1$ and $q=0.5$. The union guard required 6.5 and 32.2 executions per 100 edits (1.05\% and 0.58\% stale), and the expert guard 9.9 and 49.6 (never stale).
 
 Real histories resemble a low-$q$ trace with coarser edits. Of 426 public commits, 180 modified only comments or environment-bound directives, 246 modified the normalized configuration, and 19 changed a verdict (7 Redis, 7 OpenSSH and 5 PostgreSQL). Per-commit re-emulation would have required 426 executions, and directive-hash re-emulation 246. The learned union guard required 137 and the expert guard 159, and both detected all 19 flips at the commit that introduced them.
 
@@ -422,7 +384,7 @@ Redis exhibited three distinct classes of version and build hazard:
 \item \textbf{Semantic.} Eight configurations changed from exposed on 6.2 to not exposed on 7.0. Prior to 7.0, an explicit \texttt{bind} disabled protected mode; from 7.0 onward it does not.
 \item \textbf{Build defaults.} The official 7.0.15 container image disagreed with the Ubuntu 7.0.15 package on 11 configurations, all of which leave \texttt{protected-mode} unassigned. Querying each image with an empty configuration identified the cause: every official Redis image tested (6.0--7.4) reports \texttt{protected-mode no} by default, whereas the Ubuntu build reports \texttt{yes}.
 \end{itemize}
-A twin pinned to ``Redis 7.0.15'' can therefore produce opposite verdicts depending on the provenance of its binary. Version identity is a necessary but not a sufficient fidelity criterion.
+So a twin pinned to ``Redis 7.0.15'' can give opposite answers depending on where its binary came from. Matching the version is necessary, but it is not enough.
 
 \begin{table}[t]
 \caption{Verdict differences across pinned builds (120 configs per family)}
@@ -447,27 +409,22 @@ OpenSSH 8.8/9.3/9.7/10.0 & 0 & 0 & --\\
 
 \subsection{\RQ{6}: Public configurations}\label{sec:rw}
 
-\begin{figure*}[t]
-\centering
-\includegraphics[width=\textwidth]{figs/fig-rw-curve.png}
-\caption{Fidelity curves on public configurations (150 sampled files per family) compared with the synthetic curve. Under base P, error on public sshd files does not converge to zero, because 22\% of them rely on the vendor default for password authentication.}
-\label{fig:rwcurve}
-\end{figure*}
+
 
 \textbf{Admission.} A source must execute before any twin can be constructed. The reference servers rejected 45 of 420 public Redis files (10.7\%), predominantly because of directives specific to other Redis versions. They rejected 43 of 333 sshd files (12.9\%) for four reasons: invalid option combinations, options newer than OpenSSH 9.6 (such as post-quantum key-exchange identifiers), seven configurations that never reached readiness, and six requiring keyboard-interactive methods that our PAM-less twin cannot provide. They rejected 10 of 339 pg\_hba files (3\%). Such rejections are fidelity gaps in their own right, since a twin pinned to the wrong release cannot even start.
 
 \textbf{Verdicts.} Among admitted files, 72 of 375 Redis configurations (19\%) accepted unauthenticated administrative commands from a non-loopback client under the reference build's defaults. 34 of 329 pg\_hba files (10\%) permitted an unlisted role to execute SQL without a password from the twin's address, and 95 of 290 sshd files (33\%) permitted password authentication for an ordinary account. These figures characterize the twin setting, not the deployed systems, whose network exposure is unknown.
 
-\textbf{Curves and cores.} Under $\Vb$, pooled error was 32.2\% with no directives mirrored, 14.1\% at one half and 3.4\% at 90\% (Fig.~\ref{fig:rwcurve}). Public Redis and PostgreSQL files start lower than the synthetic corpus, since most are secure by default and seldom override it. Public sshd files start high and decline steeply, consistent with the synthetic data. Under $\Pb$ the sshd curve does not converge to zero: 33 of 150 sampled sshd files (22\%) admitted no core, because the platform value \texttt{PasswordAuthentication no} contradicts files that rely on the vendor default. Cores remained at most two directives in every family (Table~\ref{tab:cores}).
+\textbf{Curves and cores.} Under $\Vb$, pooled error was 32.2\% with no directives mirrored, 14.1\% at one half and 3.4\% at 90\%. Public Redis and PostgreSQL files start lower than the synthetic corpus, since most are secure by default and seldom override it. Public sshd files start high and decline steeply, consistent with the synthetic data. Under $\Pb$ the sshd curve does not converge to zero: 33 of 150 sampled sshd files (22\%) admitted no core, because the platform value \texttt{PasswordAuthentication no} contradicts files that rely on the vendor default. Cores remained at most two directives in every family (Table~\ref{tab:cores}).
 
 \subsection{\RQ{7}: Static analysis versus execution}\label{sec:static}
-If a verdict depends on only one or two directives, it is natural to ask whether static inspection suffices. On the 13,606 distinct synthetic configurations, the naive analyzer achieved only 72--93\% accuracy (Table~\ref{tab:static}). It disregarded sshd's first-value semantics, pg\_hba ordering and scoping, and the Nginx rule that any access directive at an inner level replaces the parent's entire rule list. The careful analyzer agreed with the servers on 17,018 of 17,032 synthetic verdicts. Each of its 14 errors traces to documented behavior that is easily misread:
+If only one or two lines matter, why not just read them? On the 13,606 distinct synthetic configurations, the naive analyzer achieved only 72--93\% accuracy (Table~\ref{tab:static}). It disregarded sshd's first-value semantics, pg\_hba ordering and scoping, and the Nginx rule that any access directive at an inner level replaces the parent's entire rule list. The careful analyzer agreed with the servers on 17,018 of 17,032 synthetic verdicts. Each of its 14 errors traces to documented behavior that is easily misread:
 \begin{itemize}
 \item \textbf{Redis ACL directives redefine the user.} The directive \texttt{user default on nopass \~{}* \&* +@read +@write} produced a user unable to execute \texttt{CONFIG}. The analyzer had treated the rules as increments to the implicit \texttt{+@all}.
 \item \textbf{ACL directives override \texttt{requirepass} irrespective of order.} With \texttt{user default \ldots{} nopass} preceding \texttt{requirepass}, the server still accepted unauthenticated clients. These four errors were missed exposures.
 \item \textbf{\texttt{satisfy any} requires an explicit allow.} When no access rule matched the client, the analyzer assumed that the implicit allow satisfied the access condition. Nginx returned 401.
 \end{itemize}
-On public files the careful analyzer reached 99.0--100\% accuracy (Table~\ref{tab:static}), but its six errors were of a different nature. Three Redis files defined additional ACL users, and the analyzer, developed against the synthetic catalog, applied every \texttt{user} directive to the default user. Two sshd files used syntax outside its model: a wildcard in \texttt{AllowGroups} and space-separated alternatives in \texttt{AuthenticationMethods}. One sshd disagreement was an artifact of our probe, as a \texttt{ForceCommand} replaced the probe's command after successful authentication. The pattern is more significant than the count. A static model must be extended for every syntactic form encountered in practice, whereas a twin inherits the server's own parser.
+On public files the careful analyzer reached 99.0--100\% accuracy (Table~\ref{tab:static}), but its six errors were of a different nature. Three Redis files defined additional ACL users, and the analyzer, developed against the synthetic catalog, applied every \texttt{user} directive to the default user. Two sshd files used syntax outside its model: a wildcard in \texttt{AllowGroups} and space-separated alternatives in \texttt{AuthenticationMethods}. One sshd disagreement was an artifact of our probe, as a \texttt{ForceCommand} replaced the probe's command after successful authentication. The pattern matters more than the count: a static model has to be extended for every bit of syntax it meets in the wild, while a twin simply uses the server's own parser.
 
 \begin{table}[t]
 \caption{Static analyzers versus real-server verdicts}
@@ -491,37 +448,20 @@ SSH password login & 72.3\% & 843 / 90 & 100\% & 0 / 0 & 99.0\%\\
 \end{tabular}
 \end{table}
 
-\subsection{Computational cost}
-The study executed approximately 60,000 distinct twin evaluations. On native servers, median wall-clock time per evaluation (start, probe, stop) was 26\,ms for Nginx, 79\,ms for PostgreSQL, 131\,ms for Redis and 161\,ms for OpenSSH. Container builds added roughly 0.3\,s, or approximately 2\,s for PostgreSQL. At this cost, computing cores and pivots and evaluating every edit is practical within a production platform rather than only in offline analysis.
+
 
 \section{Generalization: Declarative Service Adapters}\label{sec:general}
 The four families above use hand-written adapters. To test whether the model is service-specific, we replaced adapters with declarative YAML specifications. Each spec declares file templates and line formats (flat key--value, INI with flag lines, nested YAML via dotted keys, brace blocks, rule files, dynamic \texttt{Match} blocks), a parser for real files, the runtime (native binary or pinned image), readiness, preparation steps, and wire probes with verdict regexes. Cores, pivots, curves, guards and drift policies run unchanged on any spec.
 
 \textbf{Equivalence.} Specs for Redis, PostgreSQL, Nginx and OpenSSH reproduced all 614 verdicts of the hand-written adapters on the 240 corpus configurations and 240 drift versions.
 
-\textbf{Three spec-only services.} Mosquitto 2.0 (MQTT, anonymous publish), MongoDB 7.0 (unauthenticated \texttt{listDatabases}) and MariaDB 11.4 (passwordless remote root) were added without code, each with 40 admitted configurations and 400 drift edits (Table~\ref{tab:general}, Fig.~\ref{fig:newcurve}). The structural findings carried over: cores never exceeded two directives, between 29\% (MongoDB) and 62\% (MariaDB) of pivots lay outside the vendor core, and the platform profile conflicted with 4--9 sources per service. Fidelity curves again decayed slowly; under $\Pb$, 17.5--22.5\% of MongoDB and MariaDB verdicts remained wrong at full synchronization. The expert guard reproduced every held-out verdict and cut re-emulation from 93--100 to 28--30 per 100 edits. Learned guards matched it for MongoDB and MariaDB but over-fitted on Mosquitto, where operational keys entered the learned set and the export share rose to 82\%, which supports keeping the expert list as a floor. The specs also exposed version semantics: on MariaDB 11.4, \texttt{skip-grant-tables} does not imply \texttt{skip-networking}, so a remote client logs in as root without a password, and Mosquitto 2.0 denies anonymous clients once any listener is declared unless \texttt{allow\_anonymous} is set. Writing the specs surfaced two harness pitfalls worth recording for practitioners: YAML 1.1 parsers read \texttt{off} as a Boolean where mongod reads a string, and quiet logging settings can hide a server's readiness line.
+\textbf{Three spec-only services.} Mosquitto 2.0 (MQTT, anonymous publish), MongoDB 7.0 (unauthenticated \texttt{listDatabases}) and MariaDB 11.4 (passwordless remote root) were added without code, each with 40 admitted configurations and 400 drift edits (Table~\ref{tab:general}). The structural findings carried over: cores never exceeded two directives, between 29\% (MongoDB) and 62\% (MariaDB) of pivots lay outside the vendor core, and the platform profile conflicted with 4--9 sources per service. Fidelity curves again decayed slowly; under $\Pb$, 17.5--22.5\% of MongoDB and MariaDB verdicts remained wrong at full synchronization. The expert guard reproduced every held-out verdict and cut re-emulation from 93--100 to 28--30 per 100 edits. Learned guards matched it for MongoDB and MariaDB but over-fitted on Mosquitto, where operational keys entered the learned set and the export share rose to 82\%, which supports keeping the expert list as a floor. The specs also exposed version semantics: on MariaDB 11.4, \texttt{skip-grant-tables} does not imply \texttt{skip-networking}, so a remote client logs in as root without a password, and Mosquitto 2.0 denies anonymous clients once any listener is declared unless \texttt{allow\_anonymous} is set. Writing the specs surfaced two harness pitfalls worth recording for practitioners: YAML 1.1 parsers read \texttt{off} as a Boolean where mongod reads a string, and quiet logging settings can hide a server's readiness line.
 
 \textbf{Change gate on real commits.} Replaying the key-guarded gate over the 426 public commits of Section~\ref{sec:rw}, 10 commits introduced an exposure (5 Redis, 4 PostgreSQL, 1 OpenSSH). The gate would have re-emulated 137 commits and blocked all 10, missing none.
 
-\textbf{Public files for the spec-only services.} We repeated the public-corpus pipeline of Section~\ref{sec:rw}, driven only by the specs' parse rules, on \texttt{mosquitto.conf}, \texttt{mongod.conf} and \texttt{my.cnf} files from GitHub (Table~\ref{tab:general-public}). Admission exposed environment and version effects again: 80 of 168 MongoDB files failed, 25 of them because removing the environment-bound \texttt{logAppend} invalidates a retained \texttt{logRotate: reopen} (a normalization artifact) and others because of removed options such as \texttt{net.http}. 160 of 373 MariaDB files failed, mostly on file paths and memory sizes the twin cannot provide. Among admitted files, 182 of 368 Mosquitto configurations (49\%) accepted anonymous publishers in the twin setting. Cores never exceeded two directives. Guards learned from synthetic data transferred without loss to MongoDB and MariaDB (100\% of 60 sampled verdicts each, exporting 63\% and 19\% of directives) but not entirely to Mosquitto, where the expert list reached 95\% and the learned set 92\%. The misses involved keys absent from the catalog, such as a listener switched to the WebSocket \texttt{protocol}. MariaDB also revealed a \emph{validity pivot}: in 14 files, removing \texttt{character-set-server} left a mismatched \texttt{collation-server} and the server refused to start. A pivot can therefore protect a verdict by keeping the configuration valid rather than by any security semantics.
+\textbf{Public files for the spec-only services.} We repeated the public-corpus pipeline of Section~\ref{sec:rw}, driven only by the specs' parse rules, on \texttt{mosquitto.conf}, \texttt{mongod.conf} and \texttt{my.cnf} files from GitHub (414 Mosquitto, 168 MongoDB and 373 MariaDB distinct files). Admission exposed environment and version effects again: 80 of 168 MongoDB files failed, 25 of them because removing the environment-bound \texttt{logAppend} invalidates a retained \texttt{logRotate: reopen} (a normalization artifact) and others because of removed options such as \texttt{net.http}. 160 of 373 MariaDB files failed, mostly on file paths and memory sizes the twin cannot provide. Among admitted files, 182 of 368 Mosquitto configurations (49\%) accepted anonymous publishers in the twin setting. Cores never exceeded two directives. Guards learned from synthetic data transferred without loss to MongoDB and MariaDB (100\% of 60 sampled verdicts each, exporting 63\% and 19\% of directives) but not entirely to Mosquitto, where the expert list reached 95\% and the learned set 92\%. The misses involved keys absent from the catalog, such as a listener switched to the WebSocket \texttt{protocol}. MariaDB also revealed a \emph{validity pivot}: in 14 files, removing \texttt{character-set-server} left a mismatched \texttt{collation-server} and the server refused to start. A pivot can therefore protect a verdict by keeping the configuration valid rather than by any security semantics.
 
-\begin{table}[t]
-\caption{Public files for the spec-only services}
-\label{tab:general-public}
-\centering
-\setlength{\tabcolsep}{1.5pt}
-\footnotesize
-\begin{tabular}{@{}lcccccc@{}}
-\toprule
-Service & Files & Admit. & Exp. & max $|K|$ & Union & Expert\\
-\midrule
-Mosquitto & 414 & 368 & 182 & 2 & 92\%/69\% & 95\%/52\%\\
-MongoDB & 168 & 88 & 25 & 1 & 100\%/63\% & 100\%/68\%\\
-MariaDB & 373 & 213 & 25 & 1 & 100\%/19\% & 100\%/22\%\\
-\bottomrule
-\multicolumn{7}{@{}p{0.97\columnwidth}@{}}{\footnotesize Files: distinct after normalization. Union/Expert: accuracy / exported share. Guard transfer and cores on a seeded sample of 60 admitted files per service, base $\Vb$; guard sets learned on synthetic data (E10).}
-\end{tabular}
-\end{table}
+
 
 \textbf{Tooling.} The machinery is packaged as a command-line tool. \texttt{analyze} reports, for a real file, each verdict with its core, its pivots labeled as enabling or protective, security-labeled lines without effect, and keys left to server defaults, with SARIF output for code-scanning pipelines. \texttt{export} emits the guard-key subset with explicit \emph{unset} markers (Proposition~\ref{prop:silent}). \texttt{fingerprint} compares the default security behavior of builds; on Redis it flagged 8 of 19 probe configurations that differ between the Ubuntu package and the official 7.0.15 image. \texttt{gate} implements the key-guarded change check evaluated above.
 
@@ -543,12 +483,7 @@ MariaDB & 11 & 1 & 29 (11) & 100\%/26\% & 99.0/27.5/8.5\\
 \end{tabular}
 \end{table}
 
-\begin{figure*}[t]
-\centering
-\includegraphics[width=\textwidth]{figs/fig-newservices-curve.png}
-\caption{Fidelity curves for the three services added purely through declarative specs.}
-\label{fig:newcurve}
-\end{figure*}
+
 
 \section{Discussion}\label{sec:discussion}
 
@@ -563,7 +498,7 @@ MariaDB & 11 & 1 & 29 (11) & 100\%/26\% & 99.0/27.5/8.5\\
 
 \textbf{When does static analysis suffice?} For four mature services a careful analyst can encode nearly all relevant semantics, and our analyzer did. Its residual disagreements concentrate where documentation is easily misread (ACL redefinition, \texttt{satisfy any}) and where real files use syntax the model has not encountered. Static analysis and execution are complementary. The analyzer is instantaneous and explainable; the twin validates it, and fidelity cores determine what the twin may safely omit.
 
-\textbf{Concentrated yet brittle.} The central observation of this work is the coexistence of minimal cores with a slowly decaying fidelity curve. A uniformly random 90\% replica omits the decisive directive in about one case in fifteen on synthetic data and one in thirty on public files. Necessity resides in pivots rather than in cores; fidelity is a property of a verdict, not of a file.
+\textbf{Concentrated but brittle.} The heart of this paper is that tiny cores sit alongside a slowly falling fidelity curve. A uniformly random 90\% replica omits the decisive directive in about one case in fifteen on synthetic data and one in thirty on public files. What a verdict needs lives in its pivots, not its core. Fidelity belongs to a verdict, not to a file.
 
 \section{Threats to Validity}
 \textbf{Corpora.} The synthetic configurations derive from postures we designed. The public corpus mitigates this bias, but it is drawn from repositories that publish configurations, which over-represent container setups, tutorials and templates relative to production fleets. Its rejection and exposure rates should not be interpreted as population estimates, and the observed core sizes characterize both corpora rather than a general law.
@@ -577,7 +512,7 @@ MariaDB & 11 & 1 & 29 (11) & 100\%/26\% & 99.0/27.5/8.5\\
 All servers ran in an isolated container against synthetic accounts and a synthetic password, and no external system was probed. Public files were obtained through GitHub code search and anonymous reads of public repositories. Raw files were retained outside the released artifact, and secrets were replaced prior to storing any parsed result. The released data identify configurations solely by content hash and contain no repository names, so no reported verdict can be attributed to a specific project. Exposure figures describe the twin setting, not the systems from which the files originate.
 
 \section{Conclusion}
-We investigated how much configuration a security service twin requires, and the answer has two parts. \emph{Reproducing} a verdict requires very little: at most two directives in every case measured, synthetic or public. \emph{Maintaining} that verdict as files evolve and as platforms supply defaults requires tracking the larger set of directives whose removal would invert it, representing unassigned keys explicitly, and executing the same build as the source rather than merely the same version. Treating fidelity as a property of verdicts rather than of files allows a twin platform to export a quarter of a configuration and re-emulate only a fraction as often, while agreeing with the real servers on every public verdict we tested. It also explains why twins constructed from defaults, or from most of a file, can be confidently wrong. The same conclusions held for three further services added purely through declarative specifications. The harness, service specifications, generator, normalized corpora, raw results and analysis scripts accompany this paper.
+We asked how much configuration a security twin needs, and the answer has two parts. To \emph{reproduce} a verdict, very little: at most two directives in every case measured, synthetic or public. To \emph{keep} reproducing it as files change and platforms fill in defaults, a twin must track the larger set of directives whose removal would invert it, mark unset keys explicitly, and run the same build as the source, not just the same version. Treating fidelity as a property of verdicts rather than of files allows a twin platform to export a quarter of a configuration and re-emulate only a fraction as often, while agreeing with the real servers on every public verdict we tested. It also explains why a twin built from defaults, or from most of a file, can be confidently wrong. The same conclusions held for three further services added purely through declarative specifications. The harness, service specifications, generator, normalized corpora, raw results and analysis scripts accompany this paper.
 
 \begin{thebibliography}{00}
 \bibitem{dtplatform} ``Digital Twin: Discovery, emulation and bounded hunting,'' source code and evaluation artifacts, GitHub repository poojarishreyas/Digital\_twin, 2026. [Online]. Available: \url{https://github.com/poojarishreyas/Digital_twin}
