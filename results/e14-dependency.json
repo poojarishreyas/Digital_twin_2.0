@@ -1,0 +1,160 @@
+{
+ "synthetic": {
+  "0.1|dependency": {
+   "resync_per100": 7.133333333333334,
+   "stale_pct": 0.0,
+   "late_flips": 0
+  },
+  "0.1|union": {
+   "resync_per100": 6.533333333333333,
+   "stale_pct": 1.05,
+   "late_flips": 6
+  },
+  "0.1|expert": {
+   "resync_per100": 9.933333333333334,
+   "stale_pct": 0.0,
+   "late_flips": 0
+  },
+  "0.3|dependency": {
+   "resync_per100": 21.366666666666667,
+   "stale_pct": 0.0,
+   "late_flips": 0
+  },
+  "0.3|union": {
+   "resync_per100": 19.866666666666667,
+   "stale_pct": 0.2833333333333333,
+   "late_flips": 4
+  },
+  "0.3|expert": {
+   "resync_per100": 29.716666666666665,
+   "stale_pct": 0.0,
+   "late_flips": 0
+  },
+  "0.5|dependency": {
+   "resync_per100": 35.2,
+   "stale_pct": 0.0,
+   "late_flips": 0
+  },
+  "0.5|union": {
+   "resync_per100": 32.21666666666667,
+   "stale_pct": 0.5833333333333334,
+   "late_flips": 8
+  },
+  "0.5|expert": {
+   "resync_per100": 49.56666666666667,
+   "stale_pct": 0.0,
+   "late_flips": 0
+  }
+ },
+ "real": {
+  "dependency": {
+   "re_emulations": 146,
+   "late_flips": 0
+  },
+  "union": {
+   "re_emulations": 137,
+   "late_flips": 0
+  },
+  "expert": {
+   "re_emulations": 159,
+   "late_flips": 0
+  }
+ },
+ "gsync_dependency": {
+  "n": 900,
+  "accuracy": 1.0,
+  "exported": 0.2546365345992539,
+  "errors_by_prop": {}
+ },
+ "privacy": {
+  "redis": {
+   "directives": 10707,
+   "exported": 750,
+   "site_specific": 276,
+   "site_specific_exported": 1,
+   "distinct_keys": 149,
+   "distinct_keys_exported": 4
+  },
+  "postgresql": {
+   "directives": 2024,
+   "exported": 2024,
+   "site_specific": 825,
+   "site_specific_exported": 825,
+   "distinct_keys": 1,
+   "distinct_keys_exported": 1
+  },
+  "openssh": {
+   "directives": 4662,
+   "exported": 473,
+   "site_specific": 460,
+   "site_specific_exported": 5,
+   "distinct_keys": 110,
+   "distinct_keys_exported": 5
+  }
+ },
+ "effort": {
+  "mariadb": {
+   "lines": 70,
+   "catalog_lines": 18,
+   "core_lines": 52,
+   "environment_keys": 30,
+   "properties": 1,
+   "catalog_entries": 17,
+   "postures": 7
+  },
+  "mongodb": {
+   "lines": 59,
+   "catalog_lines": 15,
+   "core_lines": 44,
+   "environment_keys": 14,
+   "properties": 1,
+   "catalog_entries": 14,
+   "postures": 7
+  },
+  "mosquitto": {
+   "lines": 70,
+   "catalog_lines": 18,
+   "core_lines": 52,
+   "environment_keys": 19,
+   "properties": 1,
+   "catalog_entries": 17,
+   "postures": 7
+  },
+  "nginx": {
+   "lines": 329,
+   "catalog_lines": 272,
+   "core_lines": 57,
+   "environment_keys": 0,
+   "properties": 2,
+   "catalog_entries": 43,
+   "postures": 0
+  },
+  "openssh": {
+   "lines": 242,
+   "catalog_lines": 199,
+   "core_lines": 43,
+   "environment_keys": 9,
+   "properties": 1,
+   "catalog_entries": 35,
+   "postures": 0
+  },
+  "postgresql": {
+   "lines": 167,
+   "catalog_lines": 116,
+   "core_lines": 51,
+   "environment_keys": 0,
+   "properties": 1,
+   "catalog_entries": 15,
+   "postures": 0
+  },
+  "redis": {
+   "lines": 152,
+   "catalog_lines": 115,
+   "core_lines": 37,
+   "environment_keys": 25,
+   "properties": 1,
+   "catalog_entries": 19,
+   "postures": 0
+  }
+ }
+}
